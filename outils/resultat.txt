@@ -1,14 +1,12 @@
-<anonymous_script>:1
-Ahoy! CptSpaceToaster here! Your User-Agent has been blocked. Please review the usage guidelines https://tcgcsv.com/docs#usage-guidelines and identify your application by setting "User-Agent": "Your-Application-Name/X.Y.Z"
-^
 
-SyntaxError: Unexpected token 'A', "Ahoy! CptS"... is not valid JSON
-    at JSON.parse (<anonymous>)
-    at parseJSONFromBytes (node:internal/deps/undici/undici:5895:19)
-    at successSteps (node:internal/deps/undici/undici:5876:27)
-    at fullyReadBody (node:internal/deps/undici/undici:4768:9)
-    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
-    at async consumeBody (node:internal/deps/undici/undici:5885:7)
-    at async file:///home/runner/work/AppliCard-donnees/AppliCard-donnees/outils/debug.mjs:4:14
+## E2 : 92 cartes TCGdex, 92 produits
+TCGdex : 001:ニドランm:- | 002:ニドリーノ:- | 003:グリマー:- | 004:MUK -004/092:- | 005:MUK -005/092:- | 006:Spinarak -006/092:- | 007:Spinarak -007/092:- | 008:アリアドス-008/092:-
+TCGplayer : Arcanine - 017/092 #017/092 img1 | Arcanine - 016/092 #016/092 img1 | Ariados - 009/092 #009/092 img1 | Ariados - 008/092 #008/092 img1 | Azumarill - 026/092 #026/092 img1 | Azumarill - 025/092 #025/092 img1 | Blissey - 066/092 #066/092 img1 | Blissey - 065/092 #065/092 img1
 
-Node.js v22.23.3
+## PCG3 : 85 cartes TCGdex, 85 produits
+TCGdex : 001:エカン:- | 002:Zubat:- | 003:グリマー:- | 004:Koffing:- | 005:レディバ:- | 006:レディアン:- | 007:ホッピップ:- | 008:スキプルーム:-
+TCGplayer : Ekans #001/084 img1 | Zubat #002/084 img1 | Grimer #003/084 img1 | Koffing #004/084 img1 | Ledyba #005/084 img1 | Ledian #006/084 img1 | Hoppip #007/084 img1 | Skiploom #008/084 img1
+
+## E4 : 91 cartes TCGdex, 91 produits
+TCGdex : 001:Zubat:- | 002:Zubat:- | 003:ゴルバット:- | 004:レディバ:- | 005:レディバ:- | 006:レディアン:- | 007:レディアン:- | 008:クロバット:-
+TCGplayer : Abra #040/088 img1 | Aerodactyl #059/088 img1 | Alakazam - 043/088 #043/088 img1 | Alakazam - 042/088 #042/088 img1 | Buried Fossil #070/088 img1 | Cleffa #066/088 img1 | Crobat - 009/088 #009/088 img1 | Crobat - 008/088 #008/088 img1
