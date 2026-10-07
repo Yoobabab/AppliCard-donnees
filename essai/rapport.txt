@@ -5,35 +5,36 @@ TCGplayer : 220 groupes internationaux, 460 japonais
 PokéAPI : 1025 noms d'espèces japonais
 Taux USD → EUR : 0.8947
 
-[fr] 20054 cartes (hors Pocket), 2913 sans image → retrouvées 2811 (TCGdex non annoncées 27, TCGdex autre langue 1544, Limitless 308, Pokémon TCG 525, TCGplayer 407 dont 0 par n° de Pokédex) ; toujours sans image : 102 (0.5 %)
+[fr] 20054 cartes (hors Pocket), 2913 sans image → retrouvées 2811 (TCGdex non annoncées 10, TCGdex autre langue 1547, Limitless 322, Pokémon TCG 525, TCGplayer 407 dont 0 par n° de Pokédex) ; toujours sans image : 102 (0.5 %)
 [fr] extensions avec des images manquantes : 2019sm-fr Collection McDonald's 2019 (41) · 2018sm-fr Collection McDonald's 2018 (40) · 2013bw Collection McDonald's 2013 (12) · xya carte alternative A Jaune (6) · tk-hs-g HS Kit du dresseur (Léviator) (2) · cel25cc Célébrations Collection Classique (1)
 
-[en] 21256 cartes (hors Pocket), 1590 sans image → retrouvées 1553 (TCGdex non annoncées 41, TCGdex autre langue 146, Limitless 302, Pokémon TCG 599, TCGplayer 465 dont 0 par n° de Pokédex) ; toujours sans image : 37 (0.2 %)
-[en] extensions avec des images manquantes : tk-sm-r SM trainer Kit (Alolan Raichu) (11) · mfb My First Battle (10) · xya Yellow A Alternate (6) · ex5.5 Poké Card Creator Pack (5) · tk-hs-g HS trainer Kit (Gyarados) (2) · miscp Miscellaneous Promos (1) · cel25cc Celebrations Classic Collection (1) · mep MEP Black Star Promos (1)
+[en] 21256 cartes (hors Pocket), 1590 sans image → retrouvées 1552 (TCGdex non annoncées 27, TCGdex autre langue 146, Limitless 316, Pokémon TCG 599, TCGplayer 464 dont 0 par n° de Pokédex) ; toujours sans image : 38 (0.2 %)
+[en] extensions avec des images manquantes : tk-sm-r SM trainer Kit (Alolan Raichu) (11) · mfb My First Battle (10) · xya Yellow A Alternate (6) · ex5.5 Poké Card Creator Pack (5) · tk-hs-g HS trainer Kit (Gyarados) (2) · miscp Miscellaneous Promos (1) · cel25cc Celebrations Classic Collection (1) · svp SVP Black Star Promos (1) · mep MEP Black Star Promos (1)
 
-[de] 18995 cartes (hors Pocket), 5222 sans image → retrouvées 5222 (TCGdex non annoncées 251, TCGdex autre langue 4256, Limitless 219, Pokémon TCG 439, TCGplayer 57 dont 0 par n° de Pokédex) ; toujours sans image : 0 (0.0 %)
+[de] 18995 cartes (hors Pocket), 5222 sans image → retrouvées 5222 (TCGdex non annoncées 276, TCGdex autre langue 4267, Limitless 183, Pokémon TCG 439, TCGplayer 57 dont 0 par n° de Pokédex) ; toujours sans image : 0 (0.0 %)
 [de] extensions avec des images manquantes : 
 
-[es] 14264 cartes (hors Pocket), 993 sans image → retrouvées 993 (TCGdex non annoncées 61, TCGdex autre langue 239, Limitless 253, Pokémon TCG 407, TCGplayer 33 dont 0 par n° de Pokédex) ; toujours sans image : 0 (0.0 %)
+[es] 14264 cartes (hors Pocket), 993 sans image → retrouvées 993 (TCGdex non annoncées 126, TCGdex autre langue 174, Limitless 253, Pokémon TCG 407, TCGplayer 33 dont 0 par n° de Pokédex) ; toujours sans image : 0 (0.0 %)
 [es] extensions avec des images manquantes : 
 
 [it] 14514 cartes (hors Pocket), 1032 sans image → retrouvées 1032 (TCGdex non annoncées 0, TCGdex autre langue 339, Limitless 253, Pokémon TCG 407, TCGplayer 33 dont 0 par n° de Pokédex) ; toujours sans image : 0 (0.0 %)
 [it] extensions avec des images manquantes : 
 
-[ja] 12781 cartes (hors Pocket), 8899 sans image → retrouvées 7831 (TCGdex non annoncées 2160, TCGdex autre langue 0, Limitless 4192, Pokémon TCG 0, TCGplayer 1479 dont 230 par n° de Pokédex) ; toujours sans image : 1068 (8.4 %)
-[ja] extensions avec des images manquantes : VS1 ポケモンカード★VS (122) · E1 基本拡張パック (113) · E5 神秘なる山 (83) · E2 地図にない町 (83) · PCG5 まぼろしの森 (82) · PCG3 ロケット団の逆襲 (73) · PCG8 きせきの結晶 (72) · E4 裂けた大地 (67) · web1 ポケモンカード★web (43) · PMCG5 リーダーズスタジアム (42) · PMCG1 拡張パック (36) · PMCG6 闇からの挑戦 (33) · neo4 闇、そして光へ... (32) · neo1 金、銀、新世界へ... (24) · M-P メガ プロモカード (23) · PCG9 さいはての攻防 (20) · neo2 遺跡をこえて... (14) · PMCG4 ロケット団 (12) · SM1p サン＆ムーン (10) · neo3 めざめる伝説 (9) · MC スタートデッキ100 バトルコレクション (8) · PMCG3 化石の秘密 (5) · S12a VSTARユニバース (4) · SM1M コレクションムーン (3) · SM2L アローラの月光 (3)
+[ja] 12781 cartes (hors Pocket), 8899 sans image → retrouvées 7833 (TCGdex non annoncées 2174, TCGdex autre langue 0, Limitless 4182, Pokémon TCG 0, TCGplayer 1477 dont 230 par n° de Pokédex) ; toujours sans image : 1066 (8.3 %)
+[ja] extensions avec des images manquantes : VS1 ポケモンカード★VS (122) · E1 基本拡張パック (113) · E2 地図にない町 (83) · E5 神秘なる山 (83) · PCG5 まぼろしの森 (82) · PCG3 ロケット団の逆襲 (73) · PCG8 きせきの結晶 (72) · E4 裂けた大地 (67) · web1 ポケモンカード★web (43) · PMCG5 リーダーズスタジアム (42) · PMCG1 拡張パック (36) · PMCG6 闇からの挑戦 (33) · neo4 闇、そして光へ... (32) · neo1 金、銀、新世界へ... (24) · M-P メガ プロモカード (23) · PCG9 さいはての攻防 (20) · neo2 遺跡をこえて... (14) · PMCG4 ロケット団 (12) · SM1p サン＆ムーン (10) · neo3 めざめる伝説 (9) · MC スタートデッキ100 バトルコレクション (8) · PMCG3 化石の秘密 (5) · SM1M コレクションムーン (3) · SM2L アローラの月光 (3) · SM3H 闘う虹を見たか (3)
 
-Validation des correspondances japonaises TCGplayer (Pokémon reconnus par leur nom) : VS1 13/23 web1 3/4 E1 9/12 E2 7/10 E3 10/10 E4 19/24 E5 7/9 PCG1 11/11 PCG2 9/9 PCG3 10/13 PCG4 5/5 PCG5 3/4 PCG6 10/11 PCG7 11/12 PCG8 2/3 PCG9 10/11 SM1S 5/5 SM1M 4/4 SM2L 4/4 SM2K 4/4 SM3H 4/4 SM3N 4/4 SM4S 4/4 SM4A 4/4 SM5S 3/3 SM5M 3/3 SM6 5/5 SM6a 4/4 SM6b 6/6 SM7 5/5 SM7b 4/4 SM7a 4/4 SM8 5/5 SM8b 7/7 SM8a 4/4 SM9 6/6 SM9a 4/4 SM9b 4/4 SM10 6/6 SM10a 4/4 SM10b 4/4 SM11a 4/4 SM11 2/2 SM11b 4/5 SM12 6/6 SM12a 16/16 S6K 5/5 S8b 8/8 S5I 5/5 S6H 5/5 S7D 5/5 S8 6/6 SM2p 6/6 SM3p 5/5 SM5p 4/4 SM4p 5/5
-[fr] logos : 79 manquants, 55 retrouvés ; toujours sans logo : 2013bw 2023sv 2024sv jumbo mee mep tk-bw-e tk-bw-z tk-dp-l tk-dp-m tk-hs-g tk-hs-r tk-sm-l tk-sm-r tk-xy-b tk-xy-latia tk-xy-latio tk-xy-n tk-xy-p tk-xy-su tk-xy-sy tk-xy-w wp xya
-[en] logos : 66 manquants, 39 retrouvés ; toujours sans logo : 2023sv 2024sv ex5.5 jumbo mee mep mfb miscp sp tk-bw-e tk-bw-z tk-dp-l tk-dp-m tk-hs-g tk-hs-r tk-sm-l tk-sm-r tk-xy-b tk-xy-latia tk-xy-latio tk-xy-n tk-xy-p tk-xy-su tk-xy-sy tk-xy-w wp xya
-[de] logos : 108 manquants, 105 retrouvés ; toujours sans logo : mee mep xya
+TCGplayer : 94 groupes lus, 0 lectures en échec
+Validation des correspondances japonaises TCGplayer (Pokémon reconnus par leur nom) : VS1 13/23 web1 3/4 E1 9/12 E2 7/10 E3 10/10 E4 19/24 E5 7/9 PCG1 11/11 PCG2 9/9 PCG3 10/13 PCG4 5/5 PCG5 3/4 PCG6 10/11 PCG7 11/12 PCG8 2/3 PCG9 10/11 SM1S 5/5 SM1M 4/4 SM2L 4/4 SM2K 4/4 SM3H 4/4 SM3N 4/4 SM4S 4/4 SM4A 4/4 SM5S 3/3 SM5M 3/3 SM6 5/5 SM6a 4/4 SM6b 6/6 SM7 5/5 SM7b 4/4 SM7a 4/4 SM8 5/5 SM8b 7/7 SM8a 4/4 SM9 6/6 SM9a 4/4 SM9b 4/4 SM10 6/6 SM10a 4/4 SM10b 4/4 SM11a 4/4 SM11b 4/5 SM12 6/6 SM12a 16/16 S6K 5/5 S8b 8/8 S5I 5/5 S6H 5/5 S7D 5/5 S8 6/6 SM2p 6/6 SM3p 5/5 SM5p 4/4 SM4p 5/5
+[fr] logos : 70 manquants, 46 retrouvés ; toujours sans logo : 2013bw 2023sv 2024sv jumbo mee mep tk-bw-e tk-bw-z tk-dp-l tk-dp-m tk-hs-g tk-hs-r tk-sm-l tk-sm-r tk-xy-b tk-xy-latia tk-xy-latio tk-xy-n tk-xy-p tk-xy-su tk-xy-sy tk-xy-w wp xya
+[en] logos : 63 manquants, 36 retrouvés ; toujours sans logo : 2023sv 2024sv ex5.5 jumbo mee mep mfb miscp sp tk-bw-e tk-bw-z tk-dp-l tk-dp-m tk-hs-g tk-hs-r tk-sm-l tk-sm-r tk-xy-b tk-xy-latia tk-xy-latio tk-xy-n tk-xy-p tk-xy-su tk-xy-sy tk-xy-w wp xya
+[de] logos : 107 manquants, 104 retrouvés ; toujours sans logo : mee mep xya
 [es] logos : 108 manquants, 87 retrouvés ; toujours sans logo : 2023sv 2024sv mee mep tk-bw-e tk-bw-z tk-dp-l tk-dp-m tk-hs-g tk-hs-r tk-sm-l tk-sm-r tk-xy-b tk-xy-latia tk-xy-latio tk-xy-n tk-xy-p tk-xy-su tk-xy-sy tk-xy-w xya
 [it] logos : 146 manquants, 126 retrouvés ; toujours sans logo : 2023sv 2024sv mee mep tk-dp-l tk-dp-m tk-hs-g tk-hs-r tk-sm-l tk-sm-r tk-xy-b tk-xy-latia tk-xy-latio tk-xy-n tk-xy-p tk-xy-su tk-xy-sy tk-xy-w wp xya
 [ja] logos : 184 manquants, 0 retrouvés ; toujours sans logo : ADV1 ADV2 ADV3 ADV4 ADV5 CP1 CP2 CP3 CP4 CP5 CP6 CS1.5 CS1a CS1b CS2.5 CS2a CS2b CS3.5 CS3D CS3a CS3b CS4 CS4Da CS4a CS4b CSA E1 E2 E3 E4 E5 L1a L1b L2 L3 LL M-P M1L M1S M2 M2a M3 M4 M5 M6 MC PCG1 PCG10 PCG2 PCG3 PCG4 PCG5 PCG6 PCG7 PCG8 PCG9 PMCG1 PMCG2 PMCG3 PMCG4 PMCG5 PMCG6 S10D S10P S10a S10b S11 S11a S12 S12a S1H S1W S1a S2 S2a S3 S3a S4 S4a S5I S5R S5a S6H S6K S6a S7D S7R S8 S8a S8b S9 S9a SM0 SM1+ SM10 SM10a SM10b SM11 SM11a SM11b SM12 SM12a SM1M SM1S SM1p SM2K SM2L SM2p SM3+ SM3H SM3N SM3p SM4+ SM4A SM4S SM4p SM5+ SM5M SM5S SM5p SM6 SM6a SM6b SM7 SM7a SM7b SM8 SM8a SM8b SM9 SM9a SM9b SMP2 SV-P SV10 SV11B SV11W SV1S SV1V SV1a SV2D SV2P SV2a SV3 SV3a SV4K SV4M SV4a SV5K SV5M SV5a SV6 SV6a SV7 SV7a SV8 SV8a SV9 SV9a SVK SVLN SVLS VS1 XY10 XY11a XY11b XY1a XY1b XY2 XY3 XY4 XY5a XY5b XY6 XY7 XY8a XY8b XY9 neo1 neo2 neo3 neo4 sm2+ web1
 
-[cotes intl] 50 extensions avec des cotes manquantes dans TCGdex, 4350 cotes de secours trouvées ; extensions sans équivalent TCGplayer : bog dp1 miscp ru1 xya
+[cotes intl] 40 extensions avec des cotes manquantes dans TCGdex, 3231 cotes de secours trouvées ; extensions sans équivalent TCGplayer : bog dp1 miscp ru1 xya
 
 [cotes ja] 116 extensions avec des cotes manquantes dans TCGdex, 10404 cotes de secours trouvées ; extensions sans équivalent TCGplayer : SVLS
 
 Extensions exclues (Pokémon TCG Pocket) : A1 A1a A2 A2a A2b A3 A3a A3b A4 A4a B1 B1a B2 B2a P-A
-Durée : 549 s
+Durée : 582 s

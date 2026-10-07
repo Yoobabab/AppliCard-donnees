@@ -1,17 +1,18 @@
-ja_SV-P-046 « ネモ » l:tpc/SVP/SVP_46_R_JP
-ja_M5-024 « デンヂムシ » l:tpc/M5/M5_24_R_JP
-ja_PCG7-001 « トラピンチ（デルタ種） » g:611349
-ja_PCG1-067 « Farfetch'd » g:612399
-ja_PMCG5-032 « カスミのゴルダック » g:576818
-ja_E3-090 « ルギア » g:576386
+ja_MC-547 « ドロンチ » l:tpc/MC/MC_547_R_JP
+ja_SM10-069 « ペルシアンGX » l:tpc/SM10/SM10_69_R_JP
+ja_PCG2-047 « ブレルーム » g:612270
+ja_PMCG1-043 « ケーシィ » g:575569
+ja_PMCG1-020 « ブーバー » g:575648
+ja_neo4-021 « 軽アルカニン » g:575500
 ja_neo3-034 « スターミー » g:575239
-ja_PMCG5-042 « マチスのサンダース » g:576803
-ja_VS1-094 « ロケットのライコウ » g:631883
-ja_PMCG6-055 « R団のミュウツー » g:575340
-fr_exu-! « Zarbi » g:90166
-fr_exu-%3F « Zarbi » g:90167
-fr_ecard2-H04 « Azumarill » g:83681
-logo np https://assets.tcgdex.net/en/pop/np/logo.webp
+ja_SM12-100 « アルセウス&ディアルガ&パルキアGX » t:ja/SM/SM12/100
+ja_SM5S-016 « ブーバーン » t:ja/SM/SM5S/016
+ja_SM7a-043 « メタモン » t:ja/SM/SM7a/043
+ja_SM8-102 « ウツギ博士のレクチャー » t:ja/SM/SM8/102
+fr_ecard2-H02 « Arcanin » g:83576
+fr_ecard2-H03 « Migalos » g:83614
+fr_ecard2-H01 « Pharamp » g:83537
 logo base1 https://assets.tcgdex.net/en/base/base1/logo.webp
-logo tk-ex-latia https://images.pokemontcg.io/tk1a/logo.png
-logo exu https://assets.tcgdex.net/fr/ex/ex10/logo.webp
+logo np https://assets.tcgdex.net/en/pop/np/logo.webp
+logo tk-ex-m https://images.pokemontcg.io/tk2b/logo.png
+logo pop1 https://assets.tcgdex.net/en/pop/pop1/logo.webp
