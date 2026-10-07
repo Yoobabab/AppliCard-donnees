@@ -1,7 +1,5 @@
 Base : 21186 cartes internationales, 12336 japonaises
 900 photos simulées · niveau : 1re proposition / 3 premières / 6 premières (%) [part des photos où la carte a été cherchée]
-avant (v0.9)           20 ms · facile 97.3/99.6/99.6 [0] · moyen 92.9/97.8/99.1 [0] · difficile 75.1/89.3/92.4 [0] · loin 13.8/16.4/17.8 [0]
-loc3 large aff5        94 ms · facile 97.3/99.6/99.6 [100] · moyen 91.6/98.2/99.1 [100] · difficile 84.9/93.8/94.2 [100] · loin 87.6/91.6/92.9 [100]
-idem si doute 25/12    71 ms · facile 97.3/99.6/99.6 [27] · moyen 91.6/98.2/99.1 [57] · difficile 84.9/93.8/94.2 [86] · loin 87.6/91.6/92.9 [100]
-idem si doute 30/10    64 ms · facile 97.3/99.6/99.6 [18] · moyen 91.6/98.2/99.1 [38] · difficile 84.9/93.8/94.2 [72] · loin 87.6/91.6/92.9 [97]
-idem si doute 35/8     58 ms · facile 97.3/99.6/99.6 [14] · moyen 91.6/98.2/99.1 [21] · difficile 84.9/93.8/94.2 [60] · loin 87.6/91.6/92.9 [94]
+avant (v0.9)           31 ms · facile 95.1/99.1/99.6 [0] · moyen 92.4/100.0/100.0 [0] · difficile 80.9/88.0/88.0 [0] · loin 9.8/12.0/13.3 [0]
+réglage actuel        112 ms · facile 95.6/99.1/99.6 [21] · moyen 94.2/99.6/100.0 [40] · difficile 92.0/95.6/95.6 [76] · loin 88.0/92.9/94.2 [99]
+toujours chercher     157 ms · facile 95.6/99.1/99.6 [100] · moyen 94.2/99.6/100.0 [100] · difficile 92.0/95.6/95.6 [100] · loin 88.0/92.9/94.2 [100]
