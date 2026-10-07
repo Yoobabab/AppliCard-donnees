@@ -138,4 +138,4 @@ export function distance(a, oa, b, ob) {
   }
   return illustration * POIDS.illustration + entiere * POIDS.entiere + teinte * POIDS.teinte;
 }
-export const POIDS = { illustration: 1, entiere: 0.6, teinte: 0.5 };
+export const POIDS = { illustration: 1, entiere: 1, teinte: 0.5 }; // réglage choisi par simulation (oct. 2026)
