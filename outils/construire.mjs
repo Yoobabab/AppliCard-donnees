@@ -30,11 +30,14 @@ const note = (...a) => { const l = a.join(' '); rapport.push(l); console.log(l);
 // ---------- Outils réseau
 async function requete(url, opts = {}, essais = 3) {
   for (let i = 0; i < essais; i++) {
+    let attente = 800 * (i + 1);
     try {
       const r = await fetch(url, { signal: AbortSignal.timeout(30000), headers: UA, ...opts });
       if (r.ok || r.status === 404 || r.status === 403) return r;
+      // Trop de demandes : on patiente plus longtemps avant de réessayer.
+      if (r.status === 429) attente = (Number(r.headers.get('retry-after')) || 5 * (i + 1)) * 1000;
     } catch {}
-    await new Promise((ok) => setTimeout(ok, 800 * (i + 1)));
+    await new Promise((ok) => setTimeout(ok, attente));
   }
   return null;
 }
@@ -161,10 +164,20 @@ function groupePour(setId, japonais) {
   return groupes[3].find((g) => nomGroupe(g.name) === cible) ?? groupes[3].find((g) => norm(g.name) === cible);
 }
 const cacheGroupes = new Map();
+let echecsTcgcsv = 0;
 function contenuGroupe(cat, groupId) {
   if (!cacheGroupes.has(groupId)) cacheGroupes.set(groupId, (async () => {
-    const produits = (await json(`https://tcgcsv.com/tcgplayer/${cat}/${groupId}/products`))?.results ?? [];
-    const prix = (await json(`https://tcgcsv.com/tcgplayer/${cat}/${groupId}/prices`))?.results ?? [];
+    const lire = async (quoi) => {
+      for (let i = 0; i < 4; i++) {
+        const r = await json(`https://tcgcsv.com/tcgplayer/${cat}/${groupId}/${quoi}`);
+        if (r?.results) return r.results;
+        await new Promise((ok) => setTimeout(ok, 3000 * (i + 1)));
+      }
+      echecsTcgcsv++;
+      return [];
+    };
+    const produits = await lire('products');
+    const prix = await lire('prices');
     const parNumero = new Map();
     for (const p of produits) {
       const num = p.extendedData?.find((e) => e.name === 'Number')?.value;
@@ -325,7 +338,8 @@ for (const lang of LANGUES) {
   note(`[${lang}] extensions avec des images manquantes : ${Object.entries(stats.introuvables).sort((a, b) => b[1] - a[1]).slice(0, 25).map(([k, v]) => `${k} (${v})`).join(' · ')}`);
   resultats[lang] = { images };
 }
-note(`\nValidation des correspondances japonaises TCGplayer (Pokémon reconnus par leur nom) : ${[...validationsJa].filter(([, v]) => v.essais).map(([k, v]) => `${k} ${v.reussis}/${v.essais}`).join(' ')}`);
+note(`\nTCGplayer : ${cacheGroupes.size} groupes lus, ${echecsTcgcsv} lectures en échec`);
+note(`Validation des correspondances japonaises TCGplayer (Pokémon reconnus par leur nom) : ${[...validationsJa].filter(([, v]) => v.essais).map(([k, v]) => `${k} ${v.reussis}/${v.essais}`).join(' ')}`);
 
 // ---------- 8. Logos d'extensions
 for (const lang of LANGUES) {
@@ -431,10 +445,11 @@ if (ECHANTILLONS) {
   const pris = [];
   const ja = Object.entries(resultats.ja.images);
   const choisir = (pref, n) => ja.filter(([, v]) => v.startsWith(pref)).sort(() => Math.random() - 0.5).slice(0, n);
-  const anciennes = ja.filter(([id]) => /^(PMCG|neo|VS1|E\d|web)/.test(id)).sort(() => Math.random() - 0.5).slice(0, 6);
-  for (const [id, code] of [...choisir('l:', 2), ...choisir('g:', 2), ...anciennes]) pris.push([`ja_${id}`, code, carteParLangue.ja.get(id)?.name]);
+  const anciennes = ja.filter(([id]) => /^(PMCG|neo|VS1|E\d|web)/.test(id)).sort(() => Math.random() - 0.5).slice(0, 3);
+  const cachees = ja.filter(([, v]) => v.startsWith('t:ja/')).sort(() => Math.random() - 0.5).slice(0, 4);
+  for (const [id, code] of [...choisir('l:', 2), ...choisir('g:', 2), ...anciennes, ...cachees]) pris.push([`ja_${id}`, code, carteParLangue.ja.get(id)?.name]);
   for (const [id, code] of Object.entries(resultats.fr.images).filter(([, v]) => v.startsWith('g:') || v.startsWith('l:')).slice(0, 3)) pris.push([`fr_${id}`, code, carteParLangue.fr.get(id)?.name]);
-  const urlDe = (code) => code.startsWith('l:') ? `${URL_LIM}${code.slice(2)}_SM.png` : code.startsWith('g:') ? `https://tcgplayer-cdn.tcgplayer.com/product/${code.slice(2)}_200w.jpg` : null;
+  const urlDe = (code) => code.startsWith('t:') ? `https://assets.tcgdex.net/${code.slice(2)}/low.png` : code.startsWith('l:') ? `${URL_LIM}${code.slice(2)}_SM.png` : code.startsWith('g:') ? `https://tcgplayer-cdn.tcgplayer.com/product/${code.slice(2)}_200w.jpg` : null;
   const lignes = [];
   for (const [nom, code, nomCarte] of pris) {
     const u = urlDe(code); const r = u && (await requete(u));
