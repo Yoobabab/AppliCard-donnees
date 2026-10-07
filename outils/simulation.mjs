@@ -107,12 +107,10 @@ async function photoSimulee(brut, niveau) {
 
 const REGLAGES = {
   'avant (v0.9)': { propositions: 0, affiner: 0 },
-  'avant + ajustement': { propositions: 0, affiner: 5 },
   'loc3 large aff5': { propositions: 3, autour: 'large', affiner: 5 },
-  'loc3 moyen aff5': { propositions: 3, autour: 'moyen', affiner: 5 },
-  'loc2 large aff3': { propositions: 2, autour: 'large', affiner: 3 },
-  'loc3 moyen aff3': { propositions: 3, autour: 'moyen', affiner: 3 },
-  'loc4 moyen aff3': { propositions: 4, autour: 'moyen', affiner: 3 },
+  'idem si doute 25/12': { propositions: 3, autour: 'large', affiner: 5, confiance: [25, 12] },
+  'idem si doute 30/10': { propositions: 3, autour: 'large', affiner: 5, confiance: [30, 10] },
+  'idem si doute 35/8': { propositions: 3, autour: 'large', affiner: 5, confiance: [35, 8] },
 };
 
 mkdirSync('simulation', { recursive: true });
@@ -135,11 +133,13 @@ for (const niveau of ['facile', 'moyen', 'difficile', 'loin']) {
       if (niveau === 'loin' && exemples < 6) writeFileSync(`simulation/loin_${exemples++}_${base.nom}_${id}.jpg`, p.jpeg);
       for (const [nom, r] of Object.entries(REGLAGES)) {
         const t = performance.now();
-        const props = reconnaitre(p.px, p.w, p.h, bases, 6, base.nom, r);
+        const suivi = {};
+        const props = reconnaitre(p.px, p.w, p.h, bases, 6, base.nom, { ...r, suivi });
         temps[nom] = (temps[nom] ?? 0) + performance.now() - t;
         const rang = props.findIndex((q) => q.id === id && q.base === base.nom);
-        const s = ((stats[nom] ??= {})[niveau] ??= { n: 0, t1: 0, t3: 0, t6: 0 });
+        const s = ((stats[nom] ??= {})[niveau] ??= { n: 0, t1: 0, t3: 0, t6: 0, loc: 0 });
         s.n++;
+        if (suivi.localisation) s.loc++;
         if (rang === 0) s.t1++;
         if (rang >= 0 && rang < 3) s.t3++;
         if (rang >= 0) s.t6++;
@@ -147,10 +147,10 @@ for (const niveau of ['facile', 'moyen', 'difficile', 'loin']) {
     }
   }
 }
-console.log(`${photos} photos simulées · niveau : 1re proposition / 3 premières / 6 premières (%)`);
+console.log(`${photos} photos simulées · niveau : 1re proposition / 3 premières / 6 premières (%) [part des photos où la carte a été cherchée]`);
 for (const [nom, parNiveau] of Object.entries(stats)) {
   console.log(
     `${nom.padEnd(20)} ${(temps[nom] / photos).toFixed(0).padStart(4)} ms · ` +
-      Object.entries(parNiveau).map(([n, v]) => `${n} ${(100 * v.t1 / v.n).toFixed(1)}/${(100 * v.t3 / v.n).toFixed(1)}/${(100 * v.t6 / v.n).toFixed(1)}`).join(' · '),
+      Object.entries(parNiveau).map(([n, v]) => `${n} ${(100 * v.t1 / v.n).toFixed(1)}/${(100 * v.t3 / v.n).toFixed(1)}/${(100 * v.t6 / v.n).toFixed(1)} [${(100 * v.loc / v.n).toFixed(0)}]`).join(' · '),
   );
 }

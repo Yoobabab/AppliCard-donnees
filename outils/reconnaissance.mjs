@@ -167,50 +167,77 @@ const FINALISTES = 40;
  * @returns les `max` cartes les plus proches : [{ id, base, d }]
  */
 export function reconnaitre(px, w, h, bases, max = 6, basePreferee = null, reglages = {}) {
-  const { propositions = 3, autour = 'large', affiner = 5, finesses = [0.03, 0.015] } = reglages;
-  // 1. Cadrages : ceux du cadre de visée, et autour de l'endroit où la carte semble se trouver.
-  const rects = [...cadrages(w, h)];
-  if (propositions > 0) for (const r of localiser(px, w, h, propositions)) rects.push(...voisinage(r, autour));
-  const empreintes = rects.map((r) => empreinte(px, w, h, r));
-  const motsPhoto = enMots(Uint8Array.from(empreintes.flatMap((e) => Array.from(e))), empreintes.length);
-  const nr = empreintes.length;
-
-  // 2. Toute la base avec ces cadrages : on garde les meilleures cartes.
+  const { propositions = 3, autour = 'large', affiner = 5, finesses = [0.03, 0.015], confiance = null } = reglages;
   const finalistes = [];
+  const index = new Map(); // carte → sa place parmi les finalistes
   let seuil = Infinity; // distance de la dernière finaliste
-  for (let b = 0; b < bases.length; b++) {
-    const base = bases[b];
-    const o = base.octets;
-    const m = motsDe(base);
-    const n = base.ids.length;
-    const penalite = basePreferee && base.nom !== basePreferee ? PENALITE_AUTRE_LANGUE : 0;
-    for (let k = 0; k < n; k++) {
-      let d = seuil - penalite, ri = -1;
-      const q = k * 4;
-      const m0 = m[q], m1 = m[q + 1], m2 = m[q + 2], m3 = m[q + 3];
-      for (let i = 0; i < nr; i++) {
-        // Écart de formes (écrit d'un bloc : c'est la boucle la plus parcourue).
-        const p = i * 4;
-        let x = motsPhoto[p] ^ m0;
-        let il = BITS[x & 65535] + BITS[x >>> 16];
-        x = motsPhoto[p + 1] ^ m1;
-        il += BITS[x & 65535] + BITS[x >>> 16];
-        x = motsPhoto[p + 2] ^ m2;
-        let en = BITS[x & 65535] + BITS[x >>> 16];
-        x = motsPhoto[p + 3] ^ m3;
-        en += BITS[x & 65535] + BITS[x >>> 16];
-        const f = il * POIDS.illustration + en * POIDS.entiere;
-        if (f >= d) continue; // inutile de comparer les couleurs
-        const t = f + ecartCouleurs(empreintes[i], o, k);
-        if (t < d) { d = t; ri = i; }
+
+  /** Compare toute la base à la photo vue avec ces cadrages ; met à jour les finalistes. */
+  function passe(rects) {
+    const empreintes = rects.map((r) => empreinte(px, w, h, r));
+    const tout = new Uint8Array(empreintes.length * 30);
+    empreintes.forEach((e, i) => tout.set(e, i * 30));
+    const motsPhoto = enMots(tout, empreintes.length);
+    const nr = empreintes.length;
+    for (let b = 0; b < bases.length; b++) {
+      const base = bases[b];
+      const o = base.octets;
+      const m = motsDe(base);
+      const n = base.ids.length;
+      const penalite = basePreferee && base.nom !== basePreferee ? PENALITE_AUTRE_LANGUE : 0;
+      for (let k = 0; k < n; k++) {
+        const deja = index.get(b * 1e6 + k);
+        let d = (deja ? deja.d : seuil) - penalite, ri = -1;
+        const q = k * 4;
+        const m0 = m[q], m1 = m[q + 1], m2 = m[q + 2], m3 = m[q + 3];
+        for (let i = 0; i < nr; i++) {
+          // Écart de formes (écrit d'un bloc : c'est la boucle la plus parcourue).
+          const p = i * 4;
+          let x = motsPhoto[p] ^ m0;
+          let il = BITS[x & 65535] + BITS[x >>> 16];
+          x = motsPhoto[p + 1] ^ m1;
+          il += BITS[x & 65535] + BITS[x >>> 16];
+          x = motsPhoto[p + 2] ^ m2;
+          let en = BITS[x & 65535] + BITS[x >>> 16];
+          x = motsPhoto[p + 3] ^ m3;
+          en += BITS[x & 65535] + BITS[x >>> 16];
+          const f = il * POIDS.illustration + en * POIDS.entiere;
+          if (f >= d) continue; // inutile de comparer les couleurs
+          const t = f + ecartCouleurs(empreintes[i], o, k);
+          if (t < d) { d = t; ri = i; }
+        }
+        if (ri < 0) continue;
+        if (deja) {
+          deja.d = d + penalite;
+          deja.r = rects[ri];
+        } else {
+          const nouvelle = { b, k, d: d + penalite, r: rects[ri], penalite };
+          finalistes.push(nouvelle);
+          index.set(b * 1e6 + k, nouvelle);
+        }
+        finalistes.sort((p, q2) => p.d - q2.d);
+        if (finalistes.length > FINALISTES) {
+          const sortie = finalistes.pop();
+          index.delete(sortie.b * 1e6 + sortie.k);
+        }
+        if (finalistes.length === FINALISTES) seuil = finalistes[FINALISTES - 1].d;
       }
-      if (ri < 0) continue;
-      finalistes.push({ b, k, d: d + penalite, r: rects[ri], penalite });
-      finalistes.sort((p, q) => p.d - q.d);
-      if (finalistes.length > FINALISTES) finalistes.pop();
-      if (finalistes.length === FINALISTES) seuil = finalistes[FINALISTES - 1].d;
     }
   }
+
+  // 1. Cadrages du cadre de visée (la carte le remplit à peu près).
+  const rects = cadrages(w, h);
+  passe(rects);
+  // 2. Si aucune carte ne ressort nettement, on cherche où se trouve la carte dans la photo
+  //    (tenue de loin, dans un étui…) et on compare à nouveau toute la base autour de cet endroit.
+  const nette =
+    confiance && finalistes.length > 1 && finalistes[0].d <= confiance[0] && finalistes[1].d - finalistes[0].d >= confiance[1];
+  if (propositions > 0 && !nette) {
+    const voisins = localiser(px, w, h, propositions).flatMap((r) => voisinage(r, autour));
+    passe(voisins);
+    rects.push(...voisins);
+  }
+  if (reglages.suivi) reglages.suivi.localisation = propositions > 0 && !nette;
 
   // 3. Les meilleures finalistes : on ajuste le cadrage autour du leur, de plus en plus finement.
   const deja = new Set(rects.map((r) => `${Math.round(r.x)},${Math.round(r.y)},${Math.round(r.l)}`));
