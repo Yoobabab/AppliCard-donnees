@@ -2,7 +2,8 @@
 // node outils/simulation.mjs [nombre]
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import sharp from 'sharp';
-import { reconnaitre } from './reconnaissance.mjs';
+import { cadrages } from './reconnaissance.mjs';
+import { empreinte } from './empreinte.mjs';
 import { POIDS } from './empreinte.mjs';
 
 const N = Number(process.argv[2] ?? 300);
@@ -55,32 +56,51 @@ async function photoSimulee(url, niveau) {
 }
 
 mkdirSync('simulation', { recursive: true });
-const lignes = [];
-const resultats = {};
+const BITS = new Uint8Array(256);
+for (let i = 0; i < 256; i++) BITS[i] = (i & 1) + BITS[i >> 1];
+function dist(a, b, ob, p) {
+  let il = 0, en = 0, te = 0;
+  for (let i = 0; i < 8; i++) il += BITS[a[i] ^ b[ob + i]];
+  for (let i = 8; i < 16; i++) en += BITS[a[i] ^ b[ob + i]];
+  for (let i = 16; i < 30; i++) { const x = a[i], y = b[ob + i]; te += Math.abs((x & 15) - (y & 15)) + Math.abs((x >> 4) - (y >> 4)); }
+  return il * p.il + en * p.en + te * p.te;
+}
+const essais = [];
 for (const niveau of ['facile', 'moyen', 'difficile']) {
-  const stats = { essais: 0, top1: 0, top3: 0, top6: 0, ecarts: [] };
   for (const base of bases) {
     const nombre = base.nom === 'intl' ? N : Math.round(N / 2);
     const ech = [...base.ids].sort(() => Math.random() - 0.5).slice(0, nombre);
-    for (const [k, id] of ech.entries()) {
+    for (const id of ech) {
       const url = etats[base.nom][id];
       if (!url) continue;
       const p = await photoSimulee(url, niveau);
       if (!p) continue;
-      const t = Date.now();
-      const res = reconnaitre(p.px, p.w, p.h, bases, 6);
-      const rang = res.findIndex((r) => r.id === id && r.base === base.nom);
-      stats.essais++;
-      if (rang === 0) stats.top1++;
-      if (rang >= 0 && rang < 3) stats.top3++;
-      if (rang >= 0) stats.top6++;
-      if (k < 3 && niveau === 'difficile') writeFileSync(`simulation/${base.nom}_${id.replace(/[^\w.-]/g, '_')}.jpg`, p.jpeg);
-      if (rang !== 0 && lignes.length < 40) lignes.push(`${niveau} ${base.nom} ${id} → rang ${rang} ; proposées : ${res.slice(0, 3).map((r) => `${r.id} (${r.d.toFixed(1)})`).join(', ')} (${Date.now() - t} ms)`);
+      essais.push({ niveau, base: base.nom, id, emps: cadrages(p.w, p.h).map((r) => empreinte(p.px, p.w, p.h, r)) });
     }
   }
-  resultats[niveau] = stats;
-  const pc = (x) => `${((100 * x) / stats.essais).toFixed(1)} %`;
-  console.log(`[${niveau}] ${stats.essais} photos : 1re proposition juste ${pc(stats.top1)}, dans les 3 premières ${pc(stats.top3)}, dans les 6 ${pc(stats.top6)}`);
 }
-console.log('Poids :', JSON.stringify(POIDS));
-console.log('\nErreurs (exemples) :\n' + lignes.join('\n'));
+console.log(`${essais.length} photos simulées`);
+const CONFIGS = [
+  { il: 1, en: 0.6, te: 0.5 }, { il: 1, en: 1, te: 0.5 }, { il: 1, en: 0.6, te: 1 }, { il: 1, en: 0.3, te: 0.3 }, { il: 1, en: 0.6, te: 0.25 }, { il: 0.6, en: 1, te: 0.5 },
+];
+for (const cfg of CONFIGS) {
+  // distances minimales par carte pour chaque photo, calculées une fois par configuration
+  const parPhoto = essais.map((e) => bases.map((b) => {
+    const n = b.ids.length; const d = new Float64Array(n);
+    for (let k = 0; k < n; k++) { let m = Infinity; for (const x of e.emps) { const v = dist(x, b.octets, k * 30, cfg); if (v < m) m = v; } d[k] = m; }
+    return d;
+  }));
+  for (const penalite of [0, 4, 8]) {
+    const st = {};
+    essais.forEach((e, j) => {
+      const cible = bases.findIndex((b) => b.nom === e.base);
+      const k0 = bases[cible].ids.indexOf(e.id);
+      const dCible = parPhoto[j][cible][k0];
+      let mieux = 0;
+      bases.forEach((b, bi) => { const pen = bi === cible ? 0 : penalite; const d = parPhoto[j][bi]; for (let k = 0; k < d.length; k++) if (d[k] + pen < dCible && !(bi === cible && k === k0)) mieux++; });
+      const s0 = (st[e.niveau] ??= { n: 0, t1: 0, t3: 0, t6: 0 });
+      s0.n++; if (mieux === 0) s0.t1++; if (mieux < 3) s0.t3++; if (mieux < 6) s0.t6++;
+    });
+    console.log(`poids ${JSON.stringify(cfg)} pénalité autre langue ${penalite} : ` + Object.entries(st).map(([n, v]) => `${n} ${(100 * v.t1 / v.n).toFixed(1)}/${(100 * v.t3 / v.n).toFixed(1)}/${(100 * v.t6 / v.n).toFixed(1)}`).join(' · '));
+  }
+}
