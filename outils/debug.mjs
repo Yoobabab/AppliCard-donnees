@@ -1,4 +1,4 @@
-const j = async (u) => (await fetch(u)).json();
+const j = async (u) => (await fetch(u, { headers: { 'User-Agent': 'AppliCard-donnees/1.0 (+https://github.com/Yoobabab)' } })).json();
 for (const [set, gid] of [['E2', 23731], ['PCG3', 24135], ['E4', 23733]]) {
   const s = await j(`https://api.tcgdex.net/v2/ja/sets/${set}`);
   const p = (await j(`https://tcgcsv.com/tcgplayer/85/${gid}/products`)).results;
