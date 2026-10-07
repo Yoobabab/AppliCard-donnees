@@ -196,6 +196,7 @@ function contenuGroupe(cat, groupId) {
 // ---------- 5. Noms japonais → anglais (validation des correspondances japonaises)
 const especes = []; // [katakana, anglais normalisé, anglais en minuscules]
 const especeParDex = new Map(); // numéro de Pokédex → nom anglais en minuscules
+const especesLatines = []; // [anglais normalisé, anglais en minuscules], du plus long au plus court
 {
   const csv = (await (await requete('https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv'))?.text()) ?? '';
   const parId = new Map();
@@ -206,13 +207,20 @@ const especeParDex = new Map(); // numéro de Pokédex → nom anglais en minusc
   }
   for (const [id, e] of parId) {
     if (e.ja && e.en) especes.push([e.ja, norm(e.en), e.en.toLowerCase()]);
-    if (e.en) especeParDex.set(Number(id), e.en.toLowerCase());
+    if (e.en) { especeParDex.set(Number(id), e.en.toLowerCase()); especesLatines.push([norm(e.en), e.en.toLowerCase()]); }
   }
+  especesLatines.sort((a, b) => b[0].length - a[0].length);
   especes.sort((a, b) => b[0].length - a[0].length);
   note(`PokéAPI : ${especes.length} noms d'espèces japonais`);
 }
 const especeDe = (nomJa) => especes.find(([ja]) => nomJa?.includes(ja))?.[1];
-const especeBruteDe = (nomJa) => especes.find(([ja]) => nomJa?.includes(ja))?.[2];
+/** Nom anglais (minuscules) du Pokémon d'après un nom TCGdex : en katakana, ou parfois déjà en lettres latines. */
+function especeBruteDe(nom) {
+  const ja = especes.find(([k]) => nom?.includes(k))?.[2];
+  if (ja || !/[a-z]/i.test(nom ?? '')) return ja;
+  const n = norm(nom);
+  return especesLatines.find(([en]) => en.length >= 3 && n.includes(en))?.[1];
+}
 const echapper = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 /** Vrai si le nom anglais de l'espèce apparaît comme mot entier (« Mew » ne doit pas trouver « Mewtwo »). */
 const contientMot = (texte, mot) => new RegExp(`(^|[^a-z])${echapper(mot)}($|[^a-z])`).test(texte.toLowerCase());
@@ -232,7 +240,8 @@ async function produitTcgplayer(setId, carte, japonais, validation) {
     // sinon d'après le nom japonais (les noms TCGdex des anciennes séries sont parfois faux).
     const brut = carte.especeEn ?? especeBruteDe(carte.name);
     if (brut) {
-      const ok = candidats.find((p) => contientMot(p.name, brut));
+      // Même numéro : on vérifie juste que le nom du Pokémon y figure.
+      const ok = candidats.find((p) => contientMot(p.name, brut) || nomProduit(p.name).includes(norm(brut)));
       if (candidats.length) { validation.essais++; if (ok) validation.reussis++; }
       if (ok) return ok;
       // Pas de numéro commun : le seul produit de l'extension qui porte ce nom de Pokémon.
