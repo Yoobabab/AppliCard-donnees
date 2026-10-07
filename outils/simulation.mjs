@@ -107,10 +107,8 @@ async function photoSimulee(brut, niveau) {
 
 const REGLAGES = {
   'avant (v0.9)': { propositions: 0, affiner: 0 },
-  'loc3 large aff5': { propositions: 3, autour: 'large', affiner: 5 },
-  'idem si doute 25/12': { propositions: 3, autour: 'large', affiner: 5, confiance: [25, 12] },
-  'idem si doute 30/10': { propositions: 3, autour: 'large', affiner: 5, confiance: [30, 10] },
-  'idem si doute 35/8': { propositions: 3, autour: 'large', affiner: 5, confiance: [35, 8] },
+  'réglage actuel': {},
+  'toujours chercher': { confiance: null },
 };
 
 mkdirSync('simulation', { recursive: true });
