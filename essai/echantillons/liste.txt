@@ -1,18 +1,18 @@
-ja_MC-547 « ドロンチ » l:tpc/MC/MC_547_R_JP
-ja_SM10-069 « ペルシアンGX » l:tpc/SM10/SM10_69_R_JP
-ja_PCG2-047 « ブレルーム » g:612270
-ja_PMCG1-043 « ケーシィ » g:575569
-ja_PMCG1-020 « ブーバー » g:575648
-ja_neo4-021 « 軽アルカニン » g:575500
-ja_neo3-034 « スターミー » g:575239
-ja_SM12-100 « アルセウス&ディアルガ&パルキアGX » t:ja/SM/SM12/100
-ja_SM5S-016 « ブーバーン » t:ja/SM/SM5S/016
-ja_SM7a-043 « メタモン » t:ja/SM/SM7a/043
-ja_SM8-102 « ウツギ博士のレクチャー » t:ja/SM/SM8/102
-fr_ecard2-H02 « Arcanin » g:83576
-fr_ecard2-H03 « Migalos » g:83614
-fr_ecard2-H01 « Pharamp » g:83537
-logo base1 https://assets.tcgdex.net/en/base/base1/logo.webp
+ja_SM2K-044 « スバメ » l:tpc/SM2K/SM2K_44_R_JP
+ja_SV11B-139 « ホイーガ » l:tpc/SV11B/SV11B_139_R_JP
+ja_E1-063 « 模倣 » g:575967
+ja_PCG7-026 « オマニテ（デルタ種） » g:611334
+ja_E1-029 « meowth » g:576021
+ja_VS1-001 « フォークナーのpidgeot » g:618723
+ja_E1-113 « ライチュ » g:576049
+ja_SM1S-010 « ウインディ » t:ja/SM/SM1S/010
+ja_SM7a-059 « ダブル無色エネルギー » t:ja/SM/SM7a/059
+ja_SM12-067 « ジジーロン » t:ja/SM/SM12/067
+ja_SM1S-062 « エーフィGX » t:ja/SM/SM1S/062
+fr_ecard2-H08 « Entei » g:85267
+fr_ecard2-H07 « Électrode » g:85147
+fr_ecard2-H09 « Mentali » g:85317
 logo np https://assets.tcgdex.net/en/pop/np/logo.webp
-logo tk-ex-m https://images.pokemontcg.io/tk2b/logo.png
-logo pop1 https://assets.tcgdex.net/en/pop/pop1/logo.webp
+logo base1 https://assets.tcgdex.net/en/base/base1/logo.webp
+logo basep https://images.pokemontcg.io/basep/logo.png
+logo tk-ex-p https://images.pokemontcg.io/tk2a/logo.png
