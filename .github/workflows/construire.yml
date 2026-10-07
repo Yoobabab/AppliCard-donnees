@@ -1,0 +1,38 @@
+# Chaque nuit, le robot met à jour les compléments de la base de cartes AppliCard
+# (images, cotes et logos qui manquent dans TCGdex) et les publie dans ce dépôt.
+name: Mise à jour des données
+
+on:
+  schedule:
+    - cron: '17 3 * * *'   # tous les jours vers 5 h (heure de Paris)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['outils/**', '.github/workflows/construire.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: construire
+  cancel-in-progress: false
+
+jobs:
+  construire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Construire les compléments
+        run: SORTIE=. node outils/construire.mjs
+      - name: Publier
+        run: |
+          git config user.name "robot-applicard"
+          git config user.email "robot-applicard@users.noreply.github.com"
+          git add v1 rapport.txt
+          if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
+          git commit -m "Données du $(date -u +%Y-%m-%d)"
+          git push
