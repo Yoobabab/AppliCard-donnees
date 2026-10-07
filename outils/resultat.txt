@@ -1,0 +1,117 @@
+VS1-001 フォークナーのpidgeot dex 18 → idProduct undefined  exp  (0 produits)
+VS1-002 フォークナーの恐怖 dex 22 → idProduct undefined  exp  (0 produits)
+VS1-003 フォークナーのファーフェッチ dex 83 → idProduct undefined  exp  (0 produits)
+E1-001 Koffing dex 109 → idProduct undefined  exp  (0 produits)
+E1-002 ホッピップ dex 187 → idProduct undefined  exp  (0 produits)
+E1-003 キャタピー dex 10 → idProduct undefined  exp  (0 produits)
+neo4-001 ヴェノナト dex 48 → idProduct undefined  exp  (0 produits)
+neo4-002 レディバ dex 165 → idProduct undefined  exp  (0 produits)
+neo4-003 サンカーン dex 191 → idProduct undefined  exp  (0 produits)
+neo1-001 奇妙な dex 43 → idProduct undefined  exp  (0 produits)
+neo1-002 チコリータ dex 152 → idProduct undefined  exp  (0 produits)
+neo1-003 レディバ dex 165 → idProduct undefined  exp  (0 produits)
+PMCG1-001 フシギダネ dex 1 → idProduct undefined  exp  (0 produits)
+PMCG1-002 キャタピー dex 10 → idProduct undefined  exp  (0 produits)
+PMCG1-003 トランセル dex 11 → idProduct undefined  exp  (0 produits)
+PMCG5-001 タケシのズバット dex 41 → idProduct undefined  exp  (0 produits)
+PMCG5-002 エリカのナゾノクサ dex 43 → idProduct undefined  exp  (0 produits)
+PMCG5-003 エリカのナゾノクサ dex 43 → idProduct undefined  exp  (0 produits)
+PCG5-001 ベルスプラウト dex 69 → idProduct undefined  exp  (0 produits)
+PCG5-002 weepinbell dex 70 → idProduct undefined  exp  (0 produits)
+PCG5-003 Victreebel dex 71 → idProduct undefined  exp  (0 produits)
+PCG8-001 ブルバサウルス dex 1 → idProduct undefined  exp  (0 produits)
+PCG8-002 アイビサウルス dex 2 → idProduct undefined  exp  (0 produits)
+PCG8-003 金星 dex 3 → idProduct undefined  exp  (0 produits)
+web1-001 アイビサウルス dex 2 → idProduct undefined  exp  (0 produits)
+web1-002 ニドラン dex 32 → idProduct undefined  exp  (0 produits)
+web1-003 ヴェノナト dex 48 → idProduct undefined  exp  (0 produits)
+SV-P-001 ピカチュウ dex 25 → idProduct 687450 Pikachu [Adventuring Together] exp 5212 (304 produits)
+SV-P-002 ワナイダー dex 918 → idProduct 692248 Spidops [String Truss | Jet Headbutt] exp 5212 (304 produits)
+SV-P-003 ウインディ dex 59 → idProduct 692249 Arcanine [Crunch | Fire Mane] exp 5212 (304 produits)
+M-P-001 チコリータ dex 152 → idProduct 839193 Chikorita [Razor Leaf] exp 6230 (164 produits)
+M-P-002 ラプラスex dex 131 → idProduct 839209 Lapras ex [Hydro Turn | Surf] exp 6230 (164 produits)
+M-P-003 マシマシラ dex 1015 → idProduct 839215 Munkidori [Adrena-Brain | Mind Bend] exp 6230 (164 produits)
+SM1p-001 モクロー dex 722 → idProduct 561529 Rowlet [Tackle | Leafage] exp 3961 (73 produits)
+SM1p-002 フクスロー dex 723 → idProduct 561530 Dartrix [Sharp Blade Quill | Leaf Blade] exp 3961 (73 produits)
+SM1p-003 ジュナイパーGX dex 724 → idProduct 561531 Decidueye GX [Feather Arrow | Razor Leaf | Hollow Hunt GX] exp 3961 (73 produits)
+
+--- Cardmarket accueil https://www.cardmarket.com/fr/Pokemon → 403 text/html; charset=UTF-8 5488 url finale https://www.cardmarket.com/fr/Pokemon
+<title>Attention Required! | Cloudflare
+
+--- Cardmarket produit https://www.cardmarket.com/en/Pokemon/Products?idProduct=719604 → 403 text/html; charset=UTF-8 5488 url finale https://www.cardmarket.com/en/Pokemon/Products?idProduct=719604
+<title>Attention Required! | Cloudflare
+HEAD https://product-images.s3.cardmarket.com/51/SV2a/719604/719604.jpg 403
+HEAD https://product-images.s3.cardmarket.com/51/719604.jpg 403
+HEAD https://product-images.s3.cardmarket.com/51/MEW/733746/733746.jpg 403
+HEAD https://product-images.s3.cardmarket.com/51/MEW/733746/733746.png 403
+
+Codes Limitless JP : M6a MF M6 MEE MEM MEZ M5 M4 M3 MC MP1 M2a M2 MBD MBG M1L M1S MA MP SV11B SV11W SV10 SV9a SVOD SVOM SV9 SVN SV8a SVM SV8 SV7a SVLN SVLS SV7 SVK SV6a SVJL SVJP SV6 SV5a SVI SV5K SV5M SVHK SVHM SV4a SVG SV4K SV4M SV3a SVEL SVEM SV3 SVF WCS23 SVD SV2a SVP1 SV2D SV2P SVC SV1a SV1S SV1V SVAL SVAM SVAW SVB SVP S12a SO S12 S11a SP6 S11 SPD SPZ S10b S10a S10D S10P SN S9a SLD SLL S9 SK SI S8b SJ S8a S8 SP5 S7D S7R SH S6a SGG SGI SP4 S6H S6K SP3 S5a S5I S5R SF SC2 SEF SEK S4a SP2 S4 S3a SD S3 S2a SCd SCr S2 S1a SP1 S1H S1W SB SAf SAg SAl SAr SAw SP SM12a SM12 SM11b SM11a SM11 SMM SM10b SMP2 SM10a SML SM10 SMN SM9b SMK SM9a SM9 SMJ SMI SM8b SM8a SM8 SM7b SMH SM7a SM7 SM6b SM6a SM6 SMG SM5p SM5M SM5S SMF SME SM4p SM4A SM4S SM3p SM3H SM3N SM2p SMD SM2K SM2L SMC SM1p SMP1 SM1M SM1S SMA SMB SM0 SMP XY CP6 CP5 XY11b XY11r CP4 XY10 XYG XYH 20th CP3 XY9 XYF SNPo SNPr XY8b XY8r MMBp MMBs CP2 XYE XY7 XY6 XYD CP1 XY5g XY5t XYC XY4 XYB XY3 XY2 XYA X30 Y30 XY1x XY1y HXY XYP EBB MGg MGm BW9 KK SC BW8f BW8n PBG WAK BKB BKW BW7 MDB PPD BW6c BW6f HSZ KLD BW5n BW5z GBR SZD DS BW4 BGS HSP BKR BKZ BW3h BW3p BW2 BTV BKc BKt BKv BW1b BW1w HS CS1 BWP
+
+--- Limitless https://limitlesstcg.com/cards/jp/SV-P → 404 text/html; charset=UTF-8 13232 url finale https://limitlesstcg.com/cards/jp/SV-P
+
+
+--- Limitless https://limitlesstcg.com/cards/jp/SVP → 200 text/html; charset=UTF-8 85163 url finale https://limitlesstcg.com/cards/jp/SVP
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_1_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_2_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_3_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_4_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_5_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_6_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_7_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_8_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_9_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_10_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_11_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/SVP/SVP_12_R_JP_SM.png
+
+--- Limitless https://limitlesstcg.com/cards/jp/MP → 200 text/html; charset=UTF-8 45888 url finale https://limitlesstcg.com/cards/jp/MP
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_1_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_2_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_3_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_4_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_5_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_6_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_7_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_8_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_9_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_10_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_11_R_JP_SM.png
+https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/tpc/MP/MP_12_R_JP_SM.png
+
+--- PriceCharting https://www.pricecharting.com/console/pokemon-japanese-neo-genesis → 404 text/html; charset=utf-8 45023 url finale https://www.pricecharting.com/console/pokemon-japanese-neo-genesis
+<title>
+
+--- PriceCharting FR https://www.pricecharting.com/search-products?q=pokemon+french&type=prices → 200 text/html; charset=utf-8 71131 url finale https://www.pricecharting.com/search-products?q=pokemon+french&type=prices
+<title>Pokemon French Prices | Pokemon French List
+
+console/pokemon-promo
+
+--- Bulbagarden https://archives.bulbagarden.net/w/api.php?action=query&list=search&srsearch=Neo%20Genesis%20Japanese%20card&srnamespace=6&format=json&srlimit=10 → 403 text/html; charset=UTF-8 6288 url finale https://archives.bulbagarden.net/w/api.php?action=query&list=search&srsearch=Neo%20Genesis%20Japanese%20card&srnamespace=6&format=json&srlimit=10
+
+
+--- Bulbagarden cat https://archives.bulbagarden.net/w/api.php?action=query&list=allcategories&acprefix=Gold,_Silver&format=json&aclimit=20 → 403 text/html; charset=UTF-8 6153 url finale https://archives.bulbagarden.net/w/api.php?action=query&list=allcategories&acprefix=Gold,_Silver&format=json&aclimit=20
+
+
+FR 2018sm-fr : 1:Feuillajou:- 2:Croquine:- 3:Sovkipou:- 4:Salamèche:- 5:Caninos:- 6:Chartor:-
+EN 2018sm : 1:Growlithe:- 2:Psyduck:- 3:Horsea:- 4:Pikachu:- 5:Slowpoke:- 6:Machop:-
+
+FR 2019sm-fr : 1:Bulbizarre:- 2:Chenipan:- 3:Paras:- 4:Chétiflor:- 5:Noadkoko d'Alola:- 6:Saquedeneu:-
+EN 2019sm : 1:Caterpie:- 2:Alolan Exeggutor:- 3:Magmar:- 4:Alolan Sandshrew:- 5:Lapras:- 6:Pikachu:-
+
+FR cel25cc : CC001:Tortank:- CC002:Dracaufeu:- CC003:Florizarre:- CC004:Faux Professeur Chen:- CC005:Léviator obscur:- CC006:Et voila les Team Rocket !:-
+EN cel25cc : CC001:Blastoise:- CC002:Charizard:- CC003:Venusaur:- CC004:Imposter Professor Oak:- CC005:Dark Gyarados:- CC006:Here Comes Team Rocket!:-
+
+FR exu : !:Zarbi:- %3F:Zarbi:- A:Zarbi:- B:Zarbi:- C:Zarbi:- D:Zarbi:-
+EN exu : !:Unown:- %3F:Unown:- A:Unown:- B:Unown:- C:Unown:- D:Unown:-
+
+FR 2013bw : 1:Phyllali:- 2:Pyroli:- 3:Aquali:- 4:Givrali:- 5:Pikachu:- 6:Voltali:-
+EN 2013bw : undefined
+
+FR xya : 24a:M-Élecsprint-ex:- 28a:Voltali-ex:- 54a:Zygarde-ex:- 55a:M-Lucario-ex:- 92a:Courrier du Dresseur:- 107a:Professeur Platane:-
+EN xya : 24a:M Manectric-EX:- 28a:Jolteon-EX:- 54a:Zygarde-EX:- 55a:M Lucario-EX:- 92a:Trainers’ Mail:- 107a:Professor Sycamore:-
+
+TCGplayer McDo 2018 : Horsea - 3/12 003/012 | Growlithe - 1/12 001/012 | Psyduck - 2/12 002/012 | Pikachu - 4/12 004/012 | Slowpoke - 5/12 005/012 | Machop - 6/12 006/012 | Cubone - 7/12 007/012 | Magnemite - 8/12 008/012
+TCGplayer CelCC : Dark Gyarados 8/82 | Blastoise 2/102 | Charizard 4/102 | Venusaur 15/102 | Imposter Professor Oak 73/102 | Here Comes Team Rocket! 15/82 | Rocket's Zapdos 15/132 | ______'s Pikachu 24/53
+TCGplayer UF : Unown (!) !/28 | Unown (?) ?/28 | Unown (A) A/28 | Unown (B) B/28 | Unown (C) C/28 | Unown (D) D/28 | Unown (E) E/28 | Unown (F) F/28
+
+Scellés « Japanese » : 1526:Fossil Booster | 1531:Neo Genesis Booster | 1525:Jungle Booster | 1542:EX Team Magma vs Team Aqua Booster | 1542:EX Team Magma vs Team Aqua Booster Box | 1526:Fossil Booster Box | 1525:Jungle Booster Box | 1531:Neo Genesis Booster Box | 1525:Jungle: Water Blast Theme Deck | 1525:Jungle: Power Reserve Theme Deck | 1526:Fossil: LockDown Theme Deck | 1526:Fossil: BodyGuard Theme Deck | 1542:EX Team Magma vs Team Aqua: Team Magma Theme Deck | 1542:EX Team Magma vs Team Aqua: Team Aqua Theme Deck | 1531:Neo Genesis: Hotfoot Theme Deck | 1531:Neo Genesis: Cold Fusion Theme Deck | 1645:EX Deck Tins: Team Magma vs. Team Aqua Tin | 1525:Jungle: Vileplume Coin (Theme Decks) | 1526:Fossil: Aerodactyl Coin (Theme Decks) | 1645:Pokemon VS emblem Coin (Pokemon VS release tournaments) | 1645:Latias and Latios Coin (Theater Limited VS Pack) | 1645:Jirachi Coin (Movie Commemoration VS Pack) | 1542:EX Team Magma vs Team Aqua: Team Magma emblem Coin (Team Magma Theme Deck) | 1542:EX Team Magma vs Team Aqua: Team Aqua emblem Coin (Team Aqua Theme Deck) | 1645:Munchlax Coin (Movie Commemoration VS Pack: Space Fissure's Deoxys) | 1645:Lucario Coin (Movie Commemoration VS Pack: Aura's Lucario) | 1645:Manaphy Coin (Movie Commemoration VS Pack: Sea's Manaphy) | 1645:Magmortar and Electivire Coin (Magmortar vs Electivire Deck Kit) | 1645:Gliscor and Mewtwo Coin (Heatran vs Regigigas Deck Kit) | 1645:Pokemon VS emblem Coin (Battle Gift Set: Thundurus vs Tornadus)
