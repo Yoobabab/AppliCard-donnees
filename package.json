@@ -1,0 +1,9 @@
+{
+  "name": "applicard-donnees",
+  "private": true,
+  "type": "module",
+  "description": "Robot de données AppliCard",
+  "dependencies": {
+    "sharp": "^0.34.0"
+  }
+}

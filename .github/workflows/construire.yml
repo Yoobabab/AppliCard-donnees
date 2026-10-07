@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['outils/**', '.github/workflows/construire.yml']
+    paths: ['outils/**', 'package.json', '.github/workflows/construire.yml']
 
 permissions:
   contents: write
@@ -20,19 +20,23 @@ concurrency:
 jobs:
   construire:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Construire les compléments
-        run: SORTIE=. node outils/construire.mjs
+      - name: Installer les outils
+        run: npm ci
+      - name: Vérifier le calcul des empreintes
+        run: node outils/test-empreinte.mjs 3819d0ee19cfc98e1278add87d45cd458777788aa97886899888a9988608
+      - name: Construire les compléments et les empreintes
+        run: SORTIE=. LIMITE_EMPREINTES=40000 node outils/construire.mjs
       - name: Publier
         run: |
           git config user.name "robot-applicard"
           git config user.email "robot-applicard@users.noreply.github.com"
-          git add v1 rapport.txt
+          git add v1 etat rapport.txt
           if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
           git commit -m "Données du $(date -u +%Y-%m-%d)"
           git push

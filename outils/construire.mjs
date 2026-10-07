@@ -18,6 +18,7 @@
 //   g:<id>      TCGplayer     https://tcgplayer-cdn.tcgplayer.com/product/<id>_{200w|in_1000x1000}.jpg
 
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { construireEmpreintes, petiteImage } from './empreintes.mjs';
 
 const SORTIE = process.env.SORTIE ?? 'donnees';
 const ECHANTILLONS = process.env.ECHANTILLONS === '1';
@@ -445,6 +446,35 @@ for (const lang of LANGUES) {
 writeFileSync(`${SORTIE}/v1/cotes.json`, JSON.stringify({ version: 1, genere, source: 'TCGplayer', taux, cotes: resultats['cotes-intl'] }));
 writeFileSync(`${SORTIE}/v1/cotes-ja.json`, JSON.stringify({ version: 1, genere, source: 'TCGplayer', taux, cotes: resultats['cotes-ja'] }));
 note(`\nExtensions exclues (Pokémon TCG Pocket) : ${exclus.join(' ')}`);
+// ---------- 11 bis. Empreintes pour la reconnaissance par photo
+if (process.env.EMPREINTES !== '0') {
+  const intl = new Map();
+  for (const lang of ['en', 'fr', 'de', 'it', 'es']) {
+    for (const s of tcgdex[lang]) {
+      if (estPocket(s)) continue;
+      for (const c of s.cards ?? []) {
+        if (intl.has(c.id)) continue;
+        const code = c.image ? null : resultats.en.images[c.id] ?? resultats[lang].images[c.id];
+        const url = c.image ? `${c.image}/low.webp` : code && petiteImage(code);
+        if (url) intl.set(c.id, url);
+      }
+    }
+  }
+  // Une image anglaise trouvée plus loin vaut mieux qu'une image de complément.
+  for (const s of tcgdex.en) for (const c of s.cards ?? []) if (c.image && !estPocket(s)) intl.set(c.id, `${c.image}/low.webp`);
+  const ja = new Map();
+  for (const s of tcgdex.ja) {
+    for (const c of s.cards ?? []) {
+      const code = c.image ? null : resultats.ja.images[c.id];
+      const url = c.image ? `${c.image}/low.webp` : code && petiteImage(code);
+      if (url) ja.set(c.id, url);
+    }
+  }
+  const LIMITE = Number(process.env.LIMITE_EMPREINTES ?? 15000);
+  await construireEmpreintes('intl', intl, { SORTIE, UA, LIMITE, pool, note });
+  await construireEmpreintes('ja', ja, { SORTIE, UA, LIMITE: Math.max(0, LIMITE), pool, note });
+}
+
 note(`Durée : ${Math.round((Date.now() - t0) / 1000)} s`);
 writeFileSync(`${SORTIE}/rapport.txt`, rapport.join('\n') + '\n');
 
