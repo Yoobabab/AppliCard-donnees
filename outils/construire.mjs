@@ -64,6 +64,8 @@ function cleNumero(n) {
 }
 const estPocket = (s) => s.serie?.id === 'tcgp' || /^(A\d+[a-z]?|B\d+[a-z]?|P-A|P-B)$/.test(s.id);
 const URL_LIM = 'https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/';
+// Codes Limitless différents de ceux de TCGdex (promos japonaises).
+const ALIAS_LIMITLESS_JA = { 'SV-P': 'SVP', 'M-P': 'MP' };
 
 // ---------- 1. TCGdex
 async function setsComplets(lang) {
@@ -124,7 +126,7 @@ const GROUPES_JA = {
   SMP2: 23869, 'SV-P': 23779, 'M-P': 24423, M1L: 24399, M1S: 24400, MC: 24567, CP5: 23981, S8a: 23638,
 };
 const GROUPES_INTL = {
-  mep: 24451, svp: 22872, smp: 1861, swshp: 2545, xyp: 1451, bwp: 1407, hgssp: 1453, dpp: 1421, np: 1423, basep: 1418,
+  exu: 1398, mep: 24451, svp: 22872, smp: 1861, swshp: 2545, xyp: 1451, bwp: 1407, hgssp: 1453, dpp: 1421, np: 1423, basep: 1418,
   '2011bw': 1401, '2012bw': 1427, '2014xy': 1692, '2015xy': 1694, '2016xy': 3087, '2017sm': 2148, '2018sm': 2364, '2019sm': 2555,
   '2021swsh': 2782, '2022swsh': 3150, '2023sv': 23306, '2024sv': 24163,
   '30th': 24722, '30th-c': 24837, cel25: 2867, cel25cc: 2931, mee: 24461, sve: 24382, mfb: 23330, jumbo: 1528, rc: 1729, g1: 1728,
@@ -180,6 +182,7 @@ function contenuGroupe(cat, groupId) {
 
 // ---------- 5. Noms japonais → anglais (validation des correspondances japonaises)
 const especes = []; // [katakana, anglais normalisé, anglais en minuscules]
+const especeParDex = new Map(); // numéro de Pokédex → nom anglais en minuscules
 {
   const csv = (await (await requete('https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv'))?.text()) ?? '';
   const parId = new Map();
@@ -188,7 +191,10 @@ const especes = []; // [katakana, anglais normalisé, anglais en minuscules]
     if (!nom) continue;
     const e = parId.get(id) ?? {}; if (langue === '1') e.ja = nom; if (langue === '9') e.en = nom; parId.set(id, e);
   }
-  for (const e of parId.values()) if (e.ja && e.en) especes.push([e.ja, norm(e.en), e.en.toLowerCase()]);
+  for (const [id, e] of parId) {
+    if (e.ja && e.en) especes.push([e.ja, norm(e.en), e.en.toLowerCase()]);
+    if (e.en) especeParDex.set(Number(id), e.en.toLowerCase());
+  }
   especes.sort((a, b) => b[0].length - a[0].length);
   note(`PokéAPI : ${especes.length} noms d'espèces japonais`);
 }
@@ -207,25 +213,27 @@ async function produitTcgplayer(setId, carte, japonais, validation) {
   const g = groupePour(setId, japonais);
   if (!g) return undefined;
   const { parNumero, produits } = await contenuGroupe(japonais ? 85 : 3, g.groupId);
-  const candidats = parNumero.get(cleNumero(carte.localId)) ?? [];
-  if (!candidats.length) {
-    // Anciennes cartes japonaises sans numéro : on cherche le seul produit qui porte ce nom de Pokémon.
-    const brut = japonais && parNumero.size === 0 ? especeBruteDe(carte.name) : undefined;
-    if (!brut) return undefined;
-    const memes = produits.filter((p) => contientMot(p.name, brut));
-    return memes.length === 1 ? memes[0] : undefined;
-  }
+  const candidats = parNumero.get(cleNumero(decodeURIComponent(carte.localId))) ?? [];
   if (japonais) {
-    const espece = especeDe(carte.name);
-    if (espece) {
-      const ok = candidats.find((p) => nomProduit(p.name).includes(espece));
-      validation.essais++; if (ok) validation.reussis++;
-      return ok;
+    // Nom anglais de l'espèce : d'après le numéro de Pokédex si on l'a (plus sûr),
+    // sinon d'après le nom japonais (les noms TCGdex des anciennes séries sont parfois faux).
+    const brut = carte.especeEn ?? especeBruteDe(carte.name);
+    if (brut) {
+      const ok = candidats.find((p) => contientMot(p.name, brut));
+      if (candidats.length) { validation.essais++; if (ok) validation.reussis++; }
+      if (ok) return ok;
+      // Pas de numéro commun : le seul produit de l'extension qui porte ce nom de Pokémon.
+      const memes = produits.filter((p) => contientMot(p.name, brut));
+      return memes.length === 1 ? memes[0] : undefined;
     }
     return candidats.length === 1 ? { ...candidats[0], aConfirmer: true } : undefined;
   }
   const nomEn = norm(carteParLangue.en.get(carte.id)?.name ?? carte.name);
-  return candidats.find((p) => { const n = nomProduit(p.name); return n && (n.startsWith(nomEn) || nomEn.startsWith(n)); });
+  const parNumero_ = candidats.find((p) => { const n = nomProduit(p.name); return n && (n.startsWith(nomEn) || nomEn.startsWith(n)); });
+  if (parNumero_) return parNumero_;
+  // Numérotation différente (ex. Collection Classique) : le seul produit qui porte exactement ce nom.
+  const memes = produits.filter((p) => nomProduit(p.name) === nomEn);
+  return memes.length === 1 ? memes[0] : undefined;
 }
 
 // ---------- 6. Taux de change
@@ -249,7 +257,13 @@ for (const lang of LANGUES) {
   for (const s of tcgdex[lang]) if (!estPocket(s)) for (const c of s.cards ?? []) if (!c.image) aTraiter.push({ s, c });
   stats.sans = aTraiter.length;
   const aConfirmer = [];
+  const restantsJa = [];
   await pool(aTraiter, 48, async ({ s, c }) => {
+    // 0. L'image existe parfois chez TCGdex sans être annoncée dans ses données.
+    if (s.serie?.id && !/[%?!/]/.test(c.localId)) {
+      const chemin = `${lang}/${s.serie.id}/${s.id}/${c.localId}`;
+      if (await existe(`https://assets.tcgdex.net/${chemin}/high.webp`)) { images[c.id] = 't:' + chemin; stats.cachees = (stats.cachees ?? 0) + 1; return; }
+    }
     if (!japonais) {
       // Ordre : anglais TCGdex, Limitless, Pokémon TCG API, TCGplayer, puis les autres langues TCGdex.
       const anglais = lang !== 'en' && carteParLangue.en.get(c.id)?.image;
@@ -273,7 +287,7 @@ for (const lang of LANGUES) {
       const k = `${s.id} ${s.name}`; stats.introuvables[k] = (stats.introuvables[k] ?? 0) + 1;
       return;
     } else {
-      const code = codesJp.get(s.id.toLowerCase());
+      const code = codesJp.get((ALIAS_LIMITLESS_JA[s.id] ?? s.id).toLowerCase());
       const n = parseInt(c.localId, 10);
       if (code && Number.isFinite(n)) {
         const chemin = `tpc/${code}/${code}_${n}_R_JP`;
@@ -287,6 +301,15 @@ for (const lang of LANGUES) {
       else { images[c.id] = 'g:' + p.productId; stats.tcgplayer++; }
       return;
     }
+    restantsJa.push({ s, c });
+  });
+  // Japonais, 2e passage : on reconnaît le Pokémon par son numéro de Pokédex
+  // (les noms TCGdex des séries 1996-2003 sont souvent mal transcrits).
+  await pool(restantsJa, 12, async ({ s, c }) => {
+    const fiche = await json(`https://api.tcgdex.net/v2/ja/cards/${encodeURIComponent(c.id)}`);
+    const especeEn = fiche?.dexId?.length === 1 ? especeParDex.get(fiche.dexId[0]) : undefined;
+    const p = especeEn ? await produitTcgplayer(s.id, { ...c, especeEn }, true, { essais: 0, reussis: 0 }) : undefined;
+    if (p?.imageCount && !p.aConfirmer) { images[c.id] = 'g:' + p.productId; stats.tcgplayer++; stats.parPokedex = (stats.parPokedex ?? 0) + 1; return; }
     const k = `${s.id} ${s.name}`; stats.introuvables[k] = (stats.introuvables[k] ?? 0) + 1;
   });
   // Cartes japonaises sans nom de Pokémon (dresseurs, énergies) : acceptées seulement si
@@ -296,9 +319,9 @@ for (const lang of LANGUES) {
     if (v.essais >= 5 && v.reussis / v.essais >= 0.8) { images[c.id] = 'g:' + p.productId; stats.tcgplayer++; }
     else { const k = `${s.id} ${s.name}`; stats.introuvables[k] = (stats.introuvables[k] ?? 0) + 1; }
   }
-  const trouvees = stats.tcgdex + stats.limitless + stats.ptcg + stats.tcgplayer;
+  const trouvees = stats.tcgdex + stats.limitless + stats.ptcg + stats.tcgplayer + (stats.cachees ?? 0);
   const total = tcgdex[lang].filter((s) => !estPocket(s)).reduce((n, s) => n + (s.cards?.length ?? 0), 0);
-  note(`\n[${lang}] ${total} cartes (hors Pocket), ${stats.sans} sans image → retrouvées ${trouvees} (TCGdex autre langue ${stats.tcgdex}, Limitless ${stats.limitless}, Pokémon TCG ${stats.ptcg}, TCGplayer ${stats.tcgplayer}) ; toujours sans image : ${stats.sans - trouvees} (${((100 * (stats.sans - trouvees)) / total).toFixed(1)} %)`);
+  note(`\n[${lang}] ${total} cartes (hors Pocket), ${stats.sans} sans image → retrouvées ${trouvees} (TCGdex non annoncées ${stats.cachees ?? 0}, TCGdex autre langue ${stats.tcgdex}, Limitless ${stats.limitless}, Pokémon TCG ${stats.ptcg}, TCGplayer ${stats.tcgplayer} dont ${stats.parPokedex ?? 0} par n° de Pokédex) ; toujours sans image : ${stats.sans - trouvees} (${((100 * (stats.sans - trouvees)) / total).toFixed(1)} %)`);
   note(`[${lang}] extensions avec des images manquantes : ${Object.entries(stats.introuvables).sort((a, b) => b[1] - a[1]).slice(0, 25).map(([k, v]) => `${k} (${v})`).join(' · ')}`);
   resultats[lang] = { images };
 }
