@@ -15,46 +15,43 @@ export const ALGO = 1;
 const TAILLE = 32; // grille de calcul du pHash
 const ZONE_ILLUSTRATION = { x: 0.08, y: 0.1, l: 0.84, h: 0.43 };
 
-/** Valeur interpolée d'un canal en (x, y), coordonnées en pixels. */
-function pixel(px, w, h, x, y, canal) {
-  const x0 = Math.max(0, Math.min(w - 1, Math.floor(x)));
-  const y0 = Math.max(0, Math.min(h - 1, Math.floor(y)));
-  const x1 = Math.min(w - 1, x0 + 1);
-  const y1 = Math.min(h - 1, y0 + 1);
-  const fx = Math.max(0, Math.min(1, x - x0));
-  const fy = Math.max(0, Math.min(1, y - y0));
-  const a = px[(y0 * w + x0) * 4 + canal];
-  const b = px[(y0 * w + x1) * 4 + canal];
-  const c = px[(y1 * w + x0) * 4 + canal];
-  const d = px[(y1 * w + x1) * 4 + canal];
-  return (a * (1 - fx) + b * fx) * (1 - fy) + (c * (1 - fx) + d * fx) * fy;
-}
-
-/** Moyennes R, V, B sur une grille nx × ny couvrant le rectangle (sur-échantillonnage 4 × 4 par case). */
+/**
+ * Moyennes R, V, B sur une grille nx × ny couvrant le rectangle (sur-échantillonnage 4 × 4 par case,
+ * interpolation bilinéaire). Positions horizontales calculées une fois pour toutes les lignes.
+ */
 function grille(px, w, h, rect, nx, ny) {
   const sortie = new Float64Array(nx * ny * 3);
   const k = 4;
+  const xs0 = new Int32Array(nx * k), xs1 = new Int32Array(nx * k), fxs = new Float64Array(nx * k);
+  for (let i = 0; i < nx; i++) for (let si = 0; si < k; si++) {
+    const x = rect.x + ((i + (si + 0.5) / k) / nx) * rect.l - 0.5;
+    const x0 = Math.max(0, Math.min(w - 1, Math.floor(x)));
+    xs0[i * k + si] = x0; xs1[i * k + si] = Math.min(w - 1, x0 + 1); fxs[i * k + si] = Math.max(0, Math.min(1, x - x0));
+  }
   for (let j = 0; j < ny; j++) {
     for (let i = 0; i < nx; i++) {
       let r = 0, v = 0, b = 0;
       for (let sj = 0; sj < k; sj++) {
         const y = rect.y + ((j + (sj + 0.5) / k) / ny) * rect.h - 0.5;
+        const y0 = Math.max(0, Math.min(h - 1, Math.floor(y)));
+        const y1 = Math.min(h - 1, y0 + 1);
+        const fy = Math.max(0, Math.min(1, y - y0));
+        const l0 = y0 * w, l1 = y1 * w;
         for (let si = 0; si < k; si++) {
-          const x = rect.x + ((i + (si + 0.5) / k) / nx) * rect.l - 0.5;
-          r += pixel(px, w, h, x, y, 0);
-          v += pixel(px, w, h, x, y, 1);
-          b += pixel(px, w, h, x, y, 2);
+          const q = i * k + si;
+          const x0 = xs0[q], x1 = xs1[q], fx = fxs[q];
+          const ia = (l0 + x0) * 4, ib = (l0 + x1) * 4, ic = (l1 + x0) * 4, id = (l1 + x1) * 4;
+          r += (px[ia] * (1 - fx) + px[ib] * fx) * (1 - fy) + (px[ic] * (1 - fx) + px[id] * fx) * fy;
+          v += (px[ia + 1] * (1 - fx) + px[ib + 1] * fx) * (1 - fy) + (px[ic + 1] * (1 - fx) + px[id + 1] * fx) * fy;
+          b += (px[ia + 2] * (1 - fx) + px[ib + 2] * fx) * (1 - fy) + (px[ic + 2] * (1 - fx) + px[id + 2] * fx) * fy;
         }
       }
       const o = (j * nx + i) * 3;
-      sortie[o] = r / (k * k);
-      sortie[o + 1] = v / (k * k);
-      sortie[o + 2] = b / (k * k);
+      sortie[o] = r / (k * k); sortie[o + 1] = v / (k * k); sortie[o + 2] = b / (k * k);
     }
   }
   return sortie;
 }
-
 let cosinus = null;
 function tableCosinus() {
   if (!cosinus) {
@@ -71,17 +68,21 @@ function phash(px, w, h, rect) {
   const gris = new Float64Array(TAILLE * TAILLE);
   for (let i = 0; i < gris.length; i++) gris[i] = 0.299 * rvb[i * 3] + 0.587 * rvb[i * 3 + 1] + 0.114 * rvb[i * 3 + 2];
   const c = tableCosinus();
-  // Transformée en cosinus, seulement les basses fréquences 1..8 (on saute la composante continue).
+  // Transformée en cosinus, seulement les basses fréquences 1..8 (on saute la composante continue),
+  // en deux temps (lignes puis colonnes) : mêmes calculs, dans le même ordre, mais 8 fois moins répétés.
+  const lignes = new Float64Array(TAILLE * 8);
+  for (let y = 0; y < TAILLE; y++) {
+    for (let u = 1; u <= 8; u++) {
+      let ligne = 0;
+      for (let x = 0; x < TAILLE; x++) ligne += gris[y * TAILLE + x] * c[u * TAILLE + x];
+      lignes[y * 8 + u - 1] = ligne;
+    }
+  }
   const coef = new Float64Array(64);
   for (let v = 1; v <= 8; v++) {
     for (let u = 1; u <= 8; u++) {
       let s = 0;
-      for (let y = 0; y < TAILLE; y++) {
-        const cy = c[v * TAILLE + y];
-        let ligne = 0;
-        for (let x = 0; x < TAILLE; x++) ligne += gris[y * TAILLE + x] * c[u * TAILLE + x];
-        s += ligne * cy;
-      }
+      for (let y = 0; y < TAILLE; y++) s += lignes[y * 8 + u - 1] * c[v * TAILLE + y];
       coef[(v - 1) * 8 + (u - 1)] = s;
     }
   }
