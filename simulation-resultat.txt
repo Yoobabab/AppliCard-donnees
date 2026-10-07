@@ -1,47 +1,20 @@
 Base : 21186 cartes internationales, 12331 japonaises
-[facile] 364 photos : 1re proposition juste 90.4 %, dans les 3 premières 98.4 %, dans les 6 99.2 %
-[moyen] 375 photos : 1re proposition juste 83.5 %, dans les 3 premières 98.4 %, dans les 6 99.5 %
-[difficile] 375 photos : 1re proposition juste 71.5 %, dans les 3 premières 88.0 %, dans les 6 91.5 %
-Poids : {"illustration":1,"entiere":0.6,"teinte":0.5}
-
-Erreurs (exemples) :
-facile intl tk-ex-m-9 → rang 3 ; proposées : tk-ex-latia-9 (13.3), tk-ex-latio-9 (15.0), tk-ex-p-8 (15.2) (61 ms)
-facile intl ecard3-31 → rang 1 ; proposées : E5-073 (18.6), ecard3-31 (20.4), ecard3-H29 (29.0) (64 ms)
-facile intl tk-ex-m-4 → rang 1 ; proposées : ex6-64 (10.9), tk-ex-m-4 (12.5), PCG1-020 (20.3) (62 ms)
-facile intl tk-bw-z-1 → rang 1 ; proposées : bw1-66 (24.1), tk-bw-z-1 (25.6), tk-bw-z-25 (25.6) (60 ms)
-facile intl tk-xy-n-25 → rang -1 ; proposées : tk-xy-latio-29 (5.4), tk-xy-latia-8 (5.4), tk-xy-latia-9 (5.4) (63 ms)
-facile intl tk-xy-sy-4 → rang 3 ; proposées : tk-xy-n-29 (16.4), xy0-38 (18.6), xy6-91 (19.6) (67 ms)
-facile intl tk-bw-z-7 → rang -1 ; proposées : xy1-138 (15.7), tk-bw-z-3 (17.7), tk-bw-z-5 (17.7) (70 ms)
-facile intl tk-bw-e-5 → rang -1 ; proposées : xy1-137 (21.5), tk-xy-latio-2 (21.5), tk-xy-latio-3 (21.5) (69 ms)
-facile intl ecard2-51 → rang 1 ; proposées : E2-015 (17.0), ecard2-51 (18.1), ecard3-8 (38.9) (69 ms)
-facile intl ex16-88 → rang 1 ; proposées : ex13-95 (12.3), ex16-88 (12.6), ex10-97 (15.3) (69 ms)
-facile intl ex14-51 → rang 1 ; proposées : PCG8-039 (16.3), ex14-51 (18.1), pop8-10 (38.0) (70 ms)
-facile ja SM11-001 → rang 1 ; proposées : sm11-2 (14.6), SM11-001 (15.1), sm12-2 (38.9) (69 ms)
-facile ja S11a-022 → rang 1 ; proposées : swsh12-033 (17.8), S11a-022 (19.4), MC-223 (45.7) (70 ms)
-facile ja SM12a-018 → rang 2 ; proposées : sm9-16 (16.1), SM9-015 (19.8), SM12a-018 (21.0) (68 ms)
-facile ja SM12-080 → rang 1 ; proposées : sm12-178 (12.4), SM12-080 (14.9), M4-069 (33.8) (68 ms)
-facile ja S8b-100 → rang 1 ; proposées : swsh7-94 (29.8), S8b-100 (30.3), M2a-160 (44.3) (69 ms)
-facile ja S12a-018 → rang 1 ; proposées : S9-018 (25.6), S12a-018 (25.9), swsh9-021 (26.9) (68 ms)
-facile ja PCG1-016 → rang 1 ; proposées : ex6-51 (12.1), PCG1-016 (17.8), sm10-155 (39.8) (69 ms)
-facile ja SM9-081 → rang 5 ; proposées : SM5M-058 (5.5), SM7-082 (5.5), SM10-082 (5.5) (69 ms)
-facile ja SM1M-025 → rang 1 ; proposées : sm1-60 (14.4), SM1M-025 (16.9), SM3N-021 (40.3) (68 ms)
-facile ja S8b-083 → rang 1 ; proposées : S6K-037 (21.9), S8b-083 (23.4), swsh6-75 (28.4) (67 ms)
-facile ja SM12-024 → rang 1 ; proposées : sm12-60 (15.6), SM12-024 (16.1), SM1M-010 (39.3) (66 ms)
-facile ja CP1-030 → rang 1 ; proposées : dc1-30 (11.1), CP1-030 (11.2), SM11a-064 (37.8) (69 ms)
-facile ja SM11a-043 → rang 1 ; proposées : sm12-133 (28.8), SM11a-043 (29.1), M6-041 (44.8) (69 ms)
-facile ja SM9-056 → rang 1 ; proposées : sm9-75 (24.6), SM9-056 (26.7), sm10-86 (40.8) (67 ms)
-facile ja PCG6-057 → rang 1 ; proposées : PCG6-051 (14.1), PCG6-057 (14.1), ex11-82 (28.8) (68 ms)
-facile ja SM4A-026 → rang 1 ; proposées : sm4-55 (20.8), SM4A-026 (22.1), SM1S-030 (39.0) (68 ms)
-facile ja SM1M-022 → rang 1 ; proposées : sm1-57 (18.8), SM1M-022 (19.5), SM4p-034 (31.5) (70 ms)
-facile ja SM11b-074 → rang 1 ; proposées : sm12-144 (19.3), SM11b-074 (19.8), SM11b-035 (20.3) (68 ms)
-facile ja SM9-059 → rang 1 ; proposées : sm9-78 (19.1), SM9-059 (23.1), sm10-59 (42.9) (68 ms)
-facile ja SM9-085 → rang 2 ; proposées : SM11a-057 (11.8), SM6-087 (13.1), SM9-085 (13.1) (69 ms)
-facile ja SM4A-035 → rang 1 ; proposées : sm4-72 (20.7), SM4A-035 (27.5), xy2-65 (41.6) (69 ms)
-facile ja S6H-081 → rang 1 ; proposées : swsh6-190 (14.6), S6H-081 (18.6), swsh6-214 (33.9) (71 ms)
-facile ja SM8b-116 → rang 1 ; proposées : SM6a-045 (8.2), SM8b-116 (9.2), sm7.5-60 (13.6) (66 ms)
-facile ja SM5S-028 → rang 1 ; proposées : SM8b-066 (17.4), SM5S-028 (19.4), SM12a-074 (21.9) (69 ms)
-moyen intl sm5-84 → rang 1 ; proposées : SM5S-038 (11.6), sm5-84 (14.6), 2017sm-9 (33.7) (68 ms)
-moyen intl xy12-22 → rang 1 ; proposées : xy1-30 (26.8), xy12-22 (29.0), xy8-95 (46.9) (70 ms)
-moyen intl sm3-106 → rang 1 ; proposées : SM3H-043 (20.8), sm3-106 (21.4), MC-623 (38.7) (69 ms)
-moyen intl ecard1-116 → rang 1 ; proposées : E1-024 (17.3), ecard1-116 (17.4), ex15-51 (44.5) (68 ms)
-moyen intl ecard3-115 → rang 1 ; proposées : E5-002 (17.3), ecard3-115 (21.4), xy8-4 (41.6) (71 ms)
+1125 photos simulées
+poids {"il":1,"en":0.6,"te":0.5} pénalité autre langue 0 : facile 91.2/99.5/99.7 · moyen 82.1/98.7/99.2 · difficile 71.5/88.0/91.2
+poids {"il":1,"en":0.6,"te":0.5} pénalité autre langue 4 : facile 94.9/99.7/99.7 · moyen 89.3/98.7/99.2 · difficile 80.0/89.9/92.8
+poids {"il":1,"en":0.6,"te":0.5} pénalité autre langue 8 : facile 96.0/99.7/99.7 · moyen 91.2/98.7/99.2 · difficile 81.6/89.9/93.1
+poids {"il":1,"en":1,"te":0.5} pénalité autre langue 0 : facile 91.7/99.7/99.7 · moyen 82.9/98.7/99.5 · difficile 76.5/90.9/93.9
+poids {"il":1,"en":1,"te":0.5} pénalité autre langue 4 : facile 95.2/99.7/99.7 · moyen 89.3/98.7/99.5 · difficile 83.7/93.1/94.7
+poids {"il":1,"en":1,"te":0.5} pénalité autre langue 8 : facile 96.3/99.7/99.7 · moyen 91.2/98.7/99.5 · difficile 85.1/93.1/94.7
+poids {"il":1,"en":0.6,"te":1} pénalité autre langue 0 : facile 89.1/99.5/99.7 · moyen 82.7/97.9/98.7 · difficile 62.9/80.8/84.8
+poids {"il":1,"en":0.6,"te":1} pénalité autre langue 4 : facile 92.5/99.7/99.7 · moyen 88.0/98.1/98.7 · difficile 71.7/82.9/86.4
+poids {"il":1,"en":0.6,"te":1} pénalité autre langue 8 : facile 94.1/99.7/99.7 · moyen 90.1/98.1/98.7 · difficile 73.9/83.2/87.2
+poids {"il":1,"en":0.3,"te":0.3} pénalité autre langue 0 : facile 90.1/99.5/99.7 · moyen 81.3/98.7/99.5 · difficile 68.0/86.1/89.6
+poids {"il":1,"en":0.3,"te":0.3} pénalité autre langue 4 : facile 94.1/99.7/99.7 · moyen 89.9/98.7/99.5 · difficile 78.7/88.5/90.9
+poids {"il":1,"en":0.3,"te":0.3} pénalité autre langue 8 : facile 95.7/99.7/99.7 · moyen 91.5/98.7/99.5 · difficile 79.5/88.5/91.2
+poids {"il":1,"en":0.6,"te":0.25} pénalité autre langue 0 : facile 90.9/99.7/99.7 · moyen 81.1/98.1/99.5 · difficile 74.1/90.4/92.5
+poids {"il":1,"en":0.6,"te":0.25} pénalité autre langue 4 : facile 94.9/99.7/99.7 · moyen 89.3/98.1/99.5 · difficile 83.5/92.3/93.9
+poids {"il":1,"en":0.6,"te":0.25} pénalité autre langue 8 : facile 96.0/99.7/99.7 · moyen 90.7/98.1/99.5 · difficile 84.8/92.3/93.9
+poids {"il":0.6,"en":1,"te":0.5} pénalité autre langue 0 : facile 91.2/99.5/99.5 · moyen 84.0/98.1/98.9 · difficile 74.1/89.1/92.8
+poids {"il":0.6,"en":1,"te":0.5} pénalité autre langue 4 : facile 94.4/99.5/99.5 · moyen 89.9/98.4/98.9 · difficile 82.7/91.7/94.1
+poids {"il":0.6,"en":1,"te":0.5} pénalité autre langue 8 : facile 95.5/99.5/99.5 · moyen 91.2/98.4/98.9 · difficile 84.0/92.0/94.4
