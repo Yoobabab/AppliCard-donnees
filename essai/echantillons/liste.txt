@@ -1,0 +1,17 @@
+ja_SV-P-046 « ネモ » l:tpc/SVP/SVP_46_R_JP
+ja_M5-024 « デンヂムシ » l:tpc/M5/M5_24_R_JP
+ja_PCG7-001 « トラピンチ（デルタ種） » g:611349
+ja_PCG1-067 « Farfetch'd » g:612399
+ja_PMCG5-032 « カスミのゴルダック » g:576818
+ja_E3-090 « ルギア » g:576386
+ja_neo3-034 « スターミー » g:575239
+ja_PMCG5-042 « マチスのサンダース » g:576803
+ja_VS1-094 « ロケットのライコウ » g:631883
+ja_PMCG6-055 « R団のミュウツー » g:575340
+fr_exu-! « Zarbi » g:90166
+fr_exu-%3F « Zarbi » g:90167
+fr_ecard2-H04 « Azumarill » g:83681
+logo np https://assets.tcgdex.net/en/pop/np/logo.webp
+logo base1 https://assets.tcgdex.net/en/base/base1/logo.webp
+logo tk-ex-latia https://images.pokemontcg.io/tk1a/logo.png
+logo exu https://assets.tcgdex.net/fr/ex/ex10/logo.webp
