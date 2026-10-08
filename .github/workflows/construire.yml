@@ -40,3 +40,16 @@ jobs:
           if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
           git commit -m "Données du $(date -u +%Y-%m-%d)"
           git push
+      - name: Historique des prix (branche « historique »)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git clone -q --depth 1 --branch historique "https://github.com/${GITHUB_REPOSITORY}.git" hist-ancien || mkdir -p hist-ancien
+          node outils/historique.mjs hist-ancien hist
+          cd hist
+          git init -q -b historique
+          git config user.name "robot-applicard"
+          git config user.email "robot-applicard@users.noreply.github.com"
+          git add -A
+          git commit -qm "Historique des prix du $(date -u +%Y-%m-%d)"
+          git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" historique
