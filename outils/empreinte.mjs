@@ -139,4 +139,4 @@ export function distance(a, oa, b, ob) {
   }
   return illustration * POIDS.illustration + entiere * POIDS.entiere + teinte * POIDS.teinte;
 }
-export const POIDS = { illustration: 1, entiere: 1, teinte: 0.5 }; // réglage choisi par simulation (oct. 2026)
+export const POIDS = { illustration: 1, entiere: 1, teinte: 0.2 }; // couleurs peu fiables sur de vraies photos (balance des blancs, holo) : réglage oct. 2026
