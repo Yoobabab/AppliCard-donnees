@@ -160,6 +160,8 @@ function ecartCouleurs(e, o, k) {
 export const PENALITE_AUTRE_LANGUE = 8;
 /** Nombre de cartes gardées après le passage sur toute la base, puis départagées avec des cadrages ajustés. */
 const FINALISTES = 40;
+/** Emplacements possibles de la carte comparés à la base avant d'en garder `propositions` (choisi par simulation, oct. 2026). */
+const CANDIDATS = 20;
 /** Réglage par défaut de `confiance` ([distance max, écart min avec la 2e]), choisi par simulation (oct. 2026). */
 const CONFIANCE = [30, 10];
 
@@ -169,7 +171,7 @@ const CONFIANCE = [30, 10];
  * @returns les `max` cartes les plus proches : [{ id, base, d }]
  */
 export function reconnaitre(px, w, h, bases, max = 6, basePreferee = null, reglages = {}) {
-  const { propositions = 3, candidats = 0, autour = 'large', affiner = 5, finesses = [0.03, 0.015], confiance = CONFIANCE } = reglages;
+  const { propositions = 3, candidats = CANDIDATS, autour = 'large', affiner = 5, finesses = [0.03, 0.015], confiance = CONFIANCE } = reglages;
   const finalistes = [];
   const index = new Map(); // carte → sa place parmi les finalistes
   let seuil = Infinity; // distance de la dernière finaliste

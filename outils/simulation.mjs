@@ -7,6 +7,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import sharp from 'sharp';
 import { reconnaitre } from './reconnaissance.mjs';
+import { POIDS } from './empreinte.mjs';
 
 const N = Number(process.argv[2] ?? 150);
 const UA = { 'User-Agent': 'AppliCard-donnees/1.0 (+https://github.com/Yoobabab)' };
@@ -97,7 +98,9 @@ async function photoSimulee(brut, niveau) {
   // « sombre » : photo sous-exposée et peu contrastée, comme dans une pièce peu éclairée.
   img = sharp(await img.png().toBuffer())
     .modulate({ brightness: niveau === 'sombre' ? hasard(0.45, 0.75) : 1 + hasard(-0.25, 0.25) * f, saturation: 1 + hasard(-0.2, 0.2) * f })
-    .linear(niveau === 'sombre' ? hasard(0.7, 0.9) : 1 + hasard(-0.15, 0.15) * f, 0);
+    .linear(niveau === 'sombre' ? hasard(0.7, 0.9) : 1 + hasard(-0.15, 0.15) * f, 0)
+    // Balance des blancs de l'appareil photo : dominante de couleur (bleutée, jaune…).
+    .recomb([[hasard(0.82, 1.18), 0, 0], [0, hasard(0.9, 1.1), 0], [0, 0, hasard(0.82, 1.18)]]);
   const flou = hasard(0.3, 1.4) * f;
   if (flou >= 0.3) img = img.blur(flou);
   const jpeg = await img.jpeg({ quality: 70 }).toBuffer();
@@ -107,11 +110,19 @@ async function photoSimulee(brut, niveau) {
 }
 
 const REGLAGES = {
+<<<<<<< Updated upstream
   'v0.9.1': {},
   '12 emplacements': { candidats: 12 },
   '20 emplacements': { candidats: 20 },
   '30 emplacements': { candidats: 30 },
+=======
+  'couleurs 0.5': { teinte: 0.5 },
+  'couleurs 0.3': { teinte: 0.3 },
+  'couleurs 0.2': { teinte: 0.2 },
+  'couleurs 0.1': { teinte: 0.1 },
+>>>>>>> Stashed changes
 };
+const avec = (r, fn) => { const avant = POIDS.teinte; POIDS.teinte = r.teinte ?? avant; try { return fn(); } finally { POIDS.teinte = avant; } };
 
 mkdirSync('simulation', { recursive: true });
 const stats = {};
@@ -134,7 +145,7 @@ for (const niveau of (process.env.NIVEAUX ?? 'facile,moyen,difficile,loin,sombre
       for (const [nom, r] of Object.entries(REGLAGES)) {
         const t = performance.now();
         const suivi = {};
-        const props = reconnaitre(p.px, p.w, p.h, bases, 6, base.nom, { ...r, suivi });
+        const props = avec(r, () => reconnaitre(p.px, p.w, p.h, bases, 6, base.nom, { ...r, suivi }));
         temps[nom] = (temps[nom] ?? 0) + performance.now() - t;
         const rang = props.findIndex((q) => q.id === id && q.base === base.nom);
         const s = ((stats[nom] ??= {})[niveau] ??= { n: 0, t1: 0, t3: 0, t6: 0, loc: 0 });
@@ -164,7 +175,7 @@ try {
     const px = new Uint8Array(data.buffer, data.byteOffset, data.length);
     for (const [nom, r] of Object.entries(REGLAGES)) {
       const t = performance.now();
-      const props = reconnaitre(px, info.width, info.height, bases, 6, 'intl', r);
+      const props = avec(r, () => reconnaitre(px, info.width, info.height, bases, 6, 'intl', r));
       console.log(`  ${fichier} · ${nom} : rang ${props.findIndex((q) => q.id === attendu)} (${(performance.now() - t).toFixed(0)} ms) ; ${props.slice(0, 3).map((q) => `${q.id} ${q.d.toFixed(1)}`).join(', ')}`);
     }
   }
