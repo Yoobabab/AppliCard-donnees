@@ -160,6 +160,8 @@ function ecartCouleurs(e, o, k) {
 export const PENALITE_AUTRE_LANGUE = 8;
 /** Nombre de cartes gardées après le passage sur toute la base, puis départagées avec des cadrages ajustés. */
 const FINALISTES = 40;
+/** Emplacements possibles de la carte comparés à la base avant d'en garder `propositions` (choisi par simulation, oct. 2026). */
+const CANDIDATS = 20;
 /** Réglage par défaut de `confiance` ([distance max, écart min avec la 2e]), choisi par simulation (oct. 2026). */
 const CONFIANCE = [30, 10];
 
@@ -169,7 +171,7 @@ const CONFIANCE = [30, 10];
  * @returns les `max` cartes les plus proches : [{ id, base, d }]
  */
 export function reconnaitre(px, w, h, bases, max = 6, basePreferee = null, reglages = {}) {
-  const { propositions = 3, autour = 'large', affiner = 5, finesses = [0.03, 0.015], confiance = CONFIANCE } = reglages;
+  const { propositions = 3, candidats = CANDIDATS, autour = 'large', affiner = 5, finesses = [0.03, 0.015], confiance = CONFIANCE } = reglages;
   const finalistes = [];
   const index = new Map(); // carte → sa place parmi les finalistes
   let seuil = Infinity; // distance de la dernière finaliste
@@ -235,7 +237,18 @@ export function reconnaitre(px, w, h, bases, max = 6, basePreferee = null, regla
   const nette =
     confiance && finalistes.length > 1 && finalistes[0].d <= confiance[0] && finalistes[1].d - finalistes[0].d >= confiance[1];
   if (propositions > 0 && !nette) {
-    const voisins = localiser(px, w, h, propositions).flatMap((r) => voisinage(r, autour));
+    let lieux = localiser(px, w, h, Math.max(propositions, candidats));
+    if (candidats > propositions) {
+      // Les contours seuls se trompent souvent (étui, cadre intérieur de la carte, doigts) :
+      // on compare d'abord la base à chaque emplacement possible, et on garde ceux qui y ressemblent le plus.
+      passe(lieux);
+      rects.push(...lieux);
+      const parRessemblance = [];
+      for (const p of finalistes) if (lieux.includes(p.r) && !parRessemblance.includes(p.r)) parRessemblance.push(p.r);
+      for (const r of lieux) if (!parRessemblance.includes(r)) parRessemblance.push(r);
+      lieux = parRessemblance;
+    }
+    const voisins = lieux.slice(0, propositions).flatMap((r) => voisinage(r, autour));
     passe(voisins);
     rects.push(...voisins);
   }
