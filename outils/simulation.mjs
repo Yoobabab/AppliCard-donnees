@@ -110,17 +110,10 @@ async function photoSimulee(brut, niveau) {
 }
 
 const REGLAGES = {
-<<<<<<< Updated upstream
-  'v0.9.1': {},
-  '12 emplacements': { candidats: 12 },
-  '20 emplacements': { candidats: 20 },
-  '30 emplacements': { candidats: 30 },
-=======
   'couleurs 0.5': { teinte: 0.5 },
   'couleurs 0.3': { teinte: 0.3 },
   'couleurs 0.2': { teinte: 0.2 },
   'couleurs 0.1': { teinte: 0.1 },
->>>>>>> Stashed changes
 };
 const avec = (r, fn) => { const avant = POIDS.teinte; POIDS.teinte = r.teinte ?? avant; try { return fn(); } finally { POIDS.teinte = avant; } };
 
