@@ -43,7 +43,7 @@ function decor() {
 async function photoSimulee(brut, niveau) {
   let calques = [];
   let fond;
-  if (niveau === 'loin') {
+  if (niveau === 'loin' || niveau === 'sombre') {
     // Carte petite dans le cadre, position libre, souvent dans un étui rigide tenu à la main.
     const s = hasard(0.55, 0.85);
     const lc = Math.round(FL * s), hc = Math.round(lc * 88 / 63);
@@ -52,7 +52,7 @@ async function photoSimulee(brut, niveau) {
     let carte = await sharp(brut).resize(lc, hc, { fit: 'fill' }).rotate(angle, { background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer();
     const m = await sharp(carte).metadata();
     const x = Math.round(hasard(0, FL - m.width)), y = Math.round(hasard(0, FH - m.height));
-    if (Math.random() < 0.7) {
+    if (niveau === 'sombre' || Math.random() < 0.7) {
       // Étui : plastique un peu laiteux, plus grand que la carte, bords visibles.
       const le = Math.round(lc * 1.2), he = Math.round(hc * 1.15);
       const ex = Math.round(x + m.width / 2 - le / 2 + hasard(-0.03, 0.03) * lc), ey = Math.round(y + m.height / 2 - he / 2 + hasard(-0.05, 0.02) * hc);
@@ -94,9 +94,10 @@ async function photoSimulee(brut, niveau) {
     calques.push({ input: Buffer.from(`<svg width="${FL}" height="${FH}"><defs><radialGradient id="g"><stop offset="0" stop-color="white" stop-opacity="${op}"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient></defs><ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="url(#g)"/></svg>`), left: 0, top: 0 });
   }
   let img = sharp(fond).composite(calques);
+  // « sombre » : photo sous-exposée et peu contrastée, comme dans une pièce peu éclairée.
   img = sharp(await img.png().toBuffer())
-    .modulate({ brightness: 1 + hasard(-0.25, 0.25) * f, saturation: 1 + hasard(-0.2, 0.2) * f })
-    .linear(1 + hasard(-0.15, 0.15) * f, 0);
+    .modulate({ brightness: niveau === 'sombre' ? hasard(0.45, 0.75) : 1 + hasard(-0.25, 0.25) * f, saturation: 1 + hasard(-0.2, 0.2) * f })
+    .linear(niveau === 'sombre' ? hasard(0.7, 0.9) : 1 + hasard(-0.15, 0.15) * f, 0);
   const flou = hasard(0.3, 1.4) * f;
   if (flou >= 0.3) img = img.blur(flou);
   const jpeg = await img.jpeg({ quality: 70 }).toBuffer();
@@ -106,16 +107,17 @@ async function photoSimulee(brut, niveau) {
 }
 
 const REGLAGES = {
-  'avant (v0.9)': { propositions: 0, affiner: 0 },
-  'réglage actuel': {},
-  'toujours chercher': { confiance: null },
+  'v0.9.1': {},
+  '12 emplacements': { candidats: 12 },
+  '20 emplacements': { candidats: 20 },
+  '30 emplacements': { candidats: 30 },
 };
 
 mkdirSync('simulation', { recursive: true });
 const stats = {};
 const temps = {};
 let photos = 0;
-for (const niveau of ['facile', 'moyen', 'difficile', 'loin']) {
+for (const niveau of (process.env.NIVEAUX ?? 'facile,moyen,difficile,loin,sombre').split(',')) {
   let exemples = 0;
   for (const base of bases) {
     const nombre = base.nom === 'intl' ? N : Math.round(N / 2);
@@ -151,4 +153,21 @@ for (const [nom, parNiveau] of Object.entries(stats)) {
     `${nom.padEnd(20)} ${(temps[nom] / photos).toFixed(0).padStart(4)} ms · ` +
       Object.entries(parNiveau).map(([n, v]) => `${n} ${(100 * v.t1 / v.n).toFixed(1)}/${(100 * v.t3 / v.n).toFixed(1)}/${(100 * v.t6 / v.n).toFixed(1)} [${(100 * v.loc / v.n).toFixed(0)}]`).join(' · '),
   );
+}
+
+// Vraies photos envoyées par le porteur (outils/photos-reelles/liste.json : fichier → identifiant attendu).
+try {
+  const liste = JSON.parse(readFileSync('outils/photos-reelles/liste.json', 'utf8'));
+  console.log('\nVraies photos :');
+  for (const [fichier, attendu] of Object.entries(liste)) {
+    const { data, info } = await sharp(`outils/photos-reelles/${fichier}`).resize(160, 223, { fit: 'fill' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    const px = new Uint8Array(data.buffer, data.byteOffset, data.length);
+    for (const [nom, r] of Object.entries(REGLAGES)) {
+      const t = performance.now();
+      const props = reconnaitre(px, info.width, info.height, bases, 6, 'intl', r);
+      console.log(`  ${fichier} · ${nom} : rang ${props.findIndex((q) => q.id === attendu)} (${(performance.now() - t).toFixed(0)} ms) ; ${props.slice(0, 3).map((q) => `${q.id} ${q.d.toFixed(1)}`).join(', ')}`);
+    }
+  }
+} catch (e) {
+  console.log('Vraies photos : ' + e.message);
 }
