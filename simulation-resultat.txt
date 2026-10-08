@@ -1,16 +1,16 @@
-file:///home/runner/work/AppliCard-donnees/AppliCard-donnees/outils/simulation.mjs:113
-<<<<<<< Updated upstream
-^^
+Base : 21186 cartes internationales, 12335 japonaises
+900 photos simulées · niveau : 1re proposition / 3 premières / 6 premières (%) [part des photos où la carte a été cherchée]
+couleurs 0.5          160 ms · facile 92.8/97.8/98.9 [28] · moyen 92.2/98.9/98.9 [52] · difficile 87.2/94.4/96.1 [76] · loin 90.0/95.6/95.6 [97] · sombre 90.6/96.1/96.7 [99]
+couleurs 0.3          125 ms · facile 92.8/97.8/98.9 [26] · moyen 91.7/98.9/98.9 [35] · difficile 88.9/95.6/96.7 [64] · loin 89.4/95.6/95.6 [96] · sombre 90.6/96.1/96.7 [98]
+couleurs 0.2          120 ms · facile 92.2/98.3/99.4 [28] · moyen 91.7/98.9/98.9 [34] · difficile 87.2/95.0/96.1 [59] · loin 87.8/94.4/94.4 [96] · sombre 88.9/95.6/96.1 [96]
+couleurs 0.1          119 ms · facile 92.2/98.3/99.4 [27] · moyen 92.2/99.4/99.4 [37] · difficile 87.8/95.0/96.1 [58] · loin 87.2/93.9/93.9 [95] · sombre 88.3/95.6/96.1 [96]
 
-SyntaxError: Unexpected token '<<'
-    at compileSourceTextModule (node:internal/modules/esm/utils:346:16)
-    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:110:18)
-    at #translate (node:internal/modules/esm/loader:559:20)
-    at afterLoad (node:internal/modules/esm/loader:612:29)
-    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:617:12)
-    at #createModuleJob (node:internal/modules/esm/loader:640:36)
-    at #getJobFromResolveResult (node:internal/modules/esm/loader:353:34)
-    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:321:41)
-    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:680:25)
-
-Node.js v22.23.3
+Vraies photos :
+  sylveroy-tg14-etui.png · couleurs 0.5 : rang 0 (224 ms) ; swsh10tg-TG14 50.0, tk-hs-g-15 52.5, tk-hs-g-24 52.5
+  sylveroy-tg14-etui.png · couleurs 0.3 : rang 0 (175 ms) ; swsh10tg-TG14 42.8, S8b-220 45.1, tk-hs-g-15 45.9
+  sylveroy-tg14-etui.png · couleurs 0.2 : rang 0 (167 ms) ; swsh10tg-TG14 33.6, S8b-220 36.0, bw5-85 41.8
+  sylveroy-tg14-etui.png · couleurs 0.1 : rang -1 (174 ms) ; bw5-85 36.0, smp-SM67 38.1, sv02-173 38.3
+  sylveroy-tg14-etui-proche.png · couleurs 0.5 : rang -1 (212 ms) ; dp1-85 47.5, dp2-115 48.0, sm6-96 50.0
+  sylveroy-tg14-etui-proche.png · couleurs 0.3 : rang -1 (177 ms) ; dp2-115 43.2, sm6-96 45.2, 2011bw-12 45.6
+  sylveroy-tg14-etui-proche.png · couleurs 0.2 : rang 0 (174 ms) ; swsh10tg-TG14 33.8, dp2-115 40.8, sm1-116 41.2
+  sylveroy-tg14-etui-proche.png · couleurs 0.1 : rang 0 (167 ms) ; swsh10tg-TG14 27.9, sm1-116 37.6, swsh8-227 37.9
