@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Classeur de cartes · AppliCard</title>
-<meta name="description" content="Un classeur de cartes partagé depuis AppliCard, l'appli des collectionneurs.">
+<title>Classeur de cartes · Shivr</title>
+<meta name="description" content="Un classeur de cartes partagé depuis Shivr, l'appli des collectionneurs.">
 <meta property="og:title" content="Un classeur de cartes à découvrir">
-<meta property="og:description" content="Partagé depuis AppliCard, l'appli des collectionneurs de cartes.">
+<meta property="og:description" content="Partagé depuis Shivr, l'appli des collectionneurs de cartes.">
 <meta name="theme-color" content="#1d1f33">
 <style>
   :root {
@@ -51,7 +51,7 @@
 <div id="loupe" role="dialog" aria-modal="true" aria-label="Carte en grand"><figure><img alt=""><figcaption></figcaption></figure></div>
 <script>
 (() => {
-  // Lecture du classeur partagé dans la base AppliCard (clé publique, lecture seule des classeurs partagés).
+  // Lecture du classeur partagé dans la base Shivr (clé publique, lecture seule des classeurs partagés).
   const URL_BASE = 'https://wjribvwoxehpqtatrffa.supabase.co';
   const CLE = 'sb_publishable_LvyFRDW4Y56BxRApAulAmw_gf5qG1Ur';
   const contenu = document.getElementById('contenu');
@@ -84,7 +84,7 @@
     .catch(() => { contenu.textContent = 'Impossible de charger le classeur pour le moment. Réessayez dans un instant.'; });
 
   function afficher(c) {
-    document.title = `${c.nom} · AppliCard`;
+    document.title = `${c.nom} · Shivr`;
     const cartes = Array.isArray(c.cartes) ? c.cartes : [];
     const valeur = cartes.reduce((s, x) => s + (typeof x.cote === 'number' ? x.cote : 0), 0);
     const pages = [];
@@ -158,7 +158,7 @@
       feuille,
       pages.length > 1 ? el('nav', {}, [precedent, numero, suivante]) : null,
       el('footer', {}, [
-        el('div', {}, [document.createTextNode('Classeur créé avec '), el('strong', { texte: 'AppliCard' }), document.createTextNode(', l’appli des collectionneurs de cartes.')]),
+        el('div', {}, [document.createTextNode('Classeur créé avec '), el('strong', { texte: 'Shivr' }), document.createTextNode(', l’appli des collectionneurs de cartes.')]),
         el('div', { class: 'legal', texte: 'Cotes indicatives (Cardmarket, TCGplayer). Pokémon et les noms associés sont des marques de Nintendo, Creatures et GAME FREAK ; ce site n’est ni affilié ni approuvé par The Pokémon Company.' }),
       ]),
     ].filter(Boolean));
