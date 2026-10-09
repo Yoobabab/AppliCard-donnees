@@ -423,6 +423,41 @@ for (const [cle, lang] of [['intl', 'en'], ['ja', 'ja']]) {
   resultats['cotes-' + cle] = cotes;
 }
 
+// ---------- 9 bis. Photos envoyées par les utilisateurs de l'appli et validées par un modérateur.
+// Lues sans compte via la fonction publique photos_validees (base Supabase, clé publique de l'appli).
+// Elles ne servent que pour les cartes sans image TCGdex dans leur langue, et passent avant nos autres sources.
+{
+  const SUPABASE = 'https://wjribvwoxehpqtatrffa.supabase.co';
+  const CLE = 'sb_publishable_LvyFRDW4Y56BxRApAulAmw_gf5qG1Ur';
+  let photos = null;
+  try {
+    const r = await fetch(`${SUPABASE}/rest/v1/rpc/photos_validees`, {
+      method: 'POST',
+      headers: { apikey: CLE, 'Content-Type': 'application/json', ...UA },
+      body: '{}',
+    });
+    if (r.ok) photos = await r.json();
+    else note(`\n[photos utilisateurs] lecture impossible (${r.status}) : on garde les sources habituelles.`);
+  } catch (e) {
+    note(`\n[photos utilisateurs] lecture impossible (${e?.message ?? e}) : on garde les sources habituelles.`);
+  }
+  if (Array.isArray(photos)) {
+    const avecImage = {};
+    for (const lang of LANGUES) {
+      avecImage[lang] = new Set();
+      for (const s of tcgdex[lang]) for (const c of s.cards ?? []) if (c.image) avecImage[lang].add(c.id);
+    }
+    let n = 0;
+    for (const p of photos) {
+      if (!LANGUES.includes(p.langue) || typeof p.chemin !== 'string' || !/^[\w-]+\/[\w.-]+\.jpg$/.test(p.chemin)) continue;
+      if (avecImage[p.langue].has(p.carte_id)) continue;
+      resultats[p.langue].images[p.carte_id] = 'u:' + p.chemin;
+      n++;
+    }
+    note(`\n[photos utilisateurs] ${photos.length} photos validées, ${n} utilisées pour des cartes sans image.`);
+  }
+}
+
 // ---------- 10. Garde-fou : si une source a flanché, on garde les données d'hier.
 for (const lang of LANGUES) {
   try {

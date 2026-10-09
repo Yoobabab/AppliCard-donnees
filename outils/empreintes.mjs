@@ -23,6 +23,7 @@ export function petiteImage(code) {
   if (type === 'l') return `https://limitlesstcg.nyc3.cdn.digitaloceanspaces.com/${reste}_SM.png`;
   if (type === 'p') return `https://images.pokemontcg.io/${reste}.png`;
   if (type === 'g') return `https://tcgplayer-cdn.tcgplayer.com/product/${reste}_200w.jpg`;
+  if (type === 'u') return `https://wjribvwoxehpqtatrffa.supabase.co/storage/v1/object/public/photos-cartes/${reste}`;
   return undefined;
 }
 
