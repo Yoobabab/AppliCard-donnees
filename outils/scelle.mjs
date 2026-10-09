@@ -56,6 +56,7 @@ const prix = new Map(guide.priceGuides.map((p) => [p.idProduct, p]));
 
 // Images : produits scellés TCGplayer (sans numéro de carte), toutes extensions, international et japonais.
 const images = new Map();
+const tous = [];
 let groupesLus = 0;
 for (const cat of [3, 85]) {
   const groupes = (await lire(`https://tcgcsv.com/tcgplayer/${cat}/groups`))?.results ?? [];
@@ -68,6 +69,7 @@ for (const cat of [3, 85]) {
         if (!x.imageCount) continue;
         const k = cleNom(x.name);
         if (!images.has(k)) images.set(k, x.productId);
+        if (process.env.DUMP) tous.push([x.productId, x.name, g.name, cat]);
       }
     }));
   }
@@ -86,6 +88,7 @@ for (const p of catalogue.products) {
   const arr = (x) => (x != null && x > 0 ? Math.round(x * 100) / 100 : 0);
   produits.push([p.idProduct, p.name, c[0], (p.dateAdded ?? '').slice(0, 7), arr(g?.trend), arr(g?.low), arr(g?.avg30), img ?? 0]);
 }
+if (process.env.DUMP) writeFileSync(`${SORTIE}/tcgplayer-scelle.json`, JSON.stringify(tous));
 produits.sort((a, b) => b[3].localeCompare(a[3]) || b[0] - a[0]);
 mkdirSync(`${SORTIE}/v1`, { recursive: true });
 writeFileSync(`${SORTIE}/v1/scelle.json`, JSON.stringify({
