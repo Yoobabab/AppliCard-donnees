@@ -33,7 +33,8 @@ jobs:
       - name: Construire les compléments et les empreintes
         run: SORTIE=. LIMITE_EMPREINTES=40000 node outils/construire.mjs
       - name: Catalogue du scellé
-        run: SORTIE=. node outils/scelle.mjs || echo "Scellé indisponible ce soir : on garde la version d'hier."
+        run: |
+          SORTIE=. node outils/scelle.mjs || echo "Scellé indisponible ce soir, on garde la version d'hier"
       - name: Publier
         run: |
           git config user.name "robot-applicard"
