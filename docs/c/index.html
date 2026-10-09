@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Classeur de cartes · AppliCard</title>
+<meta name="description" content="Un classeur de cartes partagé depuis AppliCard, l'appli des collectionneurs.">
+<meta property="og:title" content="Un classeur de cartes à découvrir">
+<meta property="og:description" content="Partagé depuis AppliCard, l'appli des collectionneurs de cartes.">
+<meta name="theme-color" content="#1d1f33">
+<style>
+  :root {
+    --fond: #14152a; --feuille: #22243d; --pochette: rgba(255,255,255,.06); --bord: rgba(255,255,255,.14);
+    --texte: #f2f2f7; --doux: #a9abc3; --accent: #7aa2ff; --vert: #4cd28a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--fond); color: var(--texte); font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 40px; }
+  header h1 { font-size: 26px; line-height: 1.2; margin: 0 0 6px; overflow-wrap: anywhere; }
+  .auteur { color: var(--doux); margin: 0 0 12px; }
+  .description { margin: 0 0 14px; overflow-wrap: anywhere; }
+  .chiffres { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 20px; }
+  .chiffres b { display: block; font-size: 22px; }
+  .chiffres span { color: var(--doux); font-size: 13px; }
+  .feuille { background: var(--feuille); border-radius: 16px; padding: 10px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; box-shadow: 0 10px 30px rgba(0,0,0,.35); touch-action: pan-y; }
+  .pochette { aspect-ratio: 63 / 88; border-radius: 7px; background: var(--pochette); border: 1px solid var(--bord); position: relative; overflow: hidden; }
+  .pochette button { all: unset; cursor: zoom-in; display: block; width: 100%; height: 100%; }
+  .pochette img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .sans-image { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; font-size: 13px; color: var(--doux); }
+  .cote { position: absolute; left: 4px; bottom: 4px; background: rgba(0,0,0,.72); color: #fff; font-size: 12px; font-weight: 600; padding: 1px 6px; border-radius: 6px; }
+  nav { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 16px 0 6px; }
+  nav button { white-space: nowrap; background: var(--feuille); color: var(--texte); border: 1px solid var(--bord); border-radius: 999px; padding: 8px 14px; font-size: 15px; cursor: pointer; }
+  nav button:disabled { opacity: .35; cursor: default; }
+  #numero { color: var(--doux); min-width: 110px; text-align: center; }
+  footer { margin-top: 36px; text-align: center; color: var(--doux); font-size: 14px; }
+  footer strong { color: var(--texte); }
+  .etat { text-align: center; color: var(--doux); padding: 60px 10px; }
+  #loupe { position: fixed; inset: 0; background: rgba(0,0,0,.85); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 10; cursor: zoom-out; }
+  #loupe.ouverte { display: flex; }
+  #loupe figure { margin: 0; max-width: min(420px, 92vw); text-align: center; }
+  #loupe img { width: 100%; border-radius: 14px; }
+  #loupe figcaption { margin-top: 10px; color: var(--texte); }
+  #loupe figcaption span { color: var(--doux); display: block; font-size: 14px; }
+  .legal { font-size: 11px; margin-top: 10px; opacity: .7; }
+</style>
+</head>
+<body>
+<main>
+  <div id="contenu" class="etat">Chargement du classeur…</div>
+</main>
+<div id="loupe" role="dialog" aria-modal="true" aria-label="Carte en grand"><figure><img alt=""><figcaption></figcaption></figure></div>
+<script>
+(() => {
+  // Lecture du classeur partagé dans la base AppliCard (clé publique, lecture seule des classeurs partagés).
+  const URL_BASE = 'https://wjribvwoxehpqtatrffa.supabase.co';
+  const CLE = 'sb_publishable_LvyFRDW4Y56BxRApAulAmw_gf5qG1Ur';
+  const contenu = document.getElementById('contenu');
+  const loupe = document.getElementById('loupe');
+  const euros = (x) => x.toLocaleString('fr-FR', { style: 'currency', currency: 'EUR' });
+  const el = (tag, attrs = {}, enfants = []) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === 'texte') n.textContent = v; else if (k.startsWith('on')) n.addEventListener(k.slice(2), v); else n.setAttribute(k, v);
+    }
+    for (const e of enfants) if (e) n.append(e);
+    return n;
+  };
+  const image = (c, grande) => c.imageUrl ? c.imageUrl : c.image ? `${c.image}/${grande ? 'high' : 'low'}.webp` : null;
+
+  const id = new URLSearchParams(location.search).get('id');
+  if (!id || !/^[0-9a-f-]{36}$/i.test(id)) { contenu.textContent = 'Ce lien de classeur est incomplet.'; return; }
+
+  fetch(`${URL_BASE}/rest/v1/rpc/classeur_public`, {
+    method: 'POST',
+    headers: { apikey: CLE, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ p_id: id }),
+  })
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then((lignes) => {
+      const c = lignes && lignes[0];
+      if (!c) { contenu.textContent = "Ce classeur n'existe pas ou n'est plus partagé."; return; }
+      afficher(c);
+    })
+    .catch(() => { contenu.textContent = 'Impossible de charger le classeur pour le moment. Réessayez dans un instant.'; });
+
+  function afficher(c) {
+    document.title = `${c.nom} · AppliCard`;
+    const cartes = Array.isArray(c.cartes) ? c.cartes : [];
+    const valeur = cartes.reduce((s, x) => s + (typeof x.cote === 'number' ? x.cote : 0), 0);
+    const pages = [];
+    for (let i = 0; i < cartes.length; i += 9) pages.push(cartes.slice(i, i + 9));
+    if (!pages.length) pages.push([]);
+    let page = 0;
+
+    const feuille = el('div', { class: 'feuille', 'aria-live': 'polite' });
+    const numero = el('span', { id: 'numero' });
+    const precedent = el('button', { texte: '‹ Précédente', onclick: () => aller(page - 1) });
+    const suivante = el('button', { texte: 'Suivante ›', onclick: () => aller(page + 1) });
+
+    function aller(p) {
+      page = Math.max(0, Math.min(pages.length - 1, p));
+      feuille.replaceChildren(...Array.from({ length: 9 }, (_, i) => pochette(pages[page][i])));
+      numero.textContent = `Page ${page + 1} / ${pages.length}`;
+      precedent.disabled = page === 0;
+      suivante.disabled = page === pages.length - 1;
+    }
+
+    function pochette(x) {
+      const p = el('div', { class: 'pochette' });
+      if (!x) return p;
+      const src = image(x, false);
+      const bouton = el('button', { 'aria-label': `${x.nom}, n° ${x.numero}`, onclick: () => agrandir(x) });
+      if (src) {
+        const img = el('img', { src, alt: x.nom, loading: 'lazy' });
+        img.addEventListener('error', () => img.replaceWith(el('div', { class: 'sans-image', texte: x.nom })));
+        bouton.append(img);
+      } else bouton.append(el('div', { class: 'sans-image', texte: x.nom }));
+      p.append(bouton);
+      if (typeof x.cote === 'number' && x.cote > 0) p.append(el('span', { class: 'cote', texte: euros(x.cote) }));
+      return p;
+    }
+
+    function agrandir(x) {
+      const img = loupe.querySelector('img');
+      img.src = image(x, true) || '';
+      img.alt = x.nom;
+      const legende = loupe.querySelector('figcaption');
+      legende.replaceChildren(document.createTextNode(x.nom), el('span', { texte: `${x.extension} · n° ${x.numero}${typeof x.cote === 'number' ? ' · ' + euros(x.cote) : ''}` }));
+      loupe.classList.add('ouverte');
+    }
+    loupe.addEventListener('click', () => loupe.classList.remove('ouverte'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') loupe.classList.remove('ouverte');
+      if (e.key === 'ArrowRight') aller(page + 1);
+      if (e.key === 'ArrowLeft') aller(page - 1);
+    });
+    // Glisser pour tourner les pages, comme dans un vrai classeur.
+    let depart = null;
+    feuille.addEventListener('touchstart', (e) => { depart = e.touches[0].clientX; }, { passive: true });
+    feuille.addEventListener('touchend', (e) => {
+      if (depart == null) return;
+      const dx = e.changedTouches[0].clientX - depart;
+      if (Math.abs(dx) > 50) aller(page + (dx < 0 ? 1 : -1));
+      depart = null;
+    });
+
+    contenu.className = '';
+    contenu.replaceChildren(
+      el('header', {}, [
+        el('h1', { texte: c.nom }),
+        c.auteur ? el('p', { class: 'auteur', texte: `Classeur de ${c.auteur}` }) : null,
+        c.description ? el('p', { class: 'description', texte: c.description }) : null,
+        el('div', { class: 'chiffres' }, [
+          el('div', {}, [el('b', { texte: String(cartes.length) }), el('span', { texte: cartes.length > 1 ? 'cartes' : 'carte' })]),
+          valeur > 0 ? el('div', {}, [el('b', { texte: euros(valeur) }), el('span', { texte: 'valeur estimée' })]) : null,
+        ]),
+      ]),
+      feuille,
+      pages.length > 1 ? el('nav', {}, [precedent, numero, suivante]) : null,
+      el('footer', {}, [
+        el('div', {}, [document.createTextNode('Classeur créé avec '), el('strong', { texte: 'AppliCard' }), document.createTextNode(', l’appli des collectionneurs de cartes.')]),
+        el('div', { class: 'legal', texte: 'Cotes indicatives (Cardmarket, TCGplayer). Pokémon et les noms associés sont des marques de Nintendo, Creatures et GAME FREAK ; ce site n’est ni affilié ni approuvé par The Pokémon Company.' }),
+      ]),
+    );
+    aller(0);
+  }
+})();
+</script>
+</body>
+</html>
