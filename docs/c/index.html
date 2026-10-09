@@ -145,7 +145,7 @@
     });
 
     contenu.className = '';
-    contenu.replaceChildren(
+    contenu.replaceChildren(...[
       el('header', {}, [
         el('h1', { texte: c.nom }),
         c.auteur ? el('p', { class: 'auteur', texte: `Classeur de ${c.auteur}` }) : null,
@@ -161,7 +161,7 @@
         el('div', {}, [document.createTextNode('Classeur créé avec '), el('strong', { texte: 'AppliCard' }), document.createTextNode(', l’appli des collectionneurs de cartes.')]),
         el('div', { class: 'legal', texte: 'Cotes indicatives (Cardmarket, TCGplayer). Pokémon et les noms associés sont des marques de Nintendo, Creatures et GAME FREAK ; ce site n’est ni affilié ni approuvé par The Pokémon Company.' }),
       ]),
-    );
+    ].filter(Boolean));
     aller(0);
   }
 })();
