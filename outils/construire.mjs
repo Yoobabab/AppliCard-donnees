@@ -425,7 +425,8 @@ for (const [cle, lang] of [['intl', 'en'], ['ja', 'ja']]) {
 
 // ---------- 9 bis. Photos envoyées par les utilisateurs de l'appli et validées par un modérateur.
 // Lues sans compte via la fonction publique photos_validees (base Supabase, clé publique de l'appli).
-// Elles ne servent que pour les cartes sans image TCGdex dans leur langue, et passent avant nos autres sources.
+// Elles ne servent que pour les cartes sans vrai scan dans leur langue ; elles passent seulement avant un scan
+// d'une autre langue (image anglaise montrée pour une carte française, par exemple).
 {
   const SUPABASE = 'https://wjribvwoxehpqtatrffa.supabase.co';
   const CLE = 'sb_publishable_LvyFRDW4Y56BxRApAulAmw_gf5qG1Ur';
@@ -451,6 +452,10 @@ for (const [cle, lang] of [['intl', 'en'], ['ja', 'ja']]) {
     for (const p of photos) {
       if (!LANGUES.includes(p.langue) || typeof p.chemin !== 'string' || !/^[\w-]+\/[\w.-]+\.jpg$/.test(p.chemin)) continue;
       if (avecImage[p.langue].has(p.carte_id)) continue;
+      // Un vrai scan dans la bonne langue (image TCGdex non annoncée, ou n'importe quelle source pour le japonais,
+      // toutes japonaises) passe toujours avant une photo : même qualité que les autres cartes.
+      const deja = resultats[p.langue].images[p.carte_id];
+      if (deja && (deja.startsWith(`t:${p.langue}/`) || p.langue === 'ja')) continue;
       resultats[p.langue].images[p.carte_id] = 'u:' + p.chemin;
       n++;
     }
