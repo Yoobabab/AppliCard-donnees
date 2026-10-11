@@ -78,13 +78,21 @@ const prix = new Map((guide.priceGuides ?? []).map((p) => [Number(p.idProduct), 
 if (prix.size < 30000) throw new Error(`Seulement ${prix.size} prix Cardmarket`);
 
 // 4. Fiches de la vitrine
+// Un produit Cardmarket rattaché à plusieurs cartes TCGdex = correspondance douteuse : écarté.
+const parProduit = new Map();
+for (const [id, [idProduct]] of Object.entries(etat)) if (idProduct && setDe.has(id)) parProduit.set(idProduct, (parProduit.get(idProduct) ?? 0) + 1);
+const proche = (a, b, f) => a > 0 && b > 0 && a <= b * f && b <= a * f;
 const cartes = [];
+const details = new Map();
 for (const [id, [idProduct, rarete]] of Object.entries(etat)) {
   const p = idProduct && prix.get(idProduct);
   const s = setDe.get(id);
-  if (!p || !s) continue;
+  if (!p || !s || parProduit.get(idProduct) !== 1) continue;
   const cote = p.trend || p.avg;
   if (!cote || cote <= 0) continue;
+  // Cote crédible : des ventes ces 30 derniers jours, et une tendance pas trop loin de leur moyenne.
+  if (!proche(cote, p.avg30, 2.5)) continue;
+  details.set(id, p);
   const c = s.cards.find((x) => x.id === id);
   const var7 = p.avg7 > 0 && p.avg30 > 0 ? ((p.avg7 - p.avg30) / p.avg30) * 100 : null;
   cartes.push({
@@ -95,7 +103,8 @@ for (const [id, [idProduct, rarete]] of Object.entries(etat)) {
     image: c?.image ?? null,
     rarete,
     cote: arrondi(cote),
-    var7: var7 == null ? null : Math.round(var7 * 10) / 10,
+    // Variation seulement si la tendance confirme la moyenne de la semaine (sinon : vente isolée).
+    var7: var7 == null || !proche(cote, p.avg7, 1.6) ? null : Math.round(var7 * 10) / 10,
     sortie: s.releaseDate ?? null,
     setId: s.id,
   });
@@ -104,9 +113,9 @@ const sans = ({ setId: _s, sortie: _d, ...reste }) => reste;
 const plusCheres = [...cartes].sort((a, b) => b.cote - a.cote).slice(0, 40);
 // Hausses et baisses : moyenne des 7 derniers jours par rapport à celle des 30 derniers ; cartes d'au moins 10 €
 // et variation plafonnée (au-delà, c'est presque toujours une vente isolée).
-const mouvement = cartes.filter((c) => c.cote >= 10 && c.var7 != null && Math.abs(c.var7) <= 300);
-const hausses = [...mouvement].filter((c) => c.var7 > 0).sort((a, b) => b.var7 - a.var7).slice(0, 30);
-const baisses = [...mouvement].filter((c) => c.var7 < 0).sort((a, b) => a.var7 - b.var7).slice(0, 30);
+const mouvement = cartes.filter((c) => c.cote >= 10 && c.var7 != null);
+const hausses = [...mouvement].filter((c) => c.var7 > 3 && c.var7 <= 150).sort((a, b) => b.var7 - a.var7).slice(0, 30);
+const baisses = [...mouvement].filter((c) => c.var7 < -3 && c.var7 >= -60).sort((a, b) => a.var7 - b.var7).slice(0, 30);
 const aujourdhui = new Date().toISOString().slice(0, 10);
 const dernieres = parDate.filter((s) => s.releaseDate && s.releaseDate <= aujourdhui && !/promo/i.test(s.name)).slice(0, 3);
 const idsDernieres = new Set(dernieres.map((s) => s.id));
@@ -125,6 +134,10 @@ const vitrine = {
 mkdirSync(join(SORTIE, 'v1'), { recursive: true });
 writeFileSync(join(SORTIE, 'v1', 'vitrine.json'), JSON.stringify(vitrine));
 note(`Vitrine : ${plusCheres.length} plus chères (1re : ${plusCheres[0]?.nom} ${plusCheres[0]?.cote} €), ${hausses.length} hausses, ${baisses.length} baisses, ${nouveautes.length} cartes de ${vitrine.extensions.join(', ')}`);
+const ligne = (c) => { const p = details.get(c.id); return `  ${c.id} ${c.nom} (${c.ext}) ${c.cote} € · bas ${p.low} · moy ${p.avg} · 1j ${p.avg1} · 7j ${p.avg7} · 30j ${p.avg30} · var ${c.var7}`; };
+note('Plus chères :'); plusCheres.slice(0, 12).forEach((c) => note(ligne(c)));
+note('Hausses :'); hausses.slice(0, 8).forEach((c) => note(ligne(c)));
+note('Baisses :'); baisses.slice(0, 8).forEach((c) => note(ligne(c)));
 note(`Durée : ${Math.round((Date.now() - t0) / 1000)} s`);
 writeFileSync(join(SORTIE, 'rapport-vitrine.txt'), rapport.join('\n') + '\n');
 if (!existsSync(join(SORTIE, 'v1', 'vitrine.json'))) process.exit(1);
