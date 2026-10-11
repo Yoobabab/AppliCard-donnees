@@ -1,4 +1,30 @@
-Scellé : 5071 produits ({"b":786,"d":619,"k":559,"r":13,"t":571,"e":171,"c":1108,"p":691,"o":28,"l":495,"g":30}), 1910 avec image TCGplayer (38 %), 681 groupes TCGplayer lus, 3158 produits scellés TCGplayer.
+Scellé : 5071 produits ({"b":786,"d":619,"k":559,"r":13,"t":571,"e":171,"c":1108,"p":691,"o":28,"l":495,"g":30}), 2354 avec image TCGplayer (46 %, dont 320 au 2e passage), 681 groupes TCGplayer lus, 3158 produits scellés TCGplayer.
+Exemples du 2e passage :
+  Base Set Booster  →  Base Set 2 Booster Pack
+  Base Set Booster Box  →  Base Set 2 Booster Box
+  EX Deoxys Booster  →  Deoxys Booster Pack
+  EX Emerald Booster  →  Emerald Booster Pack
+  Gym Challenge Booster  →  Gym Challenge Booster Pack [Unlimited Edition]
+  Neo Destiny Booster  →  Neo Destiny Booster Pack [Unlimited Edition]
+  Neo Genesis Booster  →  Neo Genesis Booster Pack [1st Edition]
+  Neo Revelation Booster  →  Neo Revelation Booster Pack [1st Edition]
+  Expedition Base Set Booster  →  Expedition Booster Pack
+  Gym Heroes Booster  →  Gym Heroes Booster Pack [1st Edition]
+  Neo Discovery Booster  →  Neo Discovery Booster Pack [Unlimited Edition]
+  EX Sandstorm Booster  →  Sandstorm Booster Pack
+  EX Deoxys Booster Box  →  Deoxys Booster Box
+  EX Emerald Booster Box  →  Emerald Booster Box
+  EX Sandstorm Booster Box  →  Sandstorm Booster Box
+  Gym Challenge Booster Box  →  Gym Challenge Booster Box [1st Edition]
+  Gym Heroes Booster Box  →  Gym Heroes Booster Box [1st Edition]
+  Neo Destiny Booster Box  →  Neo Destiny Booster Box [1st Edition]
+  Neo Genesis Booster Box  →  Neo Genesis Booster Box [1st Edition]
+  Neo Revelation Booster Box  →  Neo Revelation Booster Box [1st Edition]
+  BREAKthrough Booster  →  XY BREAKthrough Booster Pack
+  BREAKthrough Booster Box  →  XY BREAKthrough Booster Box
+  EX Dragon: FireFang Theme Deck  →  Dragon Theme Deck - "FireFang" [Salamence]
+  EX Hidden Legends: Forest Guardian Theme Deck  →  Hidden Legends Theme Deck - "Forest Guardian" [Dark Celebi]
+  EX FireRed & LeafGreen: FireRed Theme Deck  →  FireRed & LeafGreen Theme Deck - "LeafGreen" [Ivysaur]
 2026-10 g Pokémon Surprise Calendar Set — 0 € — img 0
 2026-10 c Paldea Magnetic Coin Set Part 2 — 0 € — img 0
 2026-10 c Paldea Magnetic Coin Set — 0 € — img 0
@@ -26,7 +52,7 @@ Scellé : 5071 produits ({"b":786,"d":619,"k":559,"r":13,"t":571,"e":171,"c":110
 2026-09 c EX Emerald: Illustrated Booklet - Rayquaza — 0 € — img 0
 2026-09 c EX Ruby & Sapphire: Illustrated Booklet - Mudkip — 0 € — img 0
 2026-09 c EX Emerald: Illustrated Booklet - Exploud — 0 € — img 0
-2026-08 b General Mills 2018 Sun & Moon Booster (3 Cards) — 60 € — img 0
+2026-08 b General Mills 2018 Sun & Moon Booster (3 Cards) — 60 € — img 190360
 2026-08 t Kanto Power Mini Tin Display — 390 € — img 224741
 2026-08 c 30th Celebration Simplified Chinese Sylveon ex Card Showcase Set — 37.3 € — img 0
 2026-08 c 30th Celebration Simplified Chinese Greninja ex Card Showcase Set — 34.87 € — img 0

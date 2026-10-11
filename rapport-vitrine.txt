@@ -21,15 +21,15 @@ Hausses :
   ex6-2 Butterfree (FireRed & LeafGreen) 31.79 € · bas 1.8 · moy 25.65 · 1j 77.66 · 7j 47.13 · 30j 19.06 · var 147.3
   ex7-100 Rocket's Moltres ex (Team Rocket Returns) 524.04 € · bas 99 · moy 830.5 · 1j 1600 · 7j 640.33 · 30j 261.12 · var 145.2
   dp7-102 Charmeleon (Stormfront) 117.65 € · bas 9 · moy 54.54 · 1j 700 · 7j 148.55 · 30j 60.82 · var 144.2
-  hgss4-4 Drapion (Triumphant) 15.12 € · bas 0.5 · moy 12.24 · 1j 74.49 · 7j 18.31 · 30j 7.5 · var 144.1
   hgss3-82 Houndoom (Undaunted) 228.61 € · bas 9.9 · moy 133.05 · 1j 40 · 7j 242.62 · 30j 99.91 · var 142.8
+  pl4-1 Charizard (Arceus) 95.01 € · bas 4.3 · moy 44.43 · 1j 45 · 7j 94.59 · 30j 39.07 · var 142.1
 Baisses :
   hgss3-THREE Alph Lithograph (Undaunted) 50.27 € · bas 15 · moy 32.44 · 1j 59.99 · 7j 35.15 · 30j 83.26 · var -57.8
   neo4-109 Shining Mewtwo (Neo Destiny) 920.06 € · bas 198.46 · moy 350 · 1j 799 · 7j 584.25 · 30j 1351.2 · var -56.8
-  pop1-17 Tyranitar ex (POP Series 1) 15.95 € · bas 5 · moy 21.14 · 1j 27.89 · 7j 16.48 · 30j 37.51 · var -56.1
   ecard2-17 Jumpluff (Aquapolis) 38.14 € · bas 9.99 · moy 50.62 · 1j 65 · 7j 43.16 · 30j 84.38 · var -48.9
-  sv08-050 Quaxly (Surging Sparks) 13.26 € · bas 0.02 · moy 59.95 · 1j 0.5 · 7j 12.11 · 30j 23.56 · var -48.6
   sm9-184 Pikachu & Zekrom GX (Team Up) 61.5 € · bas 20 · moy 37.66 · 1j 99.99 · 7j 61.66 · 30j 119.69 · var -48.5
-  xy3-62 Tyrantrum (Furious Fists) 10.67 € · bas 2.5 · moy 7.21 · 1j 6.5 · 7j 7.07 · 30j 13.47 · var -47.5
   sv10.5b-105 Seismitoad (Black Bolt) 258.79 € · bas 100 · moy 289.58 · 1j 190 · 7j 165.74 · 30j 313.96 · var -47.2
-Durée : 3 s
+  smp-SM191 Mewtwo & Mew GX (SM Black Star Promos) 232.98 € · bas 80 · moy 304.68 · 1j 80 · 7j 207.37 · 30j 381.28 · var -45.6
+  neo3-66 Shining Magikarp (Neo Revelation) 307.41 € · bas 115.9 · moy 386.33 · 1j 190 · 7j 216.49 · 30j 393.81 · var -45
+  hgss4-94 Gengar (Triumphant) 334.87 € · bas 59.99 · moy 611.9 · 1j 320 · 7j 232.23 · 30j 419.29 · var -44.6
+Durée : 2 s
