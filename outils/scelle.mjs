@@ -42,7 +42,7 @@ const CRITIQUES = ['case', 'display', 'jp', 'japanese', 'chinese', 'simplified',
 /** Mots significatifs d'un nom de produit, pour comparer Cardmarket et TCGplayer. */
 export function jetons(n) {
   return n.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
-    .replace(/\((\d+) cards?\)/g, ' ').replace(/&/g, ' ')
+    .replace(/\(\d+ [a-z ]+\)/g, ' ').replace(/&/g, ' ')
     .replace(/booster box/g, 'boosterbox').replace(/elite trainer box/g, 'etb')
     .replace(/[^a-z0-9]+/g, ' ').trim().split(/\s+/)
     .map((t) => (t.length > 3 && t.endsWith('s') && !t.endsWith('ss') ? t.slice(0, -1) : t))
@@ -57,21 +57,30 @@ export function indexer(produitsTp) {
   return index;
 }
 
-/** Produit TCGplayer le plus ressemblant (au moins 75 % de mots en commun, mots critiques identiques). */
-export function correspondance(index, nom) {
+/** Mots qui disent la forme du produit : s'ils diffèrent, ce n'est pas le même produit (2e passage). */
+const FORMES = ['booster', 'boosterbox', 'etb', 'tin', 'blister', 'bundle', 'collection', 'box', 'deck', 'premium', 'case', 'display', 'mini', 'build', 'battle', 'kit', 'coin', 'binder', 'portfolio', 'sleeve'];
+
+/**
+ * Produit TCGplayer le plus ressemblant : au moins 75 % de mots en commun et mots critiques identiques ;
+ * à défaut (seuil `minimum`, 2e passage), au moins 60 % si les mots de forme (booster, coffret, boîte…) sont identiques.
+ */
+export function correspondance(index, nom, minimum = 0.75) {
   const j = new Set(jetons(nom));
   if (!j.size) return undefined;
   const freq = (t) => index.get(t)?.length ?? 0;
-  const rare = [...j].sort((a, b) => freq(a) - freq(b))[0];
+  const connus = [...j].filter((t) => freq(t) > 0);
+  if (!connus.length) return undefined;
+  const rare = connus.sort((a, b) => freq(a) - freq(b))[0];
   let meilleur, score = 0;
   for (const x of index.get(rare) ?? []) {
     if (CRITIQUES.some((t) => j.has(t) !== x.j.has(t))) continue;
+    if (minimum < 0.75 && FORMES.some((t) => j.has(t) !== x.j.has(t))) continue;
     let commun = 0;
     for (const t of j) if (x.j.has(t)) commun++;
     const s = commun / (j.size + x.j.size - commun);
     if (s > score) { score = s; meilleur = x; }
   }
-  return score >= 0.75 ? meilleur.id : undefined;
+  return score >= minimum ? meilleur.id : undefined;
 }
 
 async function principal() {
@@ -88,6 +97,7 @@ async function principal() {
 
   // Images : produits scellés TCGplayer (sans numéro de carte), toutes extensions, international et japonais.
   const tous = [];
+  const nomsTp = new Map();
   let groupesLus = 0;
   for (const cat of [3, 85]) {
     const groupes = (await lire(`https://tcgcsv.com/tcgplayer/${cat}/groups`))?.results ?? [];
@@ -99,6 +109,7 @@ async function principal() {
           if (x.extendedData?.some((e) => e.name === 'Number' || e.name === 'Rarity')) continue;
           if (!x.imageCount) continue;
           tous.push([x.productId, x.name]);
+          nomsTp.set(x.productId, x.name);
         }
       }));
     }
@@ -106,17 +117,27 @@ async function principal() {
 
   const index = indexer(tous);
   const produits = [];
+  const exemples = [];
+  let secondPassage = 0;
   let avecImage = 0;
   const parCat = {};
   for (const p of catalogue.products) {
     const c = CATEGORIES[p.categoryName];
     if (!c) continue;
     const g = prix.get(p.idProduct);
-    const img = correspondance(index, p.name);
+    let img = correspondance(index, p.name);
+    if (!img && ['b', 'd', 'e', 'c', 't', 'l', 'k', 'r'].includes(c[0])) {
+      img = correspondance(index, p.name, 0.6);
+      if (img && exemples.length < 25) exemples.push(`  ${p.name}  →  ${nomsTp.get(img)}`);
+      if (img) secondPassage++;
+    }
     if (img) avecImage++;
     parCat[c[0]] = (parCat[c[0]] ?? 0) + 1;
     const arr = (x) => (x != null && x > 0 ? Math.round(x * 100) / 100 : 0);
-    produits.push([p.idProduct, p.name, c[0], (p.dateAdded ?? '').slice(0, 7), arr(g?.trend), arr(g?.low), arr(g?.avg30), img ?? 0]);
+    produits.push([
+      p.idProduct, p.name, c[0], (p.dateAdded ?? '').slice(0, 7), arr(g?.trend), arr(g?.low), arr(g?.avg30), img ?? 0,
+      arr(g?.avg1), arr(g?.avg7),
+    ]);
   }
   produits.sort((a, b) => b[3].localeCompare(a[3]) || b[0] - a[0]);
   mkdirSync(`${SORTIE}/v1`, { recursive: true });
@@ -125,10 +146,10 @@ async function principal() {
     genere: new Date().toISOString(),
     source: 'Cardmarket (cote), TCGplayer (images)',
     categories: Object.fromEntries(Object.values(CATEGORIES)),
-    colonnes: ['idProduct', 'nom', 'categorie', 'ajoute', 'tendance', 'plusBas', 'moyenne30j', 'imageTcgplayer'],
+    colonnes: ['idProduct', 'nom', 'categorie', 'ajoute', 'tendance', 'plusBas', 'moyenne30j', 'imageTcgplayer', 'moyenne1j', 'moyenne7j'],
     produits,
   }));
-  const rapport = `Scellé : ${produits.length} produits (${JSON.stringify(parCat)}), ${avecImage} avec image TCGplayer (${Math.round((avecImage / produits.length) * 100)} %), ${groupesLus} groupes TCGplayer lus, ${tous.length} produits scellés TCGplayer.`;
+  const rapport = `Scellé : ${produits.length} produits (${JSON.stringify(parCat)}), ${avecImage} avec image TCGplayer (${Math.round((avecImage / produits.length) * 100)} %, dont ${secondPassage} au 2e passage), ${groupesLus} groupes TCGplayer lus, ${tous.length} produits scellés TCGplayer.\nExemples du 2e passage :\n${exemples.join('\n')}`;
   console.log(rapport);
   writeFileSync(`${SORTIE}/rapport-scelle.txt`, rapport + '\n' + produits.slice(0, 40).map((p) => `${p[3]} ${p[2]} ${p[1]} — ${p[4]} € — img ${p[7]}`).join('\n') + '\n');
 
