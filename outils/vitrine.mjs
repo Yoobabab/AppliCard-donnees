@@ -111,9 +111,9 @@ for (const [id, [idProduct, rarete]] of Object.entries(etat)) {
 }
 const sans = ({ setId: _s, sortie: _d, ...reste }) => reste;
 const plusCheres = [...cartes].sort((a, b) => b.cote - a.cote).slice(0, 40);
-// Hausses et baisses : moyenne des 7 derniers jours par rapport à celle des 30 derniers ; cartes d'au moins 10 €
+// Hausses et baisses : moyenne des 7 derniers jours par rapport à celle des 30 derniers ; cartes d’au moins 20 €
 // et variation plafonnée (au-delà, c'est presque toujours une vente isolée).
-const mouvement = cartes.filter((c) => c.cote >= 10 && c.var7 != null);
+const mouvement = cartes.filter((c) => c.cote >= 20 && c.var7 != null);
 const hausses = [...mouvement].filter((c) => c.var7 > 3 && c.var7 <= 150).sort((a, b) => b.var7 - a.var7).slice(0, 30);
 const baisses = [...mouvement].filter((c) => c.var7 < -3 && c.var7 >= -60).sort((a, b) => a.var7 - b.var7).slice(0, 30);
 const aujourdhui = new Date().toISOString().slice(0, 10);
