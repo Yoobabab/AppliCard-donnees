@@ -75,6 +75,8 @@ export function correspondance(index, nom, minimum = 0.75) {
   for (const x of index.get(rare) ?? []) {
     if (CRITIQUES.some((t) => j.has(t) !== x.j.has(t))) continue;
     if (minimum < 0.75 && FORMES.some((t) => j.has(t) !== x.j.has(t))) continue;
+    // 2e passage : les nombres (Base Set 2, Part 2…) doivent être les mêmes des deux côtés.
+    if (minimum < 0.75 && [...j, ...x.j].some((t) => /^\d+$/.test(t) && j.has(t) !== x.j.has(t))) continue;
     let commun = 0;
     for (const t of j) if (x.j.has(t)) commun++;
     const s = commun / (j.size + x.j.size - commun);
@@ -126,7 +128,7 @@ async function principal() {
     if (!c) continue;
     const g = prix.get(p.idProduct);
     let img = correspondance(index, p.name);
-    if (!img && ['b', 'd', 'e', 'c', 't', 'l', 'k', 'r'].includes(c[0])) {
+    if (!img && ['b', 'd', 'e', 'c', 't', 'l'].includes(c[0])) {
       img = correspondance(index, p.name, 0.6);
       if (img && exemples.length < 25) exemples.push(`  ${p.name}  →  ${nomsTp.get(img)}`);
       if (img) secondPassage++;
