@@ -485,6 +485,18 @@ for (const lang of LANGUES) {
 }
 writeFileSync(`${SORTIE}/v1/cotes.json`, JSON.stringify({ version: 1, genere, source: 'TCGplayer', taux, cotes: resultats['cotes-intl'] }));
 writeFileSync(`${SORTIE}/v1/cotes-ja.json`, JSON.stringify({ version: 1, genere, source: 'TCGplayer', taux, cotes: resultats['cotes-ja'] }));
+// Decks : codes d'extension des listes Pokémon TCG Live / Limitless (« 4 Professor's Research SVI 189 »)
+// → extension TCGdex, et numéros des cartes de chaque extension (cartes internationales).
+{
+  const extensions = [];
+  for (const s of tcgdex.en) {
+    if (estPocket(s)) continue;
+    const codes = [...new Set([s.abbreviation?.official, ptcgPour(s.id)?.ptcgoCode, codeLimitlessEn(s.id)].filter(Boolean).map((c) => String(c).toUpperCase()))];
+    extensions.push({ id: s.id, codes, numeros: (s.cards ?? []).map((c) => c.localId) });
+  }
+  writeFileSync(`${SORTIE}/v1/codes-extensions.json`, JSON.stringify({ version: 1, genere, extensions }));
+  note(`Codes d'extension (decks) : ${extensions.filter((e) => e.codes.length).length} extensions avec code sur ${extensions.length}`);
+}
 note(`\nExtensions exclues (Pokémon TCG Pocket) : ${exclus.join(' ')}`);
 // ---------- 11 bis. Empreintes pour la reconnaissance par photo
 if (process.env.EMPREINTES !== '0') {
