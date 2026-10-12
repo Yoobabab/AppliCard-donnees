@@ -48,6 +48,7 @@ jobs:
           git add v1 etat rapport.txt rapport-scelle.txt; git add rapport-vitrine.txt rapport-onepiece.txt 2>/dev/null || true
           if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
           git commit -m "Données du $(date -u +%Y-%m-%d)"
+          git pull --rebase -q
           git push
       - name: Historique des prix (branche « historique »)
         env:
