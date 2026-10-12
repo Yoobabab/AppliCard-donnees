@@ -153,7 +153,7 @@
       el('p', { class: 'avertissement', texte: 'Photos prises dans l’appli Shivr et datées par ses serveurs ; elles ne peuvent pas être modifiées après coup. L’état est déclaré par le propriétaire : Shivr ne vérifie pas l’authenticité de la carte. Comparez toujours les photos avec la carte reçue.' }),
       el('footer', {}, [
         el('div', {}, [document.createTextNode('Passeport créé avec '), el('strong', { texte: 'Shivr' }), document.createTextNode(', l’appli des collectionneurs de cartes.')]),
-        el('div', { class: 'legal', texte: 'Pokémon et les noms associés sont des marques de Nintendo, Creatures et GAME FREAK ; ce site n’est ni affilié ni approuvé par The Pokémon Company.' }),
+        el('div', { class: 'legal' }, ['Pokémon et les noms associés sont des marques de Nintendo, Creatures et GAME FREAK ; ce site n’est ni affilié ni approuvé par The Pokémon Company.', ' ', el('a', { href: '../legal/mentions-legales/', style: 'color: inherit', texte: 'Mentions légales' }), ' · ', el('a', { href: '../legal/confidentialite/', style: 'color: inherit', texte: 'Confidentialité' })]),
       ]),
     ].filter(Boolean));
   }

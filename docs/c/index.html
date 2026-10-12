@@ -159,7 +159,7 @@
       pages.length > 1 ? el('nav', {}, [precedent, numero, suivante]) : null,
       el('footer', {}, [
         el('div', {}, [document.createTextNode('Classeur créé avec '), el('strong', { texte: 'Shivr' }), document.createTextNode(', l’appli des collectionneurs de cartes.')]),
-        el('div', { class: 'legal', texte: 'Cotes indicatives (Cardmarket, TCGplayer). Pokémon et les noms associés sont des marques de Nintendo, Creatures et GAME FREAK ; ce site n’est ni affilié ni approuvé par The Pokémon Company.' }),
+        el('div', { class: 'legal' }, ['Cotes indicatives (Cardmarket, TCGplayer). Pokémon et les noms associés sont des marques de Nintendo, Creatures et GAME FREAK ; ce site n’est ni affilié ni approuvé par The Pokémon Company.', ' ', el('a', { href: '../legal/mentions-legales/', style: 'color: inherit', texte: 'Mentions légales' }), ' · ', el('a', { href: '../legal/confidentialite/', style: 'color: inherit', texte: 'Confidentialité' })]),
       ]),
     ].filter(Boolean));
     aller(0);
