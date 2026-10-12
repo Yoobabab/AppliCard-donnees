@@ -2,34 +2,34 @@ TCGdex : 201 extensions, 21256 cartes
 Fiches lues cette nuit : 188 / 188 à lire ; correspondances connues : 19851
 Vitrine : 40 plus chères (1re : Lugia 4739.41 €), 30 hausses, 30 baisses, 30 cartes de 30th Celebration, 30th Classic Collection, Pitch Black
 Plus chères :
-  ecard2-149 Lugia (Aquapolis) 4739.41 € · bas 1000 · moy 3714.27 · 1j 2750 · 7j 3277.77 · 30j 3033.68 · var 8
-  ecard3-10 Gengar (Skyridge) 4217.75 € · bas 450 · moy 2887.49 · 1j 3299.99 · 7j 3442.49 · 30j 2269.63 · var 51.7
-  ecard3-146 Charizard (Skyridge) 3674.72 € · bas 420 · moy 2524.99 · 1j 3439 · 7j 3980.88 · 30j 3844.3 · var 3.6
+  ecard2-149 Lugia (Aquapolis) 4739.41 € · bas 820 · moy 3714.27 · 1j 2750 · 7j 3277.77 · 30j 3033.68 · var 8
+  ecard3-10 Gengar (Skyridge) 4217.75 € · bas 450 · moy 3910 · 1j 3299.99 · 7j 3442.49 · 30j 2269.63 · var 51.7
+  ecard3-146 Charizard (Skyridge) 3674.72 € · bas 330 · moy 2524.99 · 1j 3439 · 7j 3980.88 · 30j 3844.3 · var 3.6
   sm9-170 Latias & Latios GX (Team Up) 3119.07 € · bas 300 · moy 4208.33 · 1j 550 · 7j 3631.25 · 30j 2467.57 · var 47.2
   ex5.5-4 Mudkip (Poké Card Creator Pack) 2911.86 € · bas 10000 · moy 3500 · 1j 3500 · 7j 1430.83 · 30j 1430.83 · var null
-  swsh7-215 Umbreon VMAX (Evolving Skies) 1930.74 € · bas 220 · moy 1547.22 · 1j 1199 · 7j 2037.33 · 30j 1764.06 · var 15.5
+  swsh7-215 Umbreon VMAX (Evolving Skies) 1930.74 € · bas 220 · moy 1830.92 · 1j 1199 · 7j 2037.33 · 30j 1764.06 · var 15.5
   ecard3-32 Umbreon (Skyridge) 1886.07 € · bas 599.9 · moy 1249.98 · 1j 1399.95 · 7j 1762.49 · 30j 1550.37 · var 13.7
-  col1-20 Rayquaza (Call of Legends) 1823.06 € · bas 149.99 · moy 2216.42 · 1j 550 · 7j 1803.11 · 30j 1039.93 · var 73.4
+  col1-20 Rayquaza (Call of Legends) 1760.3 € · bas 149.99 · moy 2216.42 · 1j 349 · 7j 927 · 30j 1032.75 · var null
   neo4-107 Shining Charizard (Neo Destiny) 1670.6 € · bas 298 · moy 2055 · 1j 4000 · 7j 2204.25 · 30j 1819.2 · var 21.2
   ru1-7 Pikachu (Pokémon Rumble) 1487.1 € · bas 249 · moy 1009.99 · 1j 150 · 7j 1009.99 · 30j 889.43 · var 13.6
   ex7-96 Rocket's Articuno ex (Team Rocket Returns) 1454.48 € · bas 69.99 · moy 897.5 · 1j 1600 · 7j 1638.99 · 30j 644.19 · var 154.4
   swsh11-186 Giratina V (Lost Origin) 1399.23 € · bas 300 · moy 1515.32 · 1j 2000 · 7j 1337.58 · 30j 1226.97 · var 9
 Hausses :
   ex7-103 Rocket's Sneasel ex (Team Rocket Returns) 439.35 € · bas 50 · moy 333.75 · 1j 130 · 7j 605.38 · 30j 243.12 · var 149
-  ex1-98 Hitmonchan ex (Ruby & Sapphire) 89.32 € · bas 6 · moy 39.45 · 1j 380 · 7j 114.66 · 30j 46.12 · var 148.6
   ru1-16 Bibarel (Pokémon Rumble) 66.67 € · bas 14 · moy 54.58 · 1j 35 · 7j 99.94 · 30j 40.3 · var 148
   ex6-2 Butterfree (FireRed & LeafGreen) 31.79 € · bas 1.8 · moy 25.65 · 1j 77.66 · 7j 47.13 · 30j 19.06 · var 147.3
+  ex14-89 Aggron ex (Crystal Guardians) 115.75 € · bas 8 · moy 206.08 · 1j 30 · 7j 174.63 · 30j 71.18 · var 145.3
   ex7-100 Rocket's Moltres ex (Team Rocket Returns) 524.04 € · bas 99 · moy 830.5 · 1j 1600 · 7j 640.33 · 30j 261.12 · var 145.2
   dp7-102 Charmeleon (Stormfront) 117.65 € · bas 9 · moy 54.54 · 1j 700 · 7j 148.55 · 30j 60.82 · var 144.2
-  hgss3-82 Houndoom (Undaunted) 228.61 € · bas 9.9 · moy 133.05 · 1j 40 · 7j 242.62 · 30j 99.91 · var 142.8
-  pl4-1 Charizard (Arceus) 95.01 € · bas 4.3 · moy 44.43 · 1j 45 · 7j 94.59 · 30j 39.07 · var 142.1
+  pl4-1 Charizard (Arceus) 90.93 € · bas 4.3 · moy 44.43 · 1j 49.9 · 7j 96.88 · 30j 39.88 · var 142.9
+  ex9-99 Regirock ex (Emerald) 149.3 € · bas 25 · moy 179.3 · 1j 180 · 7j 191.07 · 30j 79.37 · var 140.7
 Baisses :
   hgss3-THREE Alph Lithograph (Undaunted) 50.27 € · bas 15 · moy 32.44 · 1j 59.99 · 7j 35.15 · 30j 83.26 · var -57.8
   neo4-109 Shining Mewtwo (Neo Destiny) 920.06 € · bas 198.46 · moy 350 · 1j 799 · 7j 584.25 · 30j 1351.2 · var -56.8
   ecard2-17 Jumpluff (Aquapolis) 38.14 € · bas 9.99 · moy 50.62 · 1j 65 · 7j 43.16 · 30j 84.38 · var -48.9
   sm9-184 Pikachu & Zekrom GX (Team Up) 61.5 € · bas 20 · moy 37.66 · 1j 99.99 · 7j 61.66 · 30j 119.69 · var -48.5
-  sv10.5b-105 Seismitoad (Black Bolt) 258.79 € · bas 100 · moy 289.58 · 1j 190 · 7j 165.74 · 30j 313.96 · var -47.2
+  sv10.5b-105 Seismitoad (Black Bolt) 237.78 € · bas 100 · moy 289.58 · 1j 168.99 · 7j 166.91 · 30j 315.79 · var -47.1
   smp-SM191 Mewtwo & Mew GX (SM Black Star Promos) 232.98 € · bas 80 · moy 304.68 · 1j 80 · 7j 207.37 · 30j 381.28 · var -45.6
+  pop2-17 Celebi ex (POP Series 2) 24.09 € · bas 4.94 · moy 23.84 · 1j 18.9 · 7j 16.87 · 30j 31.02 · var -45.6
   neo3-66 Shining Magikarp (Neo Revelation) 307.41 € · bas 115.9 · moy 386.33 · 1j 190 · 7j 216.49 · 30j 393.81 · var -45
-  hgss4-94 Gengar (Triumphant) 334.87 € · bas 59.99 · moy 611.9 · 1j 320 · 7j 232.23 · 30j 419.29 · var -44.6
-Durée : 5 s
+Durée : 2 s
