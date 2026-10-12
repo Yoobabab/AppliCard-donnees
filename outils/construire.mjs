@@ -19,6 +19,7 @@
 
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { construireEmpreintes, petiteImage } from './empreintes.mjs';
+import { construireReimpressions } from './reimpressions.mjs';
 
 const SORTIE = process.env.SORTIE ?? 'donnees';
 const ECHANTILLONS = process.env.ECHANTILLONS === '1';
@@ -291,7 +292,10 @@ for (const lang of LANGUES) {
       // Ordre : anglais TCGdex, Limitless, Pokémon TCG API, TCGplayer, puis les autres langues TCGdex.
       const anglais = lang !== 'en' && carteParLangue.en.get(c.id)?.image;
       if (anglais) { images[c.id] = 't:' + anglais.replace('https://assets.tcgdex.net/', ''); stats.tcgdex++; return; }
-      const code = codeLimitlessEn(s.id);
+      // Sous-collections (30 ans Collection Classique, Galerie de Galar…) : même code Limitless que l'extension
+      // principale, mais pas les mêmes cartes derrière les mêmes numéros (bug d'oct. 2026 : les 30 cartes de la
+      // Collection Classique avaient les images des 30 premières cartes de l'extension 30 ans).
+      const code = PARENTS[s.id] ? undefined : codeLimitlessEn(s.id);
       if (code && /^\d+$/.test(c.localId)) {
         const chemin = `tpci/${code}/${code}_${c.localId.padStart(3, '0')}_R_EN`;
         if (await existe(`${URL_LIM}${chemin}_LG.png`)) { images[c.id] = 'l:' + chemin; stats.limitless++; return; }
@@ -522,9 +526,45 @@ if (process.env.EMPREINTES !== '0') {
       if (url) ja.set(c.id, url);
     }
   }
+  // Cartes absentes de TCGdex retrouvées par la veille de couverture (v1/ajouts.json de la veille) : reconnues
+  // elles aussi par photo (30 ans japonais, promos récentes…). Identifiant « tp:<produit TCGplayer> ».
+  const nomsAjouts = new Map();
+  try {
+    const a = JSON.parse(readFileSync(`${SORTIE}/v1/ajouts.json`, 'utf8'));
+    const col = Object.fromEntries((a.colonnes ?? []).map((c, i) => [c, i]));
+    for (const l of a.cartes ?? []) {
+      const id = `tp:${l[col.id]}`;
+      nomsAjouts.set(id, String(l[col.nom] ?? ''));
+      const url = petiteImage(`g:${l[col.id]}`);
+      if (l[col.image]) (l[col.langue] === 'ja' ? ja : intl).set(id, url);
+    }
+  } catch {
+    // Pas encore de cartes ajoutées.
+  }
   const LIMITE = Number(process.env.LIMITE_EMPREINTES ?? 15000);
   await construireEmpreintes('intl', intl, { SORTIE, UA, LIMITE, pool, note });
   await construireEmpreintes('ja', ja, { SORTIE, UA, LIMITE: Math.max(0, LIMITE), pool, note });
+
+  // Rééditions (même nom, même illustration, extensions différentes).
+  const ENERGIE_DE_BASE = /^(basic)?(grass|fire|water|lightning|psychic|fighting|darkness|metal|fairy|dragon)?energy$/;
+  const sansPrecision = (n) => n.replace(/\s*\(.*?\)\s*/g, ' ');
+  const cleIntl = (id) => {
+    const nom = id.startsWith('tp:') ? nomsAjouts.get(id) : carteParLangue.en.get(id)?.name ?? carteParLangue.fr.get(id)?.name;
+    const n = norm(sansPrecision(nom ?? ''));
+    return !n || ENERGIE_DE_BASE.test(n) ? null : n;
+  };
+  // Japonais : noms TCGdex en japonais, noms des cartes ajoutées en anglais → clé = espèce anglaise + suffixe latin (V, ex, GX…).
+  const cleJa = (id) => {
+    if (id.startsWith('tp:')) {
+      const n = norm(sansPrecision(nomsAjouts.get(id) ?? ''));
+      return !n || ENERGIE_DE_BASE.test(n) ? null : n;
+    }
+    const nom = carteParLangue.ja.get(id)?.name ?? '';
+    if (!nom || nom.includes('エネルギー')) return null;
+    const espece = especeBruteDe(nom);
+    return espece ? norm(espece) + nom.replace(/[^A-Za-z]/g, '').toLowerCase() : nom.replace(/\s/g, '');
+  };
+  construireReimpressions(SORTIE, { intl: cleIntl, ja: cleJa }, note);
 }
 
 note(`Durée : ${Math.round((Date.now() - t0) / 1000)} s`);
