@@ -1,0 +1,53 @@
+Couverture — 2026-10-12T22:34:02.557Z
+Extensions sorties depuis le 2024-10-12 : cartes annoncées par TCGdex mais pas encore saisies
+  [en] rien à signaler
+  [fr] rien à signaler
+  [de] rien à signaler
+  [es] rien à signaler
+  [it] rien à signaler
+  [ja] rien à signaler
+
+Cartes saisies en anglais mais pas encore dans la langue (extension présente dans la langue)
+  [fr] 457 cartes : B2 234 · B1a 103 · basep 27 · P-A 27 · np 19 · dpp 14 · tk-sm-r 11 · sm1 9 · swshp 6 · svp 6 · mep 1
+  [de] 893 cartes : B2 234 · xyp 216 · A4a 105 · B1a 103 · bwp 101 · basep 29 · hgssp 25 · cel25cc 25 · dv1 21 · svp 10 · smp 8 · xya 6 · swshp 6 · B2a 2 · P-A 1
+  [de] extensions récentes absentes : 2024sv McDonald's Collection 2024 · A3a Extradimensional Crisis · A3b Eevee Grove · A4 Wisdom of Sea and Sky · B1 Mega Rising
+  [es] 3314 cartes : B2 234 · xyp 216 · dp6 146 · pl1 133 · dp3 132 · dp1 130 · dp2 124 · hgss1 124 · ex10 117 · g1 117 · neo1 111 · pl4 111 · ex1 109 · dp4 106 · dp7 106
+  [es] extensions récentes absentes : A3a Extradimensional Crisis · A3b Eevee Grove · A4 Wisdom of Sea and Sky · B1 Mega Rising
+  [it] 5981 cartes : B2 234 · xyp 216 · ecard2 186 · ecard3 182 · ecard1 165 · dp6 146 · pl1 133 · dp3 132 · dp1 130 · dp2 124 · hgss1 124 · pl2 120 · ex10 117 · g1 117 · ex6 116
+  [it] extensions récentes absentes : A3a Extradimensional Crisis · A3b Eevee Grove · A4 Wisdom of Sea and Sky · B1 Mega Rising
+
+30e anniversaire
+  [en] 30th « 30th Celebration » 2026-09-16 : 158/158 · 30th-c « 30th Classic Collection » 2026-09-16 : 30/30
+  [fr] 30th « 30ᵉ Anniversaire » 2026-09-16 : 158/158 · 30th-c « Collection Classique30ᵉ Anniversaire » 2026-09-16 : 30/30
+  [de] 30th « 30 Jahre » 2026-09-16 : 158/158 · 30th-c « 30 Jahre: Klassische Sammlung » 2026-09-16 : 30/30
+  [es] 30th « Celebración 30.º Aniversario » 2026-09-16 : 158/158 · 30th-c « Colección Clásica del 30.º Aniversario » 2026-09-16 : 30/30
+  [it] 30th « 30° Anniversario » 2026-09-16 : 158/158 · 30th-c « Collzione Classica del 30° » 2026-09-16 : 30/30
+  [ja] aucune extension trouvée
+
+TCGplayer (en) : 35 groupes récents comparés à TCGdex
+  ⚠ ME: 30th Celebration → 30th-c : TCGdex 30 / TCGplayer 158
+  ⚠ ME: Mega Evolution Promo → mep : TCGdex 89 / TCGplayer 110
+  ⚠ MEE: Mega Evolution Energies → mee : TCGdex 8 / TCGplayer 16
+  ✗ EX Trainer Kit 1: Latias & Latios (PR, 2026-10-12) : 10 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ EX Trainer Kit 2: Plusle & Minun (PR, 2026-10-12) : 12 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ Nintendo Promos (PR, 2026-10-12) : 64 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ Alternate Art Promos (PR, 2026-10-12) : 54 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ Blister Exclusives (BLE, 2026-10-12) : 142 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ First Partner Pack (FPP, 2026-10-12) : 24 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ Miscellaneous Cards & Products (MCAP, 2026-10-12) : 526 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ Pikachu World Collection Promos (PWCP, 2026-10-12) : 17 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ Professor Program Promos (PPP, 2026-10-12) : 62 cartes chez TCGplayer, extension introuvable chez TCGdex
+
+TCGplayer (ja) : 41 groupes récents comparés à TCGdex
+  ✗ M6a: MEGA Expansion 30th Celebration (m6a, 2026-09-16) : 165 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ MF: 30th CELEBRATION Premium Deck Set Espeon & Umbreon (mF, 2026-09-16) : 44 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ⚠ M6: Storm Emeralda → M6 : TCGdex 113 / TCGplayer 116
+  ✗ MEE: Starter Set ex Eevee ex (mEE, 2026-07-31) : 20 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ MEM: Starter Set ex Meowscarada ex (mEM, 2026-07-31) : 18 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ MEZ: Starter Set ex Zoroark ex (mEZ, 2026-07-31) : 20 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ MP1: Start Deck 100 Battle Collection CoroCiao Version (MP1, 2025-12-19) : 23 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ Start Deck 100 Battle Collection (, 2025-12-19) : 788 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ MBG: MEGA Starter Set Mega Gengar ex (MBG, 2025-09-12) : 22 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ✗ MBD: MEGA Starter Set Mega Diancie ex (MBD, 2025-09-05) : 22 cartes chez TCGplayer, extension introuvable chez TCGdex
+  ⚠ m1L: Mega Brave → M1L : TCGdex 92 / TCGplayer 93
+  ✗ Vending Machine cards Series 3 (Green) (, 2026-10-12) : 5 cartes chez TCGplayer, extension introuvable chez TCGdex
