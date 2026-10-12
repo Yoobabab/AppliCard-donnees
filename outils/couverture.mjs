@@ -66,6 +66,54 @@ export const simple = (t) =>
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 
+/** « 030/165 » → « 30 » ; « SV-P 012 » → « 12 » ; « TG14 » → « tg14 ». */
+export const numeroSimple = (n) => {
+  const t = String(n ?? '').split('/')[0].trim().toLowerCase().replace(/^.*\s/, '');
+  return /^\d+$/.test(t) ? String(Number(t)) : t;
+};
+
+/** Cartes numérotées d'un groupe TCGplayer, avec image et prix (normal / holo ou reverse). */
+export function cartesTcgplayer(produits, prix) {
+  const parId = new Map();
+  for (const x of prix) parId.set(x.productId, [...(parId.get(x.productId) ?? []), x]);
+  const res = [];
+  const vus = new Set();
+  for (const p of produits) {
+    const ext = Object.fromEntries((p.extendedData ?? []).map((e) => [e.name, String(e.value ?? '').trim()]));
+    const numero = ext.Number;
+    if (!numero || !/\d/.test(numero)) continue;
+    if (vus.has(numero)) continue; // mêmes carte et numéro en double (variantes de stock) : une seule
+    vus.add(numero);
+    const pr = Object.fromEntries((parId.get(p.productId) ?? []).map((x) => [x.subTypeName, x.marketPrice || x.midPrice || 0]));
+    res.push({
+      id: p.productId,
+      numero,
+      nom: String(p.name).replace(/\s+-\s+\S+\/\S+$/, '').replace(/\s*\((?:[^)]*)\)\s*$/, '').trim(),
+      rarete: ext.Rarity ?? '',
+      image: p.imageCount === 0 || !p.imageUrl ? '' : p.imageUrl.replace(/_200w\.jpg$/, '_in_1000x1000.jpg'),
+      prix: pr.Normal || pr.Holofoil || 0,
+      prixHolo: pr['Reverse Holofoil'] || (pr.Normal ? pr.Holofoil : 0) || 0,
+    });
+  }
+  return res;
+}
+
+/** Extension TCGdex correspondant à un groupe TCGplayer : nom d'abord, puis code s'il est unique. */
+export function trouverSet(g, setsLangue) {
+  const nom = simple(String(g.name).replace(/^[A-Za-z0-9]{1,6}:\s*/, ''));
+  const liste = [...setsLangue.values()];
+  const parNom = liste.filter((s) => simple(s.name) === nom);
+  if (parNom.length === 1) return parNom[0];
+  const code = String(g.abbreviation ?? '').toLowerCase();
+  if (!code) return undefined;
+  const parCode = liste.filter((s) => [s.id, s.abbreviation?.official].some((x) => String(x ?? '').toLowerCase() === code));
+  return parCode.length === 1 ? parCode[0] : undefined;
+}
+
+function ligneAjout(c, langue, setId, frParEn, eur) {
+  return [c.id, langue, setId, c.numero, c.nom, frParEn.get(c.nom) ?? null, c.rarete, c.image, eur(c.prix), eur(c.prixHolo)];
+}
+
 async function principal() {
   const lignes = [];
   const note = (t) => {
@@ -120,8 +168,19 @@ async function principal() {
     note(`  [${l}] ${s30.map((s) => `${s.id} « ${s.name} » ${s.releaseDate} : ${(s.cards ?? []).length}/${s.cardCount?.total ?? '?'}`).join(' · ') || 'aucune extension trouvée'}`);
   }
 
-  // 4. TCGdex contre TCGplayer (anglais et japonais), extensions de moins de 18 mois.
+  // 4. TCGdex contre TCGplayer (anglais et japonais), extensions de moins de 18 mois : rapport, et cartes
+  //    absentes de TCGdex publiées dans v1/ajouts.json (l'appli les ajoute à la recherche et aux fiches).
   const recent = new Date(Date.now() - 548 * 86400000).toISOString().slice(0, 10);
+  const taux = (await lire('https://api.frankfurter.app/latest?from=USD&to=EUR'))?.rates?.EUR ?? 0.92;
+  const eur = (usd) => (usd > 0 ? Math.round(usd * taux * 100) / 100 : null);
+  // Noms anglais → français (mêmes identifiants de cartes en anglais et en français chez TCGdex).
+  const frParEn = new Map();
+  {
+    const [en, fr] = await Promise.all([lire(`${API}/en/cards`), lire(`${API}/fr/cards`)]);
+    const nomFr = new Map((fr ?? []).map((c) => [c.id, c.name]));
+    for (const c of en ?? []) if (nomFr.has(c.id) && !frParEn.has(c.name)) frParEn.set(c.name, nomFr.get(c.id));
+  }
+  const ajouts = { extensions: [], cartes: [] };
   for (const [cat, l] of [
     [3, 'en'],
     [85, 'ja'],
@@ -130,29 +189,53 @@ async function principal() {
       (g) => (g.publishedOn ?? '').slice(0, 10) >= recent,
     );
     note(`\nTCGplayer (${l}) : ${groupes.length} groupes récents comparés à TCGdex`);
-    const parNom = new Map([...sets[l].values()].map((s) => [simple(s.name), s]));
-    const parCode = new Map([...sets[l].values()].map((s) => [String(s.abbreviation?.official ?? s.id).toLowerCase(), s]));
-    const comptes = await pool(groupes, 6, async (g) => {
-      const p = (await lire(`https://tcgcsv.com/tcgplayer/${cat}/${g.groupId}/products`))?.results ?? [];
-      const numeros = new Set(
-        p.map((x) => (x.extendedData ?? []).find((e) => e.name === 'Number')?.value).filter((n) => n && /\d/.test(n)),
-      );
-      return numeros.size;
+    const resultats = await pool(groupes, 6, async (g) => {
+      const [p, pr] = await Promise.all([
+        lire(`https://tcgcsv.com/tcgplayer/${cat}/${g.groupId}/products`),
+        lire(`https://tcgcsv.com/tcgplayer/${cat}/${g.groupId}/prices`),
+      ]);
+      return { g, cartes: cartesTcgplayer(p?.results ?? [], pr?.results ?? []) };
     });
-    groupes.forEach((g, i) => {
-      const s = parCode.get(String(g.abbreviation ?? '').toLowerCase()) ?? parNom.get(simple(g.name));
-      const tp = comptes[i];
-      const td = s ? (s.cards ?? []).length : 0;
-      if (!tp) return;
-      if (!s) note(`  ✗ ${g.name} (${g.abbreviation ?? ''}, ${String(g.publishedOn).slice(0, 10)}) : ${tp} cartes chez TCGplayer, extension introuvable chez TCGdex`);
-      else if (td < tp) note(`  ⚠ ${g.name} → ${s.id} : TCGdex ${td} / TCGplayer ${tp}`);
-    });
+    for (const { g, cartes } of resultats) {
+      if (!cartes.length) continue;
+      const s = trouverSet(g, sets[l]);
+      const nomGroupe = String(g.name).replace(/^[A-Za-z0-9]{1,6}:\s*/, '');
+      if (!s) {
+        const officielle = /^[A-Za-z0-9]{2,6}:/.test(g.name) && cartes.length <= 400;
+        note(`  ✗ ${g.name} (${String(g.publishedOn).slice(0, 10)}) : ${cartes.length} cartes chez TCGplayer, extension absente de TCGdex${officielle ? ' → ajoutée' : ' (ignorée : pas une extension numérotée)'}`);
+        if (!officielle) continue;
+        const setId = `tp-${g.groupId}`;
+        ajouts.extensions.push([setId, l, nomGroupe, g.abbreviation ?? '', String(g.publishedOn).slice(0, 10)]);
+        for (const c of cartes) ajouts.cartes.push(ligneAjout(c, l, setId, frParEn, eur));
+        continue;
+      }
+      const presents = new Set((s.cards ?? []).map((c) => numeroSimple(c.localId)));
+      const manquent = cartes.filter((c) => !presents.has(numeroSimple(c.numero)));
+      if (manquent.length) {
+        note(`  ⚠ ${g.name} → ${s.id} : TCGdex ${(s.cards ?? []).length} / TCGplayer ${cartes.length} → ${manquent.length} ajoutées (${manquent.slice(0, 6).map((c) => c.numero).join(', ')}${manquent.length > 6 ? '…' : ''})`);
+        for (const c of manquent) ajouts.cartes.push(ligneAjout(c, l, s.id, frParEn, eur));
+      }
+    }
   }
+  note(`\nCartes ajoutées (absentes de TCGdex) : ${ajouts.cartes.length} dans ${ajouts.extensions.length} extensions nouvelles + extensions incomplètes`);
 
   mkdirSync(`${SORTIE}/v1`, { recursive: true });
   writeFileSync(
     `${SORTIE}/v1/manquantes.json`,
     JSON.stringify({ version: 1, genere: new Date().toISOString(), source: 'TCGdex (anglais)', cartes: manquantes }),
+  );
+  writeFileSync(
+    `${SORTIE}/v1/ajouts.json`,
+    JSON.stringify({
+      version: 1,
+      genere: new Date().toISOString(),
+      source: 'TCGplayer',
+      taux,
+      colonnesExtensions: ['id', 'langue', 'nom', 'code', 'date'],
+      extensions: ajouts.extensions,
+      colonnes: ['id', 'langue', 'set', 'numero', 'nom', 'nomFr', 'rarete', 'image', 'cote', 'coteHolo'],
+      cartes: ajouts.cartes,
+    }),
   );
   writeFileSync(`${SORTIE}/rapport-couverture.txt`, `Couverture — ${new Date().toISOString()}\n${lignes.join('\n')}\n`);
 }
