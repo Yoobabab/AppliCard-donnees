@@ -41,11 +41,14 @@ jobs:
       - name: One Piece (préparation)
         run: |
           SORTIE=. node outils/onepiece.mjs || echo "One Piece indisponible ce soir, on garde la version d'hier"
+      - name: Veille de couverture (cartes manquantes)
+        run: |
+          SORTIE=. node outils/couverture.mjs || echo "Veille indisponible ce soir, on garde la version d'hier"
       - name: Publier
         run: |
           git config user.name "robot-applicard"
           git config user.email "robot-applicard@users.noreply.github.com"
-          git add v1 etat rapport.txt rapport-scelle.txt; git add rapport-vitrine.txt rapport-onepiece.txt 2>/dev/null || true
+          git add v1 etat rapport.txt rapport-scelle.txt; git add rapport-vitrine.txt rapport-onepiece.txt rapport-couverture.txt 2>/dev/null || true
           if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
           git commit -m "Données du $(date -u +%Y-%m-%d)"
           git pull --rebase -q

@@ -35,6 +35,27 @@ export const estNumero = (n) => /^[A-Z]{1,4}\d{0,2}-\d{2,3}[A-Z]?$/.test(n);
 /** Image plus grande que la vignette de 200 px donnée par TCGplayer. */
 export const imageGrande = (url, taille = 'in_1000x1000') => (url ? url.replace(/_200w\.jpg$/, `_${taille}.jpg`) : '');
 
+/** Version alternative d'une carte (même numéro, autre illustration). */
+export const estVariante = (nom) => /\((?:[^)]*\b(?:parallel|alternate art|manga|sp|special|full art|wanted|treasure|alt)\b[^)]*)\)/i.test(nom);
+
+/** Images officielles Bandai à essayer pour un numéro (variante 0 = carte normale). */
+export function imagesOfficielles(numero, variante = 0) {
+  const nom = variante > 0 ? `${numero}_p${variante}` : numero;
+  return [
+    `https://en.onepiece-cardgame.com/images/cardlist/card/${nom}.png`,
+    `https://www.onepiece-cardgame.com/images/cardlist/card/${nom}.png`,
+  ];
+}
+
+async function pool(liste, n, f) {
+  let i = 0;
+  await Promise.all(
+    Array.from({ length: n }, async () => {
+      while (i < liste.length) await f(liste[i++]);
+    }),
+  );
+}
+
 /** Vérifie qu'une image répond vraiment (code HTTP et type). */
 async function essaiImage(url) {
   try {
@@ -132,6 +153,34 @@ async function principal() {
   }
   if (retenue !== 'in_1000x1000') for (const c of cartes) if (c[9]) c[9] = c[9].replace(/_in_1000x1000\.jpg$/, `_${retenue}.jpg`);
   note(`Taille d'image retenue : ${retenue}`);
+
+  // Cartes sans photo chez TCGplayer (souvent pas encore sorties) : images officielles de Bandai,
+  // site anglais puis japonais (même illustration, texte japonais). Versions alternatives (« Parallel »,
+  // « Alternate Art », « Manga »…) = _p1, _p2… dans l'ordre des produits TCGplayer.
+  const sans = cartes.filter((c) => !c[9]);
+  const parNumero = new Map();
+  for (const c of [...cartes].sort((a, b) => a[0] - b[0])) {
+    if (!estVariante(c[2])) continue;
+    parNumero.set(c[1], [...(parNumero.get(c[1]) ?? []), c[0]]);
+  }
+  const sources = { en: 0, ja: 0 };
+  await pool(sans, 6, async (c) => {
+    for (const url of imagesOfficielles(c[1], estVariante(c[2]) ? (parNumero.get(c[1]) ?? []).indexOf(c[0]) + 1 : 0)) {
+      if ((await essaiImage(url)).ok) {
+        c[9] = url;
+        sources[url.includes('//en.') ? 'en' : 'ja']++;
+        return;
+      }
+    }
+  });
+  note(`Sans photo TCGplayer : ${sans.length} → retrouvées sur le site officiel : ${sources.en} (anglais) + ${sources.ja} (japonais) ; toujours sans image : ${sans.filter((c) => !c[9]).length}`);
+  const restantes = {};
+  for (const c of sans.filter((x) => !x[9])) {
+    const e = extensions.find((x) => x[0] === c[3]);
+    const k = e ? `${e[2]} (${e[3]})` : String(c[3]);
+    restantes[k] = (restantes[k] ?? 0) + 1;
+  }
+  if (Object.keys(restantes).length) note(`  Encore sans image : ${Object.entries(restantes).map(([k, n]) => `${k} : ${n}`).join(' · ')}`);
   note(`${extensions.length} extensions, ${cartes.length} cartes (sur ${produits} produits, le reste = scellé et accessoires)`);
   note(`Avec image : ${cartes.filter((c) => c[9]).length} · avec prix : ${cartes.filter((c) => c[10] || c[11]).length}`);
   if (cartes.length < 500) throw new Error('Trop peu de cartes, on garde la version précédente');
