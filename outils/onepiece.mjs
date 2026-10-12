@@ -33,12 +33,26 @@ export function champ(produit, nom) {
 export const estNumero = (n) => /^[A-Z]{1,4}\d{0,2}-\d{2,3}[A-Z]?$/.test(n);
 
 /** Image plus grande que la vignette de 200 px donnée par TCGplayer. */
-export const imageGrande = (url) => (url ? url.replace(/_200w\.jpg$/, '_in_1000x1000.jpg') : '');
+export const imageGrande = (url, taille = 'in_1000x1000') => (url ? url.replace(/_200w\.jpg$/, `_${taille}.jpg`) : '');
+
+/** Vérifie qu'une image répond vraiment (code HTTP et type). */
+async function essaiImage(url) {
+  try {
+    const r = await fetch(url, { method: 'GET', headers: UA, signal: AbortSignal.timeout(20000) });
+    const type = r.headers.get('content-type') ?? '';
+    const taille = (await r.arrayBuffer()).byteLength;
+    return { ok: r.ok && type.startsWith('image/') && taille > 2000, code: r.status, type, taille };
+  } catch (e) {
+    return { ok: false, code: 0, type: String(e?.message ?? e), taille: 0 };
+  }
+}
 
 /** Une carte (colonnes) à partir d'un produit TCGplayer et de ses prix. */
-export function carteDepuis(p, prix, eur) {
+export function carteDepuis(p, prix, eur, taille = 'in_1000x1000') {
   const numero = champ(p, 'Number');
   if (!estNumero(numero)) return null;
+  // imageCount = 0 : TCGplayer n'a pas (encore) de photo pour ce produit.
+  const image = p.imageCount === 0 ? '' : imageGrande(p.imageUrl ?? '', taille);
   const parType = Object.fromEntries((prix ?? []).map((x) => [x.subTypeName, x]));
   const v = (x) => eur(x?.marketPrice || x?.midPrice || 0);
   const normal = v(parType.Normal);
@@ -54,7 +68,7 @@ export function carteDepuis(p, prix, eur) {
     champ(p, 'CardType'),
     nombre(champ(p, 'Cost')),
     nombre(champ(p, 'Power')),
-    imageGrande(p.imageUrl ?? ''),
+    image,
     normal || null,
     foil || null,
   ];
@@ -103,6 +117,21 @@ async function principal() {
     if (n) extensions.push([g.groupId, g.abbreviation ?? '', g.name, (g.publishedOn ?? '').slice(0, 10), n]);
   }
   extensions.sort((a, b) => (b[3] || '').localeCompare(a[3] || ''));
+
+  // Vérification des images sur un échantillon : grande taille, sinon 400 px, sinon 200 px.
+  const echantillon = cartes.filter((c) => c[9]).filter((_, i, t) => i % Math.max(1, Math.floor(t.length / 25)) === 0).slice(0, 25);
+  let retenue = 'in_1000x1000';
+  for (const taille of ['in_1000x1000', '400w', '200w']) {
+    const essais = await Promise.all(echantillon.map((c) => essaiImage(c[9].replace(/_in_1000x1000\.jpg$/, `_${taille}.jpg`))));
+    const bons = essais.filter((e) => e.ok).length;
+    note(`Images ${taille} : ${bons}/${essais.length} valides` + (bons < essais.length ? ` (ex. échec : ${JSON.stringify(essais.find((e) => !e.ok))})` : ''));
+    if (bons >= essais.length * 0.8) {
+      retenue = taille;
+      break;
+    }
+  }
+  if (retenue !== 'in_1000x1000') for (const c of cartes) if (c[9]) c[9] = c[9].replace(/_in_1000x1000\.jpg$/, `_${retenue}.jpg`);
+  note(`Taille d'image retenue : ${retenue}`);
   note(`${extensions.length} extensions, ${cartes.length} cartes (sur ${produits} produits, le reste = scellé et accessoires)`);
   note(`Avec image : ${cartes.filter((c) => c[9]).length} · avec prix : ${cartes.filter((c) => c[10] || c[11]).length}`);
   if (cartes.length < 500) throw new Error('Trop peu de cartes, on garde la version précédente');
