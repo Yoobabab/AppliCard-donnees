@@ -89,7 +89,7 @@ export function cartesTcgplayer(produits, prix) {
       id: p.productId,
       numero,
       nom: String(p.name).replace(/\s+-\s+\S+\/\S+$/, '').replace(/\s*\((?:[^)]*)\)\s*$/, '').trim(),
-      rarete: ext.Rarity ?? '',
+      rarete: ext.Rarity && ext.Rarity !== 'None' ? ext.Rarity : '',
       image: p.imageCount === 0 || !p.imageUrl ? '' : p.imageUrl.replace(/_200w\.jpg$/, '_in_1000x1000.jpg'),
       prix: pr.Normal || pr.Holofoil || 0,
       prixHolo: pr['Reverse Holofoil'] || (pr.Normal ? pr.Holofoil : 0) || 0,
