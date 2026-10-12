@@ -110,6 +110,23 @@ export function trouverSet(g, setsLangue) {
   return parCode.length === 1 ? parCode[0] : undefined;
 }
 
+/**
+ * Extension présente chez TCGdex sous un nom un peu différent (« 30th Celebration Classic Collection » /
+ * « 30th Classic Collection ») : même code ou mots du nom inclus, et même nombre de cartes.
+ */
+export function dejaCouvert(g, nombre, setsLangue) {
+  const nom = simple(String(g.name).replace(/^[A-Za-z0-9]{1,6}:\s*/, ''));
+  const mots = new Set(nom.split(' '));
+  const code = String(g.abbreviation ?? '').toLowerCase();
+  return [...setsLangue.values()].some((s) => {
+    if ((s.cards ?? []).length !== nombre) return false;
+    const memeCode = code && [s.id, s.abbreviation?.official].some((x) => String(x ?? '').toLowerCase() === code);
+    const motsSet = simple(s.name).split(' ').filter(Boolean);
+    const inclus = motsSet.length >= 2 && motsSet.every((m) => mots.has(m));
+    return memeCode || inclus;
+  });
+}
+
 function ligneAjout(c, langue, setId, frParEn, eur) {
   return [c.id, langue, setId, c.numero, c.nom, frParEn.get(c.nom) ?? null, c.rarete, c.image, eur(c.prix), eur(c.prixHolo)];
 }
@@ -200,6 +217,10 @@ async function principal() {
       if (!cartes.length) continue;
       const s = trouverSet(g, sets[l]);
       const nomGroupe = String(g.name).replace(/^[A-Za-z0-9]{1,6}:\s*/, '');
+      if (!s && dejaCouvert(g, cartes.length, sets[l])) {
+        note(`  = ${g.name} : ${cartes.length} cartes, même extension que chez TCGdex sous un autre nom (rien à ajouter)`);
+        continue;
+      }
       if (!s) {
         const officielle = /^[A-Za-z0-9]{2,6}:/.test(g.name) && cartes.length <= 400;
         note(`  ✗ ${g.name} (${String(g.publishedOn).slice(0, 10)}) : ${cartes.length} cartes chez TCGplayer, extension absente de TCGdex${officielle ? ' → ajoutée' : ' (ignorée : pas une extension numérotée)'}`);
