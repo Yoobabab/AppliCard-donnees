@@ -1,4 +1,4 @@
-Scellé : 5071 produits ({"b":786,"d":619,"k":559,"r":13,"t":571,"e":171,"c":1108,"p":691,"o":28,"l":495,"g":30}), 2203 avec image TCGplayer (43 %, dont 169 au 2e passage), 681 groupes TCGplayer lus, 3159 produits scellés TCGplayer.
+Scellé : 5073 produits ({"b":786,"d":619,"k":559,"r":13,"t":571,"e":171,"c":1108,"p":692,"o":28,"l":496,"g":30}), 2204 avec image TCGplayer (43 %, dont 169 au 2e passage), 681 groupes TCGplayer lus, 3159 produits scellés TCGplayer.
 Exemples du 2e passage :
   EX Deoxys Booster  →  Deoxys Booster Pack
   EX Emerald Booster  →  Emerald Booster Pack
@@ -25,6 +25,8 @@ Exemples du 2e passage :
   Arceus Collector's Tins: Arceus LV.X Tin (Green)  →  Arceus Collector's Tin [Green]
   BREAKthrough Elite Trainer Box (Mega Mewtwo X)  →  Elite Trainer Box [Mewtwo X]
   BREAKthrough Elite Trainer Box (Mega Mewtwo Y)  →  Elite Trainer Box [Mewtwo Y]
+2026-10 p XY Trainer Kit: Pikachu Libre & Suicune: Pikachu Coin (Silver) — 0 € — img 118797
+2026-10 l 30th Celebration: Tech Sticker Collection Display — 0 € — img 0
 2026-10 g Pokémon Surprise Calendar Set — 0 € — img 0
 2026-10 c Paldea Magnetic Coin Set Part 2 — 0 € — img 0
 2026-10 c Paldea Magnetic Coin Set — 0 € — img 0
@@ -63,5 +65,3 @@ Exemples du 2e passage :
 2026-08 o World Championships 2026 Paradise Resort Full Set — 574.21 € — img 0
 2026-08 k Mega Greninja ex League Battle Deck — 0 € — img 718643
 2026-08 l Fossil: Zapdos 1-Pack Blister — 0 € — img 0
-2026-08 t Kyogre and Groudon Elite Trainer Deck Shield Tin — 0 € — img 0
-2026-08 t 151 Sam's Club 4-Pack Mini Tin Bundle — 0 € — img 662302
