@@ -32,4 +32,4 @@ Baisses :
   sm5-151 Lillie (Ultra Prism) 196.53 € · bas 50 · moy 115.37 · 1j 235 · 7j 133.45 · 30j 262.9 · var -49.2
   cel25cc-CC024 M Rayquaza EX (Celebrations Classic Collection) 62.57 € · bas 29.99 · moy 86.43 · 1j 41.33 · 7j 41.07 · 30j 80.11 · var -48.7
   sv02-203 Magikarp (Paldea Evolved) 206.23 € · bas 99.9 · moy 440.06 · 1j 160 · 7j 201.22 · 30j 389.07 · var -48.3
-Durée : 4 s
+Durée : 2 s

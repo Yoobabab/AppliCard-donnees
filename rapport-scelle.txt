@@ -1,4 +1,4 @@
-Scellé : 5102 produits ({"b":795,"d":624,"k":560,"r":13,"t":571,"e":171,"c":1120,"p":692,"o":28,"l":498,"g":30}), 2204 avec image TCGplayer (43 %, dont 169 au 2e passage), 681 groupes TCGplayer lus, 3169 produits scellés TCGplayer.
+Scellé : 5102 produits ({"b":795,"d":624,"k":560,"r":13,"t":571,"e":171,"c":1120,"p":692,"o":28,"l":498,"g":30}), 2204 avec image TCGplayer (43 %, dont 169 au 2e passage), 681 groupes TCGplayer lus, 3168 produits scellés TCGplayer.
 Exemples du 2e passage :
   EX Deoxys Booster  →  Deoxys Booster Pack
   EX Emerald Booster  →  Emerald Booster Pack
