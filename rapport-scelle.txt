@@ -1,4 +1,4 @@
-Scellé : 5102 produits ({"b":795,"d":624,"k":560,"r":13,"t":571,"e":171,"c":1120,"p":692,"o":28,"l":498,"g":30}), 2204 avec image TCGplayer (43 %, dont 169 au 2e passage), 681 groupes TCGplayer lus, 3168 produits scellés TCGplayer.
+Scellé : 5105 produits ({"b":796,"d":626,"k":560,"r":13,"t":571,"e":171,"c":1120,"p":692,"o":28,"l":498,"g":30}), 2204 avec image TCGplayer (43 %, dont 169 au 2e passage), 681 groupes TCGplayer lus, 3168 produits scellés TCGplayer.
 Exemples du 2e passage :
   EX Deoxys Booster  →  Deoxys Booster Pack
   EX Emerald Booster  →  Emerald Booster Pack
@@ -25,6 +25,9 @@ Exemples du 2e passage :
   Arceus Collector's Tins: Arceus LV.X Tin (Green)  →  Arceus Collector's Tin [Green]
   BREAKthrough Elite Trainer Box (Mega Mewtwo X)  →  Elite Trainer Box [Mewtwo X]
   BREAKthrough Elite Trainer Box (Mega Mewtwo Y)  →  Elite Trainer Box [Mewtwo Y]
+2026-10 b Aura Seeker Booster — 0 € — img 0
+2026-10 d Aura Seeker Booster Box — 0 € — img 0
+2026-10 d Aura Seeker Booster Box Case — 0 € — img 0
 2026-10 c CSV10.6C: White Flare S-Ch Jigsaw Magnet Set — 0 € — img 0
 2026-10 c CSV10.5C: Black Bolt S-Ch Jigsaw Magnet Set — 0 € — img 0
 2026-10 l CSV10.6C: White Flare S-Ch Coin Set — 0 € — img 0
@@ -38,19 +41,19 @@ Exemples du 2e passage :
 2026-10 b CSV10.5C: Black Bolt S-Ch Jumbo Booster — 0 € — img 0
 2026-10 b CSV10.6C: White Flare S-Ch Jumbo Booster — 0 € — img 0
 2026-10 b CSV10.6C: White Flare S-Ch Booster — 0 € — img 0
-2026-10 b CBB7C: Gem Pack Vol. 7 Booster — 0 € — img 0
+2026-10 b CBB7C: Gem Pack Vol. 7 Booster — 13.99 € — img 0
 2026-10 b CSVH6eC: Happy Pack — 0 € — img 0
 2026-10 b CSVH6pC: Reward Pack — 0 € — img 0
 2026-10 b CSVH6aC: Transformation Pack — 0 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Snivy, Tepig & Oshawott — 0 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Chespin, Fennekin & Froakie — 0 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Snivy, Tepig & Oshawott — 29.99 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Chespin, Fennekin & Froakie — 29.99 € — img 0
 2026-10 c 30th Celebration JP Starter Set: Rowlet, Litten & Popplio — 0 € — img 0
 2026-10 c 30th Celebration JP Starter Set: Grookey, Scorbunny & Sobble — 0 € — img 0
 2026-10 c 30th Celebration JP Starter Set: Sprigatito, Fuecoco & Quaxly — 0 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Turtwig, Chimchar & Piplup — 29.99 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Chikorita, Cyndaquil & Totodile — 29.99 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Treecko, Torchic & Mudkip — 29.99 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Bulbasaur, Charmander & Squirtle — 178.53 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Turtwig, Chimchar & Piplup — 28.56 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Chikorita, Cyndaquil & Totodile — 92.99 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Treecko, Torchic & Mudkip — 14.28 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Bulbasaur, Charmander & Squirtle — 114.73 € — img 0
 2026-10 b Pokémon Card Gym Promo MEGA Vol. 6 Booster (1 Card) — 0 € — img 0
 2026-10 k CSVH6C: Happy Set Trainers’ Pokémon Theme Deck — 0 € — img 0
 2026-10 c CSVH6C: Happy Set Trainers’ Pokémon Box Set — 0 € — img 0
@@ -62,6 +65,3 @@ Exemples du 2e passage :
 2026-10 p MEGA Starter Set: Zoroark Coin — 0 € — img 0
 2026-10 p MEGA Starter Set: Meowscarada Coin — 0 € — img 0
 2026-10 p MEGA Starter Set: Eevee Coin — 0 € — img 0
-2026-09 c Magikarp Special Set — 0 € — img 0
-2026-09 c Dream Painting Collection Pikachu Figure Set — 26.88 € — img 0
-2026-09 e 30th Celebration 10 Elite Trainer Box Case — 1400.83 € — img 0
