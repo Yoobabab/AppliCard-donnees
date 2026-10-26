@@ -8,16 +8,16 @@ Plus chères :
   ex5.5-4 Mudkip (Poké Card Creator Pack) 2911.86 € · bas null · moy 8500 · 1j 3500 · 7j 1430.83 · 30j 1430.83 · var null
   sm9-170 Latias & Latios GX (Team Up) 2854.07 € · bas 300 · moy 1574.83 · 1j 550 · 7j 3493.62 · 30j 2340.4 · var 49.3
   ecard3-32 Umbreon (Skyridge) 2257.93 € · bas 550 · moy 2849.48 · 1j 4299 · 7j 1987.37 · 30j 1659.43 · var 19.8
-  ex7-99 Rocket's Mewtwo ex (Team Rocket Returns) 1983.29 € · bas 280 · moy 486.8 · 1j 590 · 7j 354.22 · 30j 1193.31 · var null
-  col1-20 Rayquaza (Call of Legends) 1673.75 € · bas 150 · moy 1855.24 · 1j 1375 · 7j 779.8 · 30j 1098.96 · var null
+  ex7-99 Rocket's Mewtwo ex (Team Rocket Returns) 1983.29 € · bas 299.99 · moy 486.8 · 1j 590 · 7j 354.22 · 30j 1193.31 · var null
+  col1-20 Rayquaza (Call of Legends) 1673.75 € · bas 220 · moy 1855.24 · 1j 1375 · 7j 779.8 · 30j 1098.96 · var null
   ru1-7 Pikachu (Pokémon Rumble) 1565.4 € · bas 150 · moy 1179.45 · 1j 417.5 · 7j 1310.5 · 30j 1194.27 · var 9.7
-  swsh7-215 Umbreon VMAX (Evolving Skies) 1514.74 € · bas 490 · moy 1830.92 · 1j 1187 · 7j 1729.2 · 30j 1702.84 · var 1.5
-  neo4-107 Shining Charizard (Neo Destiny) 1420.52 € · bas 298 · moy 2055 · 1j 500 · 7j 1600 · 30j 1596.85 · var 0.2
+  swsh7-215 Umbreon VMAX (Evolving Skies) 1514.74 € · bas 250 · moy 1830.92 · 1j 1187 · 7j 1729.2 · 30j 1702.84 · var 1.5
+  neo4-107 Shining Charizard (Neo Destiny) 1420.52 € · bas 199 · moy 2055 · 1j 500 · 7j 1600 · 30j 1596.85 · var 0.2
   ex6-105 Charizard ex (FireRed & LeafGreen) 1335.38 € · bas 80 · moy 1866.43 · 1j 545 · 7j 1622.77 · 30j 727.02 · var 123.2
 Hausses :
-  ex7-103 Rocket's Sneasel ex (Team Rocket Returns) 439.35 € · bas 49 · moy 822.8 · 1j 130 · 7j 605.38 · 30j 243.12 · var 149
+  ex7-103 Rocket's Sneasel ex (Team Rocket Returns) 439.35 € · bas 74.65 · moy 822.8 · 1j 130 · 7j 605.38 · 30j 243.12 · var 149
+  col1-SL2 Dialga (Call of Legends) 34 € · bas 0.8 · moy 31.96 · 1j 8.89 · 7j 46.24 · 30j 18.66 · var 147.8
   lc-11 Gengar (Legendary Collection) 252.56 € · bas 30 · moy 292.85 · 1j 130 · 7j 290 · 30j 117.14 · var 147.6
-  hgss3-2 Espeon (Undaunted) 30.01 € · bas 0.5 · moy 20.52 · 1j 138.33 · 7j 45.82 · 30j 18.51 · var 147.5
   ex4-97 Jirachi (Team Magma vs Team Aqua) 298.54 € · bas 6.9 · moy 201.07 · 1j 11.9 · 7j 291.87 · 30j 119.95 · var 143.3
   ex13-14 Pidgeot δ (Holon Phantoms) 51.57 € · bas 3.98 · moy 59.49 · 1j 18 · 7j 71.05 · 30j 29.26 · var 142.8
   ex1-10 Mightyena (Ruby & Sapphire) 42.98 € · bas 2 · moy 15.81 · 1j 250 · 7j 43.77 · 30j 18.2 · var 140.5
@@ -28,8 +28,8 @@ Baisses :
   hgss3-THREE Alph Lithograph (Undaunted) 50.27 € · bas 15 · moy 32.44 · 1j 59.99 · 7j 35.15 · 30j 83.26 · var -57.8
   neo1-2 Azumarill (Neo Genesis) 22.65 € · bas 3.99 · moy 41.54 · 1j 11.99 · 7j 15.65 · 30j 35.9 · var -56.4
   swsh11-186 Giratina V (Lost Origin) 677.5 € · bas 300 · moy 1070.92 · 1j 650 · 7j 589.22 · 30j 1308.72 · var -55
-  swsh6-170 Galarian Articuno V (Chilling Reign) 52.53 € · bas 25 · moy 96.81 · 1j 19.51 · 7j 36 · 30j 75.18 · var -52.1
+  swsh6-170 Galarian Articuno V (Chilling Reign) 52.53 € · bas 23 · moy 96.81 · 1j 19.51 · 7j 36 · 30j 75.18 · var -52.1
   swshp-SWSH066 Charizard (SWSH Black Star Promos) 127.35 € · bas 59.95 · moy 92 · 1j 81.95 · 7j 83.61 · 30j 172.56 · var -51.5
   smp-SM167 Celebi & Venusaur GX (SM Black Star Promos) 112.82 € · bas 19.89 · moy 139.64 · 1j 69.99 · 7j 90.82 · 30j 185.12 · var -50.9
-  ex8-96 Crobat ex (Deoxys) 52.2 € · bas 14.99 · moy 30.79 · 1j 38 · 7j 34.25 · 30j 68.61 · var -50.1
-Durée : 2 s
+  sv02-203 Magikarp (Paldea Evolved) 156.67 € · bas 99.9 · moy 440.06 · 1j 255 · 7j 196.27 · 30j 388.39 · var -49.5
+Durée : 4 s
