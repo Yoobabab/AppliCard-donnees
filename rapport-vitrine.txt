@@ -3,33 +3,33 @@ Fiches lues cette nuit : 188 / 188 à lire ; correspondances connues : 19851
 Vitrine : 40 plus chères (1re : Gengar 8704.81 €), 30 hausses, 30 baisses, 30 cartes de 30th Celebration, 30th Classic Collection, Pitch Black
 Plus chères :
   ecard3-10 Gengar (Skyridge) 8704.81 € · bas 400 · moy 3910 · 1j 7000 · 7j 7911.25 · 30j 3509.63 · var 125.4
-  ecard2-149 Lugia (Aquapolis) 5063.4 € · bas 820 · moy 4438.89 · 1j 8000 · 7j 4218.74 · 30j 3415.09 · var 23.5
   ecard3-146 Charizard (Skyridge) 4918.35 € · bas 330 · moy 6146.85 · 1j 3800 · 7j 5403.11 · 30j 4012.63 · var 34.7
+  ecard2-149 Lugia (Aquapolis) 4634.17 € · bas 820 · moy 4438.89 · 1j 1000 · 7j 3718.74 · 30j 3464.24 · var 7.3
   ex5.5-4 Mudkip (Poké Card Creator Pack) 2911.86 € · bas null · moy 8500 · 1j 3500 · 7j 1430.83 · 30j 1430.83 · var null
   sm9-170 Latias & Latios GX (Team Up) 2854.07 € · bas 250 · moy 1574.83 · 1j 550 · 7j 3493.62 · 30j 2340.4 · var 49.3
   ecard3-32 Umbreon (Skyridge) 2257.93 € · bas 550 · moy 2849.48 · 1j 4299 · 7j 1987.37 · 30j 1659.43 · var 19.8
   ex7-99 Rocket's Mewtwo ex (Team Rocket Returns) 1983.29 € · bas 299.99 · moy 486.8 · 1j 590 · 7j 354.22 · 30j 1193.31 · var null
   swsh7-215 Umbreon VMAX (Evolving Skies) 1869.1 € · bas 250 · moy 1830.92 · 1j 3800 · 7j 1726.99 · 30j 1750.88 · var -1.4
-  col1-20 Rayquaza (Call of Legends) 1673.75 € · bas 220 · moy 1855.24 · 1j 1375 · 7j 779.8 · 30j 1098.96 · var null
+  col1-20 Rayquaza (Call of Legends) 1673.75 € · bas 150 · moy 1855.24 · 1j 1375 · 7j 779.8 · 30j 1098.96 · var null
   ru1-7 Pikachu (Pokémon Rumble) 1565.4 € · bas 150 · moy 1179.45 · 1j 417.5 · 7j 1310.5 · 30j 1194.27 · var 9.7
+  ex5-94 Kyogre ex (Hidden Legends) 1518.56 € · bas 14.99 · moy 150.17 · 1j 89.9 · 7j 2354.68 · 30j 624.83 · var 276.9
   ex6-105 Charizard ex (FireRed & LeafGreen) 1335.38 € · bas 79.95 · moy 1866.43 · 1j 545 · 7j 1622.77 · 30j 727.02 · var 123.2
-  neo4-107 Shining Charizard (Neo Destiny) 1295.88 € · bas 199 · moy 1456.31 · 1j 575.99 · 7j 1172 · 30j 1599.23 · var -26.7
 Hausses :
-  ex7-103 Rocket's Sneasel ex (Team Rocket Returns) 439.35 € · bas 74.65 · moy 822.8 · 1j 130 · 7j 605.38 · 30j 243.12 · var 149
+  ex7-103 Rocket's Sneasel ex (Team Rocket Returns) 439.35 € · bas 50 · moy 822.8 · 1j 130 · 7j 605.38 · 30j 243.12 · var 149
   col1-SL2 Dialga (Call of Legends) 34 € · bas 0.8 · moy 31.96 · 1j 8.89 · 7j 46.24 · 30j 18.66 · var 147.8
   lc-11 Gengar (Legendary Collection) 252.56 € · bas 30 · moy 292.85 · 1j 130 · 7j 290 · 30j 117.14 · var 147.6
+  sm7-97 Jirachi ◇ (Celestial Storm) 27.53 € · bas 2 · moy 17.32 · 1j 3.3 · 7j 43.21 · 30j 17.66 · var 144.7
   ex4-97 Jirachi (Team Magma vs Team Aqua) 296.39 € · bas 6.9 · moy 201.07 · 1j 150 · 7j 297.98 · 30j 121.99 · var 144.3
   ex1-10 Mightyena (Ruby & Sapphire) 42.98 € · bas 2 · moy 15.81 · 1j 250 · 7j 43.77 · 30j 18.2 · var 140.5
-  ecard2-4 Azumarill (Aquapolis) 260.34 € · bas 19.99 · moy 32 · 1j 10 · 7j 264.62 · 30j 110.09 · var 140.4
-  ex1-14 Wailord (Ruby & Sapphire) 31.7 € · bas 1 · moy 33.2 · 1j 6.49 · 7j 33.2 · 30j 13.9 · var 138.8
-  ecard3-75 Magikarp (Skyridge) 65.77 € · bas 8.5 · moy 56.01 · 1j 22.95 · 7j 88.7 · 30j 37.81 · var 134.6
+  ecard2-4 Azumarill (Aquapolis) 253.39 € · bas 19.99 · moy 32 · 1j 49.99 · 7j 258.37 · 30j 108.47 · var 138.2
+  ex7-100 Rocket's Moltres ex (Team Rocket Returns) 566.28 € · bas 95 · moy 830.5 · 1j 270 · 7j 622.79 · 30j 265.09 · var 134.9
 Baisses :
   sm5-151 Lillie (Ultra Prism) 160.66 € · bas 50 · moy 115.37 · 1j 4 · 7j 104.11 · 30j 259.06 · var -59.8
   sm115-9 Charizard GX (Hidden Fates) 374.25 € · bas 190 · moy 331.76 · 1j 350 · 7j 238.1 · 30j 570.66 · var -58.3
-  hgss3-THREE Alph Lithograph (Undaunted) 50.27 € · bas 15 · moy 32.44 · 1j 59.99 · 7j 35.15 · 30j 83.26 · var -57.8
-  swsh11-186 Giratina V (Lost Origin) 677.5 € · bas 300 · moy 1070.92 · 1j 650 · 7j 589.22 · 30j 1308.72 · var -55
+  hgss3-THREE Alph Lithograph (Undaunted) 43.71 € · bas 15 · moy 32.44 · 1j 89 · 7j 39.85 · 30j 84.09 · var -52.6
+  neo1-2 Azumarill (Neo Genesis) 20.28 € · bas 3.99 · moy 41.54 · 1j 35 · 7j 17.69 · 30j 37.17 · var -52.4
   swsh6-170 Galarian Articuno V (Chilling Reign) 52.53 € · bas 23 · moy 96.81 · 1j 19.51 · 7j 36 · 30j 75.18 · var -52.1
-  swshp-SWSH066 Charizard (SWSH Black Star Promos) 127.35 € · bas 59.95 · moy 92 · 1j 81.95 · 7j 83.61 · 30j 172.56 · var -51.5
-  smp-SM167 Celebi & Venusaur GX (SM Black Star Promos) 112.82 € · bas 19.89 · moy 139.64 · 1j 69.99 · 7j 90.82 · 30j 185.12 · var -50.9
-  ecard3-100 Snorlax (Skyridge) 27.5 € · bas 4 · moy 83.02 · 1j 6.99 · 7j 35.62 · 30j 67.87 · var -47.5
+  sm9-183 Magikarp & Wailord GX (Team Up) 55.37 € · bas 12.8 · moy 44.69 · 1j 34.5 · 7j 37.26 · 30j 77.6 · var -52
+  hgssp-HGSS01 Ho-Oh (HGSS Black Star Promos) 48.69 € · bas 1 · moy 36.08 · 1j 7 · 7j 30.83 · 30j 63.23 · var -51.2
+  swshp-SWSH066 Charizard (SWSH Black Star Promos) 121.96 € · bas 59.95 · moy 92 · 1j 120 · 7j 89.11 · 30j 174.35 · var -48.9
 Durée : 4 s
