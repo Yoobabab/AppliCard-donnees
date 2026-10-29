@@ -36,7 +36,7 @@ Exemples du 2e passage :
 2026-10 d CSV10.6C: White Flare S-Ch Jumbo Booster Box — 0 € — img 0
 2026-10 d CSV10.5C: Black Bolt S-Ch Jumbo Booster Box — 0 € — img 0
 2026-10 d CSV10.5C: Black Bolt S-Ch Booster Box — 0 € — img 0
-2026-10 d CBB7C: Gem Pack Vol. 7 Booster Box — 0 € — img 0
+2026-10 d CBB7C: Gem Pack Vol. 7 Booster Box — 69.99 € — img 0
 2026-10 b CSV10.5C: Black Bolt S-Ch Booster — 0 € — img 0
 2026-10 b CSV10.5C: Black Bolt S-Ch Jumbo Booster — 0 € — img 0
 2026-10 b CSV10.6C: White Flare S-Ch Jumbo Booster — 0 € — img 0
@@ -50,15 +50,15 @@ Exemples du 2e passage :
 2026-10 c 30th Celebration JP Starter Set: Rowlet, Litten & Popplio — 0 € — img 0
 2026-10 c 30th Celebration JP Starter Set: Grookey, Scorbunny & Sobble — 0 € — img 0
 2026-10 c 30th Celebration JP Starter Set: Sprigatito, Fuecoco & Quaxly — 0 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Turtwig, Chimchar & Piplup — 28.32 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Chikorita, Cyndaquil & Totodile — 72.49 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Treecko, Torchic & Mudkip — 8.32 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Bulbasaur, Charmander & Squirtle — 52.56 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Turtwig, Chimchar & Piplup — 25.4 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Chikorita, Cyndaquil & Totodile — 53.56 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Treecko, Torchic & Mudkip — 10.96 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Bulbasaur, Charmander & Squirtle — 67.93 € — img 0
 2026-10 b Pokémon Card Gym Promo MEGA Vol. 6 Booster (1 Card) — 0 € — img 0
 2026-10 k CSVH6C: Happy Set Trainers’ Pokémon Theme Deck — 0 € — img 0
 2026-10 c CSVH6C: Happy Set Trainers’ Pokémon Box Set — 0 € — img 0
 2026-10 p XY Trainer Kit: Pikachu Libre & Suicune: Pikachu Coin (Silver) — 0 € — img 118797
-2026-10 l 30th Celebration: Tech Sticker Collection Display — 320 € — img 0
+2026-10 l 30th Celebration: Tech Sticker Collection Display — 387.5 € — img 0
 2026-10 g Pokémon Surprise Calendar Set — 0 € — img 0
 2026-10 c Paldea Magnetic Coin Set Part 2 — 0 € — img 0
 2026-10 c Paldea Magnetic Coin Set — 0 € — img 0
