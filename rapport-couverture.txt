@@ -1,5 +1,5 @@
-Couverture — 2026-10-30T10:20:25.605Z
-Extensions sorties depuis le 2024-10-30 : cartes annoncées par TCGdex mais pas encore saisies
+Couverture — 2026-10-31T09:56:16.780Z
+Extensions sorties depuis le 2024-10-31 : cartes annoncées par TCGdex mais pas encore saisies
   [en] rien à signaler
   [fr] rien à signaler
   [de] rien à signaler
@@ -25,19 +25,19 @@ Cartes saisies en anglais mais pas encore dans la langue (extension présente da
   [ja] aucune extension trouvée
 
 TCGplayer (en) : 35 groupes récents comparés à TCGdex
-  ✗ ME06: Delta Reign (2026-11-06) : 100 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
+  ✗ ME06: Delta Reign (2026-11-06) : 141 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
   = ME: 30th Celebration Classic Collection : 30 cartes, même extension que chez TCGdex sous un autre nom (rien à ajouter)
   ⚠ ME: Mega Evolution Promo → mep : TCGdex 89 / TCGplayer 110 → 22 ajoutées (089, 090, 091, 093, 109, 107…)
   ⚠ MEE: Mega Evolution Energies → mee : TCGdex 8 / TCGplayer 16 → 8 ajoutées (009, 010, 011, 012, 013, 014…)
   = EX Trainer Kit 1: Latias & Latios : 10 cartes, même extension que chez TCGdex sous un autre nom (rien à ajouter)
   = EX Trainer Kit 2: Plusle & Minun : 12 cartes, même extension que chez TCGdex sous un autre nom (rien à ajouter)
-  ✗ Nintendo Promos (2026-10-29) : 64 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Alternate Art Promos (2026-10-29) : 54 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Blister Exclusives (2026-10-29) : 142 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ First Partner Pack (2026-10-29) : 24 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Miscellaneous Cards & Products (2026-10-29) : 527 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Pikachu World Collection Promos (2026-10-29) : 17 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Professor Program Promos (2026-10-29) : 62 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Nintendo Promos (2026-10-30) : 64 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Alternate Art Promos (2026-10-30) : 54 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Blister Exclusives (2026-10-30) : 142 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ First Partner Pack (2026-10-30) : 24 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Miscellaneous Cards & Products (2026-10-30) : 527 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Pikachu World Collection Promos (2026-10-30) : 17 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Professor Program Promos (2026-10-30) : 62 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
 
 TCGplayer (ja) : 40 groupes récents comparés à TCGdex
   ✗ M6a: MEGA Expansion 30th Celebration (2026-09-16) : 165 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
@@ -51,6 +51,6 @@ TCGplayer (ja) : 40 groupes récents comparés à TCGdex
   ✗ MBD: MEGA Starter Set Mega Diancie ex (2025-09-05) : 22 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
   ⚠ M-P Promotional Cards → M-P : TCGdex 132 / TCGplayer 96 → 2 ajoutées (052/M-P, 082/M-P)
   ⚠ m1L: Mega Brave → M1L : TCGdex 92 / TCGplayer 93 → 1 ajoutées (151/165)
-  ✗ Vending Machine cards Series 3 (Green) (2026-10-29) : 5 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Vending Machine cards Series 3 (Green) (2026-10-30) : 5 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
 
-Cartes ajoutées (absentes de TCGdex) : 467 dans 9 extensions nouvelles + extensions incomplètes
+Cartes ajoutées (absentes de TCGdex) : 508 dans 9 extensions nouvelles + extensions incomplètes
