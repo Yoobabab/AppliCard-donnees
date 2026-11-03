@@ -12,24 +12,24 @@ Plus chères :
   swsh7-215 Umbreon VMAX (Evolving Skies) 1995.01 € · bas 250 · moy 1944 · 1j 500 · 7j 1834.3 · 30j 1730.43 · var 6
   ru1-7 Pikachu (Pokémon Rumble) 1675.54 € · bas 150 · moy 1179.45 · 1j 2600 · 7j 1616.75 · 30j 1250.55 · var 29.3
   col1-20 Rayquaza (Call of Legends) 1640.24 € · bas 150 · moy 1855.24 · 1j 249.99 · 7j 720.71 · 30j 1104.49 · var null
-  ex5-94 Kyogre ex (Hidden Legends) 1346.01 € · bas 9.99 · moy 150.17 · 1j 50 · 7j 2305.4 · 30j 618.87 · var null
   ex6-105 Charizard ex (FireRed & LeafGreen) 1335.38 € · bas 79.95 · moy 1866.43 · 1j 545 · 7j 1622.77 · 30j 727.02 · var 123.2
+  ecard2-40 Tyranitar (Aquapolis) 1300.38 € · bas 75 · moy 638.6 · 1j 6800 · 7j 1149.8 · 30j 678.42 · var 69.5
 Hausses :
   ex1-10 Mightyena (Ruby & Sapphire) 41.02 € · bas 2 · moy 15.81 · 1j 10 · 7j 43.88 · 30j 17.89 · var 145.3
-  ex4-97 Jirachi (Team Magma vs Team Aqua) 296.39 € · bas 6.9 · moy 201.07 · 1j 150 · 7j 297.98 · 30j 121.99 · var 144.3
+  ex4-97 Jirachi (Team Magma vs Team Aqua) 296.39 € · bas 7 · moy 201.07 · 1j 150 · 7j 297.98 · 30j 121.99 · var 144.3
   dv1-11 Rayquaza (Dragon Vault) 53.43 € · bas 2.29 · moy 55.71 · 1j 160 · 7j 74.33 · 30j 31.05 · var 139.4
   ecard2-4 Azumarill (Aquapolis) 219.39 € · bas 19.99 · moy 32 · 1j 70 · 7j 259.61 · 30j 110.05 · var 135.9
   ecard3-14 Kabutops (Skyridge) 372.61 € · bas 40 · moy 682.81 · 1j 1019.45 · 7j 532.92 · 30j 229.67 · var 132
   lc-9 Dark Vaporeon (Legendary Collection) 130.7 € · bas 9.98 · moy 209.66 · 1j 75 · 7j 178.81 · 30j 77.12 · var 131.9
   neo4-15 Light Togetic (Neo Destiny) 183.72 € · bas 15 · moy 97.31 · 1j 57.95 · 7j 255.16 · 30j 110.27 · var 131.4
-  ex10-1 Ampharos (Unseen Forces) 32.7 € · bas 1.5 · moy 38.32 · 1j 14.99 · 7j 47.12 · 30j 20.42 · var 130.8
+  ex10-1 Ampharos (Unseen Forces) 37.84 € · bas 1.5 · moy 38.32 · 1j 14.99 · 7j 47.12 · 30j 20.42 · var 130.8
 Baisses :
   hgssp-HGSS01 Ho-Oh (HGSS Black Star Promos) 37.1 € · bas 0.99 · moy 36.08 · 1j 25 · 7j 27.54 · 30j 62.59 · var -56
   sm5-151 Lillie (Ultra Prism) 116.95 € · bas 50 · moy 120.8 · 1j 120 · 7j 129.33 · 30j 260.54 · var -50.4
   swshp-SWSH066 Charizard (SWSH Black Star Promos) 106.7 € · bas 69.99 · moy 84.83 · 1j 90 · 7j 86.6 · 30j 173.97 · var -50.2
-  ex5-8 Jirachi (Hidden Legends) 21.55 € · bas 0.98 · moy 35.87 · 1j 14.99 · 7j 15.92 · 30j 31.1 · var -48.8
-  dp3-131 Gardevoir (Secret Wonders) 55.79 € · bas 10 · moy 109.76 · 1j 55.5 · 7j 40.5 · 30j 78.14 · var -48.2
+  dp3-131 Gardevoir (Secret Wonders) 50.53 € · bas 10 · moy 109.76 · 1j 55.5 · 7j 40.5 · 30j 78.14 · var -48.2
   ex10-5 Flareon (Unseen Forces) 37.71 € · bas 8 · moy 23.42 · 1j 28 · 7j 24.47 · 30j 46.92 · var -47.8
   sm9-162 Pikachu & Zekrom GX (Team Up) 125.88 € · bas 25 · moy 91.31 · 1j 137.99 · 7j 90.14 · 30j 171.01 · var -47.3
   ex1-102 Scyther ex (Ruby & Sapphire) 79.23 € · bas 7.49 · moy 124.59 · 1j 58 · 7j 55.49 · 30j 102.37 · var -45.8
-Durée : 4 s
+  ex3-89 Ampharos ex (Dragon) 76.79 € · bas 8 · moy 114.11 · 1j 10 · 7j 70.46 · 30j 128.08 · var -45
+Durée : 2 s

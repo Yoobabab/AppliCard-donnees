@@ -1,4 +1,4 @@
-Scellé : 5106 produits ({"b":796,"d":626,"k":560,"r":13,"t":571,"e":171,"c":1121,"p":692,"o":28,"l":498,"g":30}), 2204 avec image TCGplayer (43 %, dont 169 au 2e passage), 681 groupes TCGplayer lus, 3169 produits scellés TCGplayer.
+Scellé : 5106 produits ({"b":796,"d":626,"k":560,"r":13,"t":571,"e":171,"c":1121,"p":692,"o":28,"l":498,"g":30}), 2204 avec image TCGplayer (43 %, dont 169 au 2e passage), 681 groupes TCGplayer lus, 3170 produits scellés TCGplayer.
 Exemples du 2e passage :
   EX Deoxys Booster  →  Deoxys Booster Pack
   EX Emerald Booster  →  Emerald Booster Pack
@@ -47,14 +47,14 @@ Exemples du 2e passage :
 2026-10 b CSVH6pC: Reward Pack — 0 € — img 0
 2026-10 b CSVH6aC: Transformation Pack — 0 € — img 0
 2026-10 c 30th Celebration JP Starter Set: Snivy, Tepig & Oshawott — 18.63 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Chespin, Fennekin & Froakie — 19.14 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Chespin, Fennekin & Froakie — 17.87 € — img 0
 2026-10 c 30th Celebration JP Starter Set: Rowlet, Litten & Popplio — 19.85 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Grookey, Scorbunny & Sobble — 66.17 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Sprigatito, Fuecoco & Quaxly — 20.08 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Grookey, Scorbunny & Sobble — 36.56 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Sprigatito, Fuecoco & Quaxly — 19.81 € — img 0
 2026-10 c 30th Celebration JP Starter Set: Turtwig, Chimchar & Piplup — 18.18 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Chikorita, Cyndaquil & Totodile — 30.26 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Treecko, Torchic & Mudkip — 5 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Bulbasaur, Charmander & Squirtle — 49.31 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Chikorita, Cyndaquil & Totodile — 26.16 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Treecko, Torchic & Mudkip — 4.52 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Bulbasaur, Charmander & Squirtle — 53.12 € — img 0
 2026-10 b Pokémon Card Gym Promo MEGA Vol. 6 Booster (1 Card) — 0 € — img 0
 2026-10 k CSVH6C: Happy Set Trainers’ Pokémon Theme Deck — 0 € — img 0
 2026-10 c CSVH6C: Happy Set Trainers’ Pokémon Box Set — 0 € — img 0
