@@ -1,4 +1,4 @@
-Scellé : 5109 produits ({"b":796,"d":626,"k":560,"r":13,"t":571,"e":171,"c":1121,"p":695,"o":28,"l":498,"g":30}), 2203 avec image TCGplayer (43 %, dont 169 au 2e passage), 682 groupes TCGplayer lus, 3171 produits scellés TCGplayer.
+Scellé : 5109 produits ({"b":796,"d":626,"k":560,"r":13,"t":571,"e":171,"c":1121,"p":695,"o":28,"l":498,"g":30}), 2204 avec image TCGplayer (43 %, dont 169 au 2e passage), 682 groupes TCGplayer lus, 3170 produits scellés TCGplayer.
 Exemples du 2e passage :
   EX Deoxys Booster  →  Deoxys Booster Pack
   EX Emerald Booster  →  Emerald Booster Pack
@@ -49,15 +49,15 @@ Exemples du 2e passage :
 2026-10 b CSVH6eC: Happy Pack — 0 € — img 0
 2026-10 b CSVH6pC: Reward Pack — 0 € — img 0
 2026-10 b CSVH6aC: Transformation Pack — 0 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Snivy, Tepig & Oshawott — 18.07 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Chespin, Fennekin & Froakie — 17.93 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Rowlet, Litten & Popplio — 19.73 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Grookey, Scorbunny & Sobble — 19.92 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Sprigatito, Fuecoco & Quaxly — 42.19 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Turtwig, Chimchar & Piplup — 16.41 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Chikorita, Cyndaquil & Totodile — 19.23 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Treecko, Torchic & Mudkip — 4.97 € — img 0
-2026-10 c 30th Celebration JP Starter Set: Bulbasaur, Charmander & Squirtle — 76.29 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Snivy, Tepig & Oshawott — 18.72 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Chespin, Fennekin & Froakie — 17.89 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Rowlet, Litten & Popplio — 19.69 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Grookey, Scorbunny & Sobble — 18.29 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Sprigatito, Fuecoco & Quaxly — 36.43 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Turtwig, Chimchar & Piplup — 16.8 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Chikorita, Cyndaquil & Totodile — 18.25 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Treecko, Torchic & Mudkip — 14.06 € — img 0
+2026-10 c 30th Celebration JP Starter Set: Bulbasaur, Charmander & Squirtle — 71.07 € — img 0
 2026-10 b Pokémon Card Gym Promo MEGA Vol. 6 Booster (1 Card) — 0 € — img 0
 2026-10 k CSVH6C: Happy Set Trainers’ Pokémon Theme Deck — 0 € — img 0
 2026-10 c CSVH6C: Happy Set Trainers’ Pokémon Box Set — 0 € — img 0

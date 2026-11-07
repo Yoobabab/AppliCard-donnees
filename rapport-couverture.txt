@@ -1,5 +1,5 @@
-Couverture — 2026-11-06T11:05:25.672Z
-Extensions sorties depuis le 2024-11-06 : cartes annoncées par TCGdex mais pas encore saisies
+Couverture — 2026-11-07T10:24:49.014Z
+Extensions sorties depuis le 2024-11-07 : cartes annoncées par TCGdex mais pas encore saisies
   [en] rien à signaler
   [fr] rien à signaler
   [de] rien à signaler
@@ -32,13 +32,13 @@ TCGplayer (en) : 36 groupes récents comparés à TCGdex
   ⚠ MEE: Mega Evolution Energies → mee : TCGdex 8 / TCGplayer 20 → 8 ajoutées (009, 010, 011, 012, 013, 014…)
   = EX Trainer Kit 1: Latias & Latios : 10 cartes, même extension que chez TCGdex sous un autre nom (rien à ajouter)
   = EX Trainer Kit 2: Plusle & Minun : 12 cartes, même extension que chez TCGdex sous un autre nom (rien à ajouter)
-  ✗ Nintendo Promos (2026-11-05) : 64 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Alternate Art Promos (2026-11-05) : 54 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Blister Exclusives (2026-11-05) : 142 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ First Partner Pack (2026-11-05) : 24 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Miscellaneous Cards & Products (2026-11-05) : 527 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Pikachu World Collection Promos (2026-11-05) : 17 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Professor Program Promos (2026-11-05) : 62 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Nintendo Promos (2026-11-06) : 64 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Alternate Art Promos (2026-11-06) : 54 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Blister Exclusives (2026-11-06) : 142 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ First Partner Pack (2026-11-06) : 24 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Miscellaneous Cards & Products (2026-11-06) : 527 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Pikachu World Collection Promos (2026-11-06) : 17 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Professor Program Promos (2026-11-06) : 62 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
 
 TCGplayer (ja) : 40 groupes récents comparés à TCGdex
   ✗ M6a: MEGA Expansion 30th Celebration (2026-09-16) : 165 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
@@ -50,8 +50,8 @@ TCGplayer (ja) : 40 groupes récents comparés à TCGdex
   ✗ Start Deck 100 Battle Collection (2025-12-19) : 788 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
   ✗ MBG: MEGA Starter Set Mega Gengar ex (2025-09-12) : 22 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
   ✗ MBD: MEGA Starter Set Mega Diancie ex (2025-09-05) : 22 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
-  ⚠ M-P Promotional Cards → M-P : TCGdex 132 / TCGplayer 96 → 2 ajoutées (052/M-P, 082/M-P)
+  ⚠ M-P Promotional Cards → M-P : TCGdex 132 / TCGplayer 97 → 3 ajoutées (052/M-P, 082/M-P, 152/M-P)
   ⚠ m1L: Mega Brave → M1L : TCGdex 92 / TCGplayer 93 → 1 ajoutées (151/165)
-  ✗ Vending Machine cards Series 3 (Green) (2026-11-05) : 5 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Vending Machine cards Series 3 (Green) (2026-11-06) : 5 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
 
-Cartes ajoutées (absentes de TCGdex) : 512 dans 9 extensions nouvelles + extensions incomplètes
+Cartes ajoutées (absentes de TCGdex) : 513 dans 9 extensions nouvelles + extensions incomplètes
