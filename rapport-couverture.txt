@@ -1,5 +1,5 @@
-Couverture — 2026-11-07T10:24:49.014Z
-Extensions sorties depuis le 2024-11-07 : cartes annoncées par TCGdex mais pas encore saisies
+Couverture — 2026-11-08T10:41:45.390Z
+Extensions sorties depuis le 2024-11-08 : cartes annoncées par TCGdex mais pas encore saisies
   [en] rien à signaler
   [fr] rien à signaler
   [de] rien à signaler
@@ -8,41 +8,37 @@ Extensions sorties depuis le 2024-11-07 : cartes annoncées par TCGdex mais pas 
   [ja] rien à signaler
 
 Cartes saisies en anglais mais pas encore dans la langue (extension présente dans la langue)
-  [fr] 457 cartes : B2 234 · B1a 103 · basep 27 · P-A 27 · np 19 · dpp 14 · tk-sm-r 11 · sm1 9 · swshp 6 · svp 6 · mep 1
-  [de] 893 cartes : B2 234 · xyp 216 · A4a 105 · B1a 103 · bwp 101 · basep 29 · hgssp 25 · cel25cc 25 · dv1 21 · svp 10 · smp 8 · xya 6 · swshp 6 · B2a 2 · P-A 1
+  [fr] 461 cartes : B2 234 · B1a 103 · basep 27 · P-A 27 · np 19 · dpp 14 · tk-sm-r 11 · sm1 9 · swshp 6 · svp 6 · mep 4 · det1 1
+  [de] 935 cartes : B2 234 · xyp 216 · A4a 105 · B1a 103 · bwp 101 · mep 32 · basep 29 · svp 28 · hgssp 25 · cel25cc 25 · dv1 21 · xya 6 · swshp 6 · B2a 2 · det1 1
   [de] extensions récentes absentes : 2024sv McDonald's Collection 2024 · A3a Extradimensional Crisis · A3b Eevee Grove · A4 Wisdom of Sea and Sky · B1 Mega Rising
-  [es] 3314 cartes : B2 234 · xyp 216 · dp6 146 · pl1 133 · dp3 132 · dp1 130 · dp2 124 · hgss1 124 · ex10 117 · g1 117 · neo1 111 · pl4 111 · ex1 109 · dp4 106 · dp7 106
+  [es] 3488 cartes : B2 234 · xyp 216 · dp6 146 · bw11 140 · pl1 133 · dp3 132 · dp1 130 · dp2 124 · hgss1 124 · ex10 117 · g1 117 · neo1 111 · pl4 111 · ex1 109 · dp4 106
   [es] extensions récentes absentes : A3a Extradimensional Crisis · A3b Eevee Grove · A4 Wisdom of Sea and Sky · B1 Mega Rising
-  [it] 5981 cartes : B2 234 · xyp 216 · ecard2 186 · ecard3 182 · ecard1 165 · dp6 146 · pl1 133 · dp3 132 · dp1 130 · dp2 124 · hgss1 124 · pl2 120 · ex10 117 · g1 117 · ex6 116
+  [it] 6031 cartes : B2 234 · xyp 216 · ecard2 186 · ecard3 182 · ecard1 165 · dp6 146 · pl1 133 · dp3 132 · dp1 130 · dp2 124 · hgss1 124 · pl2 120 · ex10 117 · g1 117 · ex6 116
   [it] extensions récentes absentes : A3a Extradimensional Crisis · A3b Eevee Grove · A4 Wisdom of Sea and Sky · B1 Mega Rising
 
 30e anniversaire
-  [en] 30th « 30th Celebration » 2026-09-16 : 158/158 · 30th-c « 30th Classic Collection » 2026-09-16 : 30/30
-  [fr] 30th « 30ᵉ Anniversaire » 2026-09-16 : 158/158 · 30th-c « Collection Classique30ᵉ Anniversaire » 2026-09-16 : 30/30
-  [de] 30th « 30 Jahre » 2026-09-16 : 158/158 · 30th-c « 30 Jahre: Klassische Sammlung » 2026-09-16 : 30/30
-  [es] 30th « Celebración 30.º Aniversario » 2026-09-16 : 158/158 · 30th-c « Colección Clásica del 30.º Aniversario » 2026-09-16 : 30/30
-  [it] 30th « 30° Anniversario » 2026-09-16 : 158/158 · 30th-c « Collzione Classica del 30° » 2026-09-16 : 30/30
-  [ja] aucune extension trouvée
+  [en] 30th « 30th Celebration » 2026-09-16 : 161/161 · 30th-c « 30th Classic Collection » 2026-09-16 : 30/30
+  [fr] 30th « 30ᵉ Anniversaire » 2026-09-16 : 161/161 · 30th-c « Collection Classique 30ᵉ Anniversaire » 2026-09-16 : 30/30
+  [de] 30th « 30 Jahre » 2026-09-16 : 161/161 · 30th-c « 30 Jahre: Klassische Sammlung » 2026-09-16 : 30/30
+  [es] 30th « Celebración 30.º Aniversario » 2026-09-16 : 161/161 · 30th-c « Colección Clásica del 30.º Aniversario » 2026-09-16 : 30/30
+  [it] 30th « 30° Anniversario » 2026-09-16 : 161/161 · 30th-c « Collzione Classica del 30° » 2026-09-16 : 30/30
+  [ja] M6a « 30th CELEBRATION » 2026-09-16 : 176/176 · MF « 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー » 2026-09-16 : 49/49
 
 TCGplayer (en) : 36 groupes récents comparés à TCGdex
-  ✗ ME06: Delta Reign (2026-11-06) : 141 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
   ✗ McDonald's Promos 2026 (2026-11-06) : 15 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
   = ME: 30th Celebration Classic Collection : 30 cartes, même extension que chez TCGdex sous un autre nom (rien à ajouter)
-  ⚠ ME: Mega Evolution Promo → mep : TCGdex 89 / TCGplayer 114 → 26 ajoutées (089, 090, 091, 093, 109, 107…)
-  ⚠ MEE: Mega Evolution Energies → mee : TCGdex 8 / TCGplayer 20 → 8 ajoutées (009, 010, 011, 012, 013, 014…)
+  ⚠ ME: Mega Evolution Promo → mep : TCGdex 112 / TCGplayer 114 → 4 ajoutées (114, 113, 112, 111)
   = EX Trainer Kit 1: Latias & Latios : 10 cartes, même extension que chez TCGdex sous un autre nom (rien à ajouter)
   = EX Trainer Kit 2: Plusle & Minun : 12 cartes, même extension que chez TCGdex sous un autre nom (rien à ajouter)
-  ✗ Nintendo Promos (2026-11-06) : 64 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Alternate Art Promos (2026-11-06) : 54 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Blister Exclusives (2026-11-06) : 142 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ First Partner Pack (2026-11-06) : 24 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Miscellaneous Cards & Products (2026-11-06) : 527 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Pikachu World Collection Promos (2026-11-06) : 17 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
-  ✗ Professor Program Promos (2026-11-06) : 62 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Nintendo Promos (2026-11-07) : 64 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Alternate Art Promos (2026-11-07) : 54 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Blister Exclusives (2026-11-07) : 142 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ First Partner Pack (2026-11-07) : 24 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Miscellaneous Cards & Products (2026-11-07) : 527 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Pikachu World Collection Promos (2026-11-07) : 17 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Professor Program Promos (2026-11-07) : 62 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
 
 TCGplayer (ja) : 40 groupes récents comparés à TCGdex
-  ✗ M6a: MEGA Expansion 30th Celebration (2026-09-16) : 165 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
-  ✗ MF: 30th CELEBRATION Premium Deck Set Espeon & Umbreon (2026-09-16) : 44 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
   ✗ MEE: Starter Set ex Eevee ex (2026-07-31) : 20 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
   ✗ MEM: Starter Set ex Meowscarada ex (2026-07-31) : 18 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
   ✗ MEZ: Starter Set ex Zoroark ex (2026-07-31) : 20 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
@@ -52,6 +48,6 @@ TCGplayer (ja) : 40 groupes récents comparés à TCGdex
   ✗ MBD: MEGA Starter Set Mega Diancie ex (2025-09-05) : 22 cartes chez TCGplayer, extension absente de TCGdex → ajoutée
   ⚠ M-P Promotional Cards → M-P : TCGdex 132 / TCGplayer 97 → 3 ajoutées (052/M-P, 082/M-P, 152/M-P)
   ⚠ m1L: Mega Brave → M1L : TCGdex 92 / TCGplayer 93 → 1 ajoutées (151/165)
-  ✗ Vending Machine cards Series 3 (Green) (2026-11-06) : 5 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
+  ✗ Vending Machine cards Series 3 (Green) (2026-11-07) : 5 cartes chez TCGplayer, extension absente de TCGdex (ignorée : pas une extension numérotée)
 
-Cartes ajoutées (absentes de TCGdex) : 513 dans 9 extensions nouvelles + extensions incomplètes
+Cartes ajoutées (absentes de TCGdex) : 133 dans 6 extensions nouvelles + extensions incomplètes

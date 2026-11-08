@@ -1,19 +1,19 @@
-TCGdex : 201 extensions, 21256 cartes
-Fiches lues cette nuit : 188 / 188 à lire ; correspondances connues : 19851
-Vitrine : 40 plus chères (1re : Gengar 8704.81 €), 30 hausses, 30 baisses, 30 cartes de 30th Celebration, 30th Classic Collection, Pitch Black
+TCGdex : 202 extensions, 21432 cartes
+Fiches lues cette nuit : 364 / 364 à lire ; correspondances connues : 20203
+Vitrine : 40 plus chères (1re : Gengar 8704.81 €), 30 hausses, 30 baisses, 30 cartes de Delta Reign, 30th Celebration, 30th Classic Collection
 Plus chères :
   ecard3-10 Gengar (Skyridge) 8704.81 € · bas 400 · moy 12312.5 · 1j 7000 · 7j 7911.25 · 30j 3509.63 · var 125.4
   ecard3-146 Charizard (Skyridge) 4918.35 € · bas 350 · moy 8149.98 · 1j 3800 · 7j 5403.11 · 30j 4012.63 · var 34.7
   ecard2-149 Lugia (Aquapolis) 4634.17 € · bas 775 · moy 4438.89 · 1j 1000 · 7j 3718.74 · 30j 3464.24 · var 7.3
   ex5.5-4 Mudkip (Poké Card Creator Pack) 2911.86 € · bas null · moy 8500 · 1j 3500 · 7j 1430.83 · 30j 1430.83 · var null
+  30th-R Mew (30th Celebration) 2785.82 € · bas 2000 · moy 3125.99 · 1j 3750 · 7j 2994.45 · 30j 2909.83 · var 2.9
   ecard3-32 Umbreon (Skyridge) 2637.72 € · bas 550 · moy 2849.48 · 1j 4299 · 7j 1987.37 · 30j 1659.43 · var 19.8
+  30th-G Mew (30th Celebration) 2555 € · bas 1900 · moy 2312.26 · 1j 3299.9 · 7j 2140.26 · 30j 2227.27 · var -3.9
+  30th-B Mew (30th Celebration) 2180.28 € · bas 1699 · moy 2787 · 1j 3000 · 7j 2449.89 · 30j 2614.08 · var -6.3
   swsh7-215 Umbreon VMAX (Evolving Skies) 2082 € · bas 250 · moy 1944 · 1j 500 · 7j 1834.3 · 30j 1730.43 · var 6
   ex7-99 Rocket's Mewtwo ex (Team Rocket Returns) 2012.24 € · bas 252.72 · moy 486.8 · 1j 1999 · 7j 702 · 30j 1293.57 · var null
   sm9-170 Latias & Latios GX (Team Up) 1948.94 € · bas 350 · moy 1574.83 · 1j 250 · 7j 2931.12 · 30j 2301.82 · var 27.3
   ex6-105 Charizard ex (FireRed & LeafGreen) 1866.64 € · bas 80 · moy 2564.28 · 1j 5099.99 · 7j 2128.33 · 30j 862.77 · var 146.7
-  ru1-7 Pikachu (Pokémon Rumble) 1675.54 € · bas 150 · moy 1179.45 · 1j 2600 · 7j 1616.75 · 30j 1250.55 · var 29.3
-  col1-20 Rayquaza (Call of Legends) 1585.97 € · bas 150 · moy 1855.24 · 1j 249.99 · 7j 720.71 · 30j 1104.49 · var null
-  ecard2-40 Tyranitar (Aquapolis) 1300.38 € · bas 75 · moy 638.6 · 1j 6800 · 7j 1149.8 · 30j 678.42 · var 69.5
 Hausses :
   lc-1 Alakazam (Legendary Collection) 147.04 € · bas 15 · moy 284.95 · 1j 34.97 · 7j 191.67 · 30j 76.68 · var 150
   sm2-131 Turtonator GX (Guardians Rising) 21.32 € · bas 1.3 · moy 14.95 · 1j 4 · 7j 22.87 · 30j 9.15 · var 149.9
@@ -32,4 +32,4 @@ Baisses :
   sm5-151 Lillie (Ultra Prism) 116.95 € · bas 50 · moy 120.8 · 1j 120 · 7j 129.33 · 30j 260.54 · var -50.4
   swshp-SWSH066 Charizard (SWSH Black Star Promos) 100.84 € · bas 69.99 · moy 84.83 · 1j 90 · 7j 86.6 · 30j 173.97 · var -50.2
   ex10-5 Flareon (Unseen Forces) 32.24 € · bas 8 · moy 23.42 · 1j 28 · 7j 24.47 · 30j 46.92 · var -47.8
-Durée : 1 s
+Durée : 4 s
