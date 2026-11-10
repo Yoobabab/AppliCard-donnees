@@ -32,4 +32,4 @@ Baisses :
   swshp-SWSH066 Charizard (SWSH Black Star Promos) 100.84 € · bas 69.99 · moy 84.83 · 1j 59.95 · 7j 81.72 · 30j 170.87 · var -52.2
   dp1-122 Torterra (Diamond & Pearl) 24.1 € · bas 4.99 · moy 44.65 · 1j 19.95 · 7j 15.12 · 30j 31.61 · var -52.2
   ex10-29 Lugia (Unseen Forces) 29.68 € · bas 1 · moy 45.02 · 1j 6.23 · 7j 19.89 · 30j 40.75 · var -51.2
-Durée : 2 s
+Durée : 3 s
