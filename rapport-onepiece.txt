@@ -1,9 +1,9 @@
-One Piece — 2026-11-12T11:28:13.074Z
+One Piece — 2026-11-13T11:12:02.218Z
 TCGplayer : catégorie 68 (One Piece Card Game)
 Images in_1000x1000 : 25/25 valides
 Taille d'image retenue : in_1000x1000
-Sans photo TCGplayer : 232 → retrouvées sur le site officiel : 168 (anglais) + 3 (japonais) ; toujours sans image : 61
-  Encore sans image : The Dominance of God (2026-11-20) : 61
+Sans photo TCGplayer : 232 → retrouvées sur le site officiel : 219 (anglais) + 3 (japonais) ; toujours sans image : 10
+  Encore sans image : The Dominance of God (2026-11-20) : 10
 85 extensions, 7124 cartes (sur 7820 produits, le reste = scellé et accessoires)
-Avec image : 7063 · avec prix : 6883
-Cardmarket : jeu n° 18, 12720 cartes (dont 634 « Luffy »)
+Avec image : 7114 · avec prix : 6883
+Cardmarket : jeu n° 18, 12736 cartes (dont 635 « Luffy »)
