@@ -32,4 +32,4 @@ Baisses :
   swshp-SWSH066 Charizard (SWSH Black Star Promos) 100.7 € · bas 69.98 · moy 84.83 · 1j 94.95 · 7j 84.22 · 30j 167.49 · var -49.7
   ex16-6 Charizard (Power Keepers) 90.12 € · bas 19 · moy 208.65 · 1j 20 · 7j 91.85 · 30j 177.27 · var -48.2
   neo4-22 Light Dragonair (Neo Destiny) 31.01 € · bas 3.5 · moy 19.72 · 1j 70 · 7j 22.31 · 30j 42.95 · var -48.1
-Durée : 1 s
+Durée : 3 s
