@@ -1,35 +1,35 @@
 TCGdex : 202 extensions, 21432 cartes
 Fiches lues cette nuit : 11 / 11 à lire ; correspondances connues : 20203
-Vitrine : 40 plus chères (1re : Gengar 6221.9 €), 30 hausses, 30 baisses, 30 cartes de Delta Reign, 30th Celebration, 30th Classic Collection
+Vitrine : 40 plus chères (1re : Gengar 5622.34 €), 30 hausses, 30 baisses, 30 cartes de Delta Reign, 30th Celebration, 30th Classic Collection
 Plus chères :
-  ecard3-10 Gengar (Skyridge) 6221.9 € · bas 400 · moy 12312.5 · 1j 325 · 7j 7204.53 · 30j 3661.87 · var 96.7
+  ecard3-10 Gengar (Skyridge) 5622.34 € · bas 500 · moy 12312.5 · 1j 589.99 · 7j 6724.53 · 30j 3660.11 · var 83.7
   ecard3-146 Charizard (Skyridge) 4918.35 € · bas 450 · moy 8149.98 · 1j 3800 · 7j 5403.11 · 30j 4012.63 · var 34.7
   ecard2-149 Lugia (Aquapolis) 4634.17 € · bas 775 · moy 4500 · 1j 1000 · 7j 3718.74 · 30j 3464.24 · var 7.3
+  30th-G Mew (30th Celebration) 2954.36 € · bas 1850 · moy 2312.26 · 1j 2999 · 7j 2181.69 · 30j 2307.99 · var -5.5
   30th-R Mew (30th Celebration) 2923.77 € · bas 2000 · moy 3125.99 · 1j 2000 · 7j 3006.13 · 30j 2919.85 · var 3
   ex5.5-4 Mudkip (Poké Card Creator Pack) 2911.86 € · bas null · moy 8500 · 1j 3500 · 7j 1430.83 · 30j 1430.83 · var null
-  30th-G Mew (30th Celebration) 2847.65 € · bas 1850 · moy 2312.26 · 1j 3070 · 7j 2237.54 · 30j 2271.63 · var -1.5
-  ecard3-32 Umbreon (Skyridge) 2637.72 € · bas 550 · moy 2849.48 · 1j 3930 · 7j 2041.12 · 30j 1752.77 · var 16.5
+  ecard3-32 Umbreon (Skyridge) 2637.72 € · bas 550 · moy 3930 · 1j 3930 · 7j 2041.12 · 30j 1752.77 · var 16.5
   30th-B Mew (30th Celebration) 2153.46 € · bas 1699 · moy 2787 · 1j 3000 · 7j 2239.67 · 30j 2487.78 · var -10
   ex7-99 Rocket's Mewtwo ex (Team Rocket Returns) 2012.24 € · bas 80 · moy 714.11 · 1j 1999 · 7j 702 · 30j 1293.57 · var null
-  swsh7-215 Umbreon VMAX (Evolving Skies) 1872.01 € · bas 500 · moy 1944 · 1j 1775 · 7j 1945.63 · 30j 1790.22 · var 8.7
-  ex6-105 Charizard ex (FireRed & LeafGreen) 1866.64 € · bas 79.95 · moy 2564.28 · 1j 5099.99 · 7j 2128.33 · 30j 862.77 · var 146.7
-  sm9-170 Latias & Latios GX (Team Up) 1812.13 € · bas 350 · moy 1574.83 · 1j 2700 · 7j 1159.43 · 30j 2344.44 · var -50.5
+  swsh7-215 Umbreon VMAX (Evolving Skies) 1902.14 € · bas 250 · moy 1944 · 1j 2100 · 7j 1552.14 · 30j 1810.68 · var -14.3
+  ex6-105 Charizard ex (FireRed & LeafGreen) 1860.66 € · bas 79.95 · moy 2564.28 · 1j 600 · 7j 2083.88 · 30j 872.49 · var 138.8
+  sm9-170 Latias & Latios GX (Team Up) 1812.13 € · bas 350 · moy 1044.5 · 1j 2700 · 7j 1159.43 · 30j 2344.44 · var -50.5
 Hausses :
-  ex6-105 Charizard ex (FireRed & LeafGreen) 1866.64 € · bas 79.95 · moy 2564.28 · 1j 5099.99 · 7j 2128.33 · 30j 862.77 · var 146.7
-  xyp-XY04 Sylveon (XY Black Star Promos) 27.1 € · bas 0.4 · moy 28.44 · 1j 1 · 7j 34.53 · 30j 14.27 · var 142
-  ex13-79 Pikachu δ (Holon Phantoms) 32.74 € · bas 1.5 · moy 7.75 · 1j 3.5 · 7j 35.76 · 30j 14.94 · var 139.4
-  smp-SM219 Entei (SM Black Star Promos) 54.25 € · bas 14 · moy 14.87 · 1j 21.99 · 7j 76.19 · 30j 32.21 · var 136.5
+  dp2-10 Honchkrow (Mysterious Treasures) 30.38 € · bas 0.49 · moy 35.48 · 1j 7.99 · 7j 39.73 · 30j 16.5 · var 140.8
+  ex6-105 Charizard ex (FireRed & LeafGreen) 1860.66 € · bas 79.95 · moy 2564.28 · 1j 600 · 7j 2083.88 · 30j 872.49 · var 138.8
+  smp-SM219 Entei (SM Black Star Promos) 54.25 € · bas 14 · moy 76.19 · 1j 21.99 · 7j 76.19 · 30j 32.21 · var 136.5
   ex1-10 Mightyena (Ruby & Sapphire) 33.16 € · bas 2 · moy 40.49 · 1j 7 · 7j 41.41 · 30j 17.55 · var 136
-  sm5-141 Glaceon GX (Ultra Prism) 126.84 € · bas 6 · moy 105.63 · 1j 20.95 · 7j 135.36 · 30j 58.68 · var 130.7
-  ex1-12 Slaking (Ruby & Sapphire) 42.69 € · bas 0.4 · moy 14.11 · 1j 4 · 7j 49.56 · 30j 21.51 · var 130.4
+  ex1-12 Slaking (Ruby & Sapphire) 39.64 € · bas 0.4 · moy 39.68 · 1j 4.39 · 7j 50.04 · 30j 21.49 · var 132.9
+  xyp-XY04 Sylveon (XY Black Star Promos) 22.24 € · bas 0.4 · moy 28.44 · 1j 1.99 · 7j 32.73 · 30j 14.25 · var 129.7
+  sm5-141 Glaceon GX (Ultra Prism) 116.99 € · bas 6 · moy 105.63 · 1j 20 · 7j 135.36 · 30j 58.99 · var 129.5
   ecard3-14 Kabutops (Skyridge) 381.79 € · bas 40 · moy 682.81 · 1j 287.5 · 7j 560.3 · 30j 245.44 · var 128.3
 Baisses :
-  ex1-99 Lapras ex (Ruby & Sapphire) 75.38 € · bas 9.9 · moy 198.53 · 1j 24.98 · 7j 66.23 · 30j 154.03 · var -57
-  ex15-6 Nidoking δ (Dragon Frontiers) 29.77 € · bas 3.99 · moy 60.54 · 1j 19 · 7j 19.09 · 30j 42.01 · var -54.6
+  dp1-121 Infernape (Diamond & Pearl) 29.07 € · bas 5.5 · moy 38.68 · 1j 20 · 7j 24 · 30j 57.34 · var -58.1
   dc1-15 Team Magma's Groudon EX (Double Crisis) 335.47 € · bas 40 · moy 342.25 · 1j 192.5 · 7j 210 · 30j 460.28 · var -54.4
-  sm9-170 Latias & Latios GX (Team Up) 1812.13 € · bas 350 · moy 1574.83 · 1j 2700 · 7j 1159.43 · 30j 2344.44 · var -50.5
+  sm9-170 Latias & Latios GX (Team Up) 1812.13 € · bas 350 · moy 1044.5 · 1j 2700 · 7j 1159.43 · 30j 2344.44 · var -50.5
   sm5-151 Lillie (Ultra Prism) 116.95 € · bas 50 · moy 120.8 · 1j 120 · 7j 129.33 · 30j 260.54 · var -50.4
-  sv10.5b-105 Seismitoad (Black Bolt) 213.22 € · bas 99.9 · moy 352.08 · 1j 170 · 7j 162.59 · 30j 324.48 · var -49.9
-  swshp-SWSH066 Charizard (SWSH Black Star Promos) 100.7 € · bas 69.98 · moy 84.83 · 1j 94.95 · 7j 84.22 · 30j 167.49 · var -49.7
-  ex12-8 Lapras (Legend Maker) 22.21 € · bas 3 · moy 49.12 · 1j 49.99 · 7j 16.05 · 30j 31.89 · var -49.7
+  sv10.5b-105 Seismitoad (Black Bolt) 195.83 € · bas 99.9 · moy 352.08 · 1j 189 · 7j 163.59 · 30j 324.06 · var -49.5
+  swshp-SWSH066 Charizard (SWSH Black Star Promos) 95.24 € · bas 69.98 · moy 84.83 · 1j 94.99 · 7j 85.47 · 30j 168.28 · var -49.2
+  ecard3-51 Ditto (Skyridge) 24.13 € · bas 6 · moy 33.04 · 1j 11 · 7j 15.56 · 30j 30.18 · var -48.4
+  hgss3-83 Raichu (Undaunted) 60.58 € · bas 4 · moy 47.51 · 1j 155 · 7j 46.5 · 30j 89.81 · var -48.2
 Durée : 2 s
