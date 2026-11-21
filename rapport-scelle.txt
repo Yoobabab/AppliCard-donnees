@@ -1,4 +1,4 @@
-Scellé : 5143 produits ({"b":798,"d":626,"k":561,"r":13,"t":579,"e":171,"c":1135,"p":699,"o":28,"l":499,"g":34}), 2210 avec image TCGplayer (43 %, dont 169 au 2e passage), 684 groupes TCGplayer lus, 3191 produits scellés TCGplayer.
+Scellé : 5143 produits ({"b":798,"d":626,"k":561,"r":13,"t":579,"e":171,"c":1135,"p":699,"o":28,"l":499,"g":34}), 2211 avec image TCGplayer (43 %, dont 169 au 2e passage), 685 groupes TCGplayer lus, 3194 produits scellés TCGplayer.
 Exemples du 2e passage :
   EX Deoxys Booster  →  Deoxys Booster Pack
   EX Emerald Booster  →  Emerald Booster Pack
@@ -51,7 +51,7 @@ Exemples du 2e passage :
 2026-11 p Pokémon Day 2027 Coin — 0 € — img 0
 2026-11 c Pokémon Day 2027 Collection — 0 € — img 0
 2026-11 b Pokémon TCG Valentine's Booster — 0 € — img 0
-2026-11 c Pokémon TCG Valentine’s Box — 0 € — img 0
+2026-11 c Pokémon TCG Valentine’s Box — 0 € — img 735297
 2026-11 p Mega Gengar ex, Mega Dragonite ex & Mega Feraligatr ex Special Deck Set: Gengar Coin — 0 € — img 0
 2026-11 p Mega Gengar ex, Mega Dragonite ex & Mega Feraligatr ex Special Deck Set: Feraligatr Coin — 0 € — img 0
 2026-11 p Mega Gengar ex, Mega Dragonite ex & Mega Feraligatr ex Special Deck Set: Dragonite Coin — 0 € — img 0

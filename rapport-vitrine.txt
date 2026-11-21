@@ -32,4 +32,4 @@ Baisses :
   dc1-15 Team Magma's Groudon EX (Double Crisis) 335.47 € · bas 40 · moy 342.25 · 1j 192.5 · 7j 210 · 30j 460.28 · var -54.4
   xy10-116 Glaceon EX (Fates Collide) 54.74 € · bas 10 · moy 48.88 · 1j 10 · 7j 34.28 · 30j 72.76 · var -52.9
   bw6-128 Rayquaza (Dragons Exalted) 65.84 € · bas 6.49 · moy 41.79 · 1j 49.95 · 7j 43.33 · 30j 91.48 · var -52.6
-Durée : 1 s
+Durée : 3 s
