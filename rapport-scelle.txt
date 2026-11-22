@@ -1,4 +1,4 @@
-Scellé : 5143 produits ({"b":798,"d":626,"k":561,"r":13,"t":579,"e":171,"c":1135,"p":699,"o":28,"l":499,"g":34}), 2211 avec image TCGplayer (43 %, dont 169 au 2e passage), 685 groupes TCGplayer lus, 3194 produits scellés TCGplayer.
+Scellé : 5162 produits ({"b":800,"d":631,"k":561,"r":13,"t":579,"e":174,"c":1137,"p":700,"o":28,"l":505,"g":34}), 2225 avec image TCGplayer (43 %, dont 169 au 2e passage), 685 groupes TCGplayer lus, 3194 produits scellés TCGplayer.
 Exemples du 2e passage :
   EX Deoxys Booster  →  Deoxys Booster Pack
   EX Emerald Booster  →  Emerald Booster Pack
@@ -25,7 +25,26 @@ Exemples du 2e passage :
   Arceus Collector's Tins: Arceus LV.X Tin (Green)  →  Arceus Collector's Tin [Green]
   BREAKthrough Elite Trainer Box (Mega Mewtwo X)  →  Elite Trainer Box [Mewtwo X]
   BREAKthrough Elite Trainer Box (Mega Mewtwo Y)  →  Elite Trainer Box [Mewtwo Y]
-2026-11 t Ascended Heroes: Costco 5-Pack Mini Tins — 0 € — img 719650
+2026-11 e Flowing Fists Elite Trainer Box — 0 € — img 735050
+2026-11 e Flowing Fists Pokémon Center Elite Trainer Box — 0 € — img 735049
+2026-11 d Flowing Fists Booster Box (18 Boosters) — 0 € — img 735045
+2026-11 d Flowing Fists Booster Box — 0 € — img 735045
+2026-11 b Flowing Fists Booster — 0 € — img 735046
+2026-11 b Flowing Fists Sleeved Booster — 0 € — img 735047
+2026-11 d Flowing Fists 24 Sleeved Booster Case — 0 € — img 0
+2026-11 e Flowing Fists 10 Elite Trainer Box Case — 0 € — img 0
+2026-11 d Flowing Fists 6 Booster Box Case — 0 € — img 0
+2026-11 p Flowing Fists: Eevee Coin — 0 € — img 0
+2026-11 l Flowing Fists: Armarouge Premium Checklane Blister — 0 € — img 735064
+2026-11 l Flowing Fists: Silvally Premium Checklane Blister — 0 € — img 735065
+2026-11 l Flowing Fists: Wimpod 3-Pack Blister — 0 € — img 735058
+2026-11 l Flowing Fists: Tynamo 1-Pack Blister — 0 € — img 0
+2026-11 l Flowing Fists: Primarina Premium Checklane Blister — 0 € — img 735063
+2026-11 l Flowing Fists: Bastiodon Premium Checklane Blister — 0 € — img 735062
+2026-11 d Flowing Fists Booster Bundle — 0 € — img 735066
+2026-11 c Flowing Fists Build & Battle Box Display — 0 € — img 735070
+2026-11 c Flowing Fists Build & Battle Box — 0 € — img 735069
+2026-11 t Ascended Heroes: Costco 5-Pack Mini Tins — 130 € — img 719650
 2026-11 k CSVH2C: Happy Set Lucario & Greninja & Zamazenta & Mabosstiff: Happy Set Lucario & Greninja & Zamazenta & Mabosstiff: Theme Deck — 0 € — img 0
 2026-11 c Typhlosion ex Epic Collection — 0 € — img 552237
 2026-11 c Meganium ex Epic Collection — 0 € — img 0
@@ -46,22 +65,3 @@ Exemples du 2e passage :
 2026-11 t Wonderful Waters: Staryu Mini Tin — 0 € — img 0
 2026-11 t Wonderful Waters: Froakie Mini Tin — 0 € — img 0
 2026-11 t Wonderful Waters: Amaura Mini Tin — 0 € — img 0
-2026-11 t Wonderful Waters: Slowbro Mini Tin — 0 € — img 0
-2026-11 t Wonderful Waters: Dragonair Mini Tin — 0 € — img 0
-2026-11 p Pokémon Day 2027 Coin — 0 € — img 0
-2026-11 c Pokémon Day 2027 Collection — 0 € — img 0
-2026-11 b Pokémon TCG Valentine's Booster — 0 € — img 0
-2026-11 c Pokémon TCG Valentine’s Box — 0 € — img 735297
-2026-11 p Mega Gengar ex, Mega Dragonite ex & Mega Feraligatr ex Special Deck Set: Gengar Coin — 0 € — img 0
-2026-11 p Mega Gengar ex, Mega Dragonite ex & Mega Feraligatr ex Special Deck Set: Feraligatr Coin — 0 € — img 0
-2026-11 p Mega Gengar ex, Mega Dragonite ex & Mega Feraligatr ex Special Deck Set: Dragonite Coin — 0 € — img 0
-2026-11 c Mega Gengar ex, Mega Dragonite ex & Mega Feraligatr ex Special Deck Set — 0 € — img 732941
-2026-11 b Delta Reign Fun Pack (3 Cards) — 0 € — img 0
-2026-11 t 30th Celebration Mini Tin Bundle: Night — 99.45 € — img 0
-2026-11 t 30th Celebration Mini Tin Bundle: Day — 100 € — img 0
-2026-11 p Delta Reign: Mega Rayquaza Coin — 0.56 € — img 0
-2026-11 p Delta Reign: Totodile Coin — 0.6 € — img 0
-2026-11 p Delta Reign: Mega Rayquaza Coin — 0 € — img 0
-2026-10 c Mega Rayquaza ex Premium Tournament Collection — 0 € — img 0
-2026-10 b Aura Seeker Booster — 0 € — img 0
-2026-10 d Aura Seeker Booster Box — 90.5 € — img 0

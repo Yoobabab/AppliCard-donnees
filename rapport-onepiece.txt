@@ -1,9 +1,8 @@
-One Piece — 2026-11-21T11:15:58.734Z
+One Piece — 2026-11-22T11:37:41.418Z
 TCGplayer : catégorie 68 (One Piece Card Game)
 Images in_1000x1000 : 25/25 valides
 Taille d'image retenue : in_1000x1000
-Sans photo TCGplayer : 246 → retrouvées sur le site officiel : 239 (anglais) + 6 (japonais) ; toujours sans image : 1
-  Encore sans image : One Piece Promotion Cards (2022-09-30) : 1
+Sans photo TCGplayer : 246 → retrouvées sur le site officiel : 243 (anglais) + 3 (japonais) ; toujours sans image : 0
 86 extensions, 7297 cartes (sur 8005 produits, le reste = scellé et accessoires)
-Avec image : 7296 · avec prix : 6991
-Cardmarket : jeu n° 18, 12943 cartes (dont 648 « Luffy »)
+Avec image : 7297 · avec prix : 7048
+Cardmarket : jeu n° 18, 13039 cartes (dont 649 « Luffy »)
