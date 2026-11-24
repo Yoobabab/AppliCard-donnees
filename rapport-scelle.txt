@@ -1,4 +1,4 @@
-Scellé : 5162 produits ({"b":800,"d":631,"k":561,"r":13,"t":579,"e":174,"c":1137,"p":700,"o":28,"l":505,"g":34}), 2225 avec image TCGplayer (43 %, dont 169 au 2e passage), 685 groupes TCGplayer lus, 3194 produits scellés TCGplayer.
+Scellé : 5169 produits ({"b":801,"d":632,"k":561,"r":13,"t":579,"e":174,"c":1139,"p":700,"o":28,"l":508,"g":34}), 2225 avec image TCGplayer (43 %, dont 169 au 2e passage), 685 groupes TCGplayer lus, 3194 produits scellés TCGplayer.
 Exemples du 2e passage :
   EX Deoxys Booster  →  Deoxys Booster Pack
   EX Emerald Booster  →  Emerald Booster Pack
@@ -25,6 +25,13 @@ Exemples du 2e passage :
   Arceus Collector's Tins: Arceus LV.X Tin (Green)  →  Arceus Collector's Tin [Green]
   BREAKthrough Elite Trainer Box (Mega Mewtwo X)  →  Elite Trainer Box [Mewtwo X]
   BREAKthrough Elite Trainer Box (Mega Mewtwo Y)  →  Elite Trainer Box [Mewtwo Y]
+2026-11 l Aura Storm Special Set Meowth 2-Pack Blister — 0 € — img 0
+2026-11 l Aura Storm Special Set Squirtle 2-Pack Blister — 0 € — img 0
+2026-11 l Aura Storm Special Set Growlithe 2-Pack Blister — 0 € — img 0
+2026-11 c Aura Storm 10 Pack Plus Bundle — 0 € — img 0
+2026-11 d Aura Storm Booster Box — 0 € — img 0
+2026-11 b Aura Storm Booster — 0 € — img 0
+2026-11 c Stellar Pikachu Exclusive Gift Box — 0 € — img 0
 2026-11 e Flowing Fists Elite Trainer Box — 0 € — img 735050
 2026-11 e Flowing Fists Pokémon Center Elite Trainer Box — 0 € — img 735049
 2026-11 d Flowing Fists Booster Box (18 Boosters) — 0 € — img 735045
@@ -58,10 +65,3 @@ Exemples du 2e passage :
 2026-11 c Black Bolt & White Flare S-CH Energy Pack: Darkness — 0 € — img 0
 2026-11 c Black Bolt & White Flare S-CH Energy Pack: Fighting — 0 € — img 0
 2026-11 c Black Bolt & White Flare S-CH Energy Pack: Psychic — 0 € — img 0
-2026-11 c Black Bolt & White Flare S-CH Energy Pack: Lightning — 0 € — img 0
-2026-11 c Black Bolt & White Flare S-CH Energy Pack: Water — 0 € — img 0
-2026-11 c Black Bolt & White Flare S-CH Energy Pack: Fire — 0 € — img 0
-2026-11 c Black Bolt & White Flare S-CH Energy Pack: Grass — 0 € — img 0
-2026-11 t Wonderful Waters: Staryu Mini Tin — 0 € — img 0
-2026-11 t Wonderful Waters: Froakie Mini Tin — 0 € — img 0
-2026-11 t Wonderful Waters: Amaura Mini Tin — 0 € — img 0
