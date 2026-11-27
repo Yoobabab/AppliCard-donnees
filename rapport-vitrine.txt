@@ -32,4 +32,4 @@ Baisses :
   ex11-13 Rayquaza δ (Delta Species) 52.57 € · bas 14 · moy 102.92 · 1j 42.95 · 7j 58.5 · 30j 121.27 · var -51.8
   sm11-226 Mega Sableye & Tyranitar GX (Unified Minds) 219.05 € · bas 20 · moy 205.83 · 1j 95 · 7j 145.21 · 30j 294.07 · var -50.6
   sm5-151 Lillie (Ultra Prism) 116.95 € · bas 50 · moy 120.8 · 1j 120 · 7j 129.33 · 30j 260.54 · var -50.4
-Durée : 1 s
+Durée : 2 s

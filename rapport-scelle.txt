@@ -1,4 +1,4 @@
-Scellé : 5198 produits ({"b":830,"d":632,"k":561,"r":13,"t":579,"e":174,"c":1139,"p":700,"o":28,"l":508,"g":34}), 2253 avec image TCGplayer (43 %, dont 171 au 2e passage), 685 groupes TCGplayer lus, 3202 produits scellés TCGplayer.
+Scellé : 5199 produits ({"b":831,"d":632,"k":561,"r":13,"t":579,"e":174,"c":1139,"p":700,"o":28,"l":508,"g":34}), 2254 avec image TCGplayer (43 %, dont 171 au 2e passage), 685 groupes TCGplayer lus, 3194 produits scellés TCGplayer.
 Exemples du 2e passage :
   EX Deoxys Booster  →  Deoxys Booster Pack
   EX Emerald Booster  →  Emerald Booster Pack
@@ -25,8 +25,9 @@ Exemples du 2e passage :
   Arceus Collector's Tins: Arceus LV.X Tin (Green)  →  Arceus Collector's Tin [Green]
   BREAKthrough Elite Trainer Box (Mega Mewtwo X)  →  Elite Trainer Box [Mewtwo X]
   BREAKthrough Elite Trainer Box (Mega Mewtwo Y)  →  Elite Trainer Box [Mewtwo Y]
+2026-11 b 30th Celebration JP Gym Promo Booster — 0 € — img 0
 2026-11 b Plasma Storm Sleeved Booster — 0 € — img 98526
-2026-11 b XY Sleeved Booster — 0 € — img 542096
+2026-11 b XY Sleeved Booster — 0 € — img 272648
 2026-11 b Roaring Skies Sleeved Booster — 0 € — img 697502
 2026-11 b Steam Siege Sleeved Booster — 0 € — img 268448
 2026-11 b Primal Clash Sleeved Booster — 0 € — img 546608
@@ -64,4 +65,3 @@ Exemples du 2e passage :
 2026-11 e Flowing Fists Elite Trainer Box — 99.93 € — img 735050
 2026-11 e Flowing Fists Pokémon Center Elite Trainer Box — 0 € — img 735049
 2026-11 d Flowing Fists Booster Box (18 Boosters) — 0 € — img 735045
-2026-11 d Flowing Fists Booster Box — 224.89 € — img 735045
