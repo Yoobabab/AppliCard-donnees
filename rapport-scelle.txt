@@ -1,4 +1,4 @@
-Scellé : 5199 produits ({"b":831,"d":632,"k":561,"r":13,"t":579,"e":174,"c":1139,"p":700,"o":28,"l":508,"g":34}), 2254 avec image TCGplayer (43 %, dont 171 au 2e passage), 685 groupes TCGplayer lus, 3194 produits scellés TCGplayer.
+Scellé : 5199 produits ({"b":831,"d":632,"k":561,"r":13,"t":579,"e":174,"c":1139,"p":700,"o":28,"l":508,"g":34}), 2256 avec image TCGplayer (43 %, dont 171 au 2e passage), 685 groupes TCGplayer lus, 3196 produits scellés TCGplayer.
 Exemples du 2e passage :
   EX Deoxys Booster  →  Deoxys Booster Pack
   EX Emerald Booster  →  Emerald Booster Pack
@@ -25,7 +25,7 @@ Exemples du 2e passage :
   Arceus Collector's Tins: Arceus LV.X Tin (Green)  →  Arceus Collector's Tin [Green]
   BREAKthrough Elite Trainer Box (Mega Mewtwo X)  →  Elite Trainer Box [Mewtwo X]
   BREAKthrough Elite Trainer Box (Mega Mewtwo Y)  →  Elite Trainer Box [Mewtwo Y]
-2026-11 b 30th Celebration JP Gym Promo Booster — 0 € — img 0
+2026-11 b 30th Celebration JP Gym Promo Booster — 12.95 € — img 0
 2026-11 b Plasma Storm Sleeved Booster — 0 € — img 98526
 2026-11 b XY Sleeved Booster — 0 € — img 272648
 2026-11 b Roaring Skies Sleeved Booster — 0 € — img 697502
